@@ -1,65 +1,70 @@
-import { cn } from '@/utils';
+'use client';
+
+import { cn } from '../utils';
+import { cva, type VariantProps } from 'class-variance-authority';
 import React from 'react';
 
+const buttonVariants = cva(
+  'inline-flex items-center justify-center rounded-lg font-semibold transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed',
+  {
+    variants: {
+      variant: {
+        primary: 'btn-primary',
+        secondary: 'btn-secondary',
+        outline:
+          'bg-transparent border border-neutral-300 text-neutral-700 hover:bg-neutral-50 focus:ring-neutral-500',
+        ghost:
+          'bg-transparent text-neutral-700 hover:bg-neutral-100 focus:ring-neutral-500',
+        destructive:
+          'bg-error-500 text-white hover:bg-error-600 focus:ring-error-500',
+      },
+      size: {
+        sm: 'h-8 px-3 text-sm',
+        md: 'h-10 px-4 text-sm',
+        lg: 'h-12 px-6 text-base',
+        xl: 'h-14 px-8 text-lg',
+      },
+    },
+    defaultVariants: {
+      variant: 'primary',
+      size: 'md',
+    },
+  }
+);
+
 export interface ButtonProps
-  extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  variant?: 'primary' | 'secondary' | 'outline' | 'ghost' | 'game';
-  size?: 'sm' | 'md' | 'lg';
+  extends React.ButtonHTMLAttributes<HTMLButtonElement>,
+    VariantProps<typeof buttonVariants> {
+  asChild?: boolean;
   loading?: boolean;
-  children: React.ReactNode;
 }
 
 const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
   (
     {
       className,
-      variant = 'primary',
-      size = 'md',
+      variant,
+      size,
+      asChild = false,
       loading = false,
-      disabled,
       children,
+      disabled,
       ...props
     },
     ref
   ) => {
-    const baseStyles =
-      'inline-flex items-center justify-center font-medium rounded-lg transition-all duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed';
-
-    const variants = {
-      primary:
-        'bg-gradient-to-br from-primary-400 to-primary-600 text-white hover:from-primary-500 hover:to-primary-700 focus:ring-primary-500 shadow-game hover:shadow-game-lg hover:-translate-y-0.5 active:translate-y-0',
-      secondary:
-        'bg-gradient-to-br from-secondary-400 to-secondary-600 text-white hover:from-secondary-500 hover:to-secondary-700 focus:ring-secondary-500 shadow-game hover:shadow-game-lg hover:-translate-y-0.5 active:translate-y-0',
-      outline:
-        'border-2 border-primary-500 text-primary-600 dark:text-primary-400 hover:bg-primary-50 dark:hover:bg-primary-900/20 focus:ring-primary-500',
-      ghost:
-        'text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 focus:ring-gray-500',
-      game:
-        'bg-gradient-to-br from-primary-500 to-accent-500 text-white hover:from-primary-600 hover:to-accent-600 focus:ring-primary-500 shadow-game-lg hover:shadow-game-xl hover:-translate-y-1 hover:scale-105 active:translate-y-0 active:scale-100',
-    };
-
-    const sizes = {
-      sm: 'px-3 py-1.5 text-sm',
-      md: 'px-4 py-2 text-sm',
-      lg: 'px-6 py-3 text-base',
-    };
+    const Comp = asChild ? React.Fragment : 'button';
 
     return (
-      <button
-        className={cn(
-          baseStyles,
-          variants[variant],
-          sizes[size],
-          loading ? 'cursor-wait' : '',
-          className
-        )}
-        disabled={disabled || loading}
+      <Comp
+        className={cn(buttonVariants({ variant, size, className }))}
         ref={ref}
+        disabled={disabled || loading}
         {...props}
       >
         {loading && (
           <svg
-            className="animate-spin -ml-1 mr-2 h-4 w-4"
+            className="mr-2 h-4 w-4 animate-spin"
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
             viewBox="0 0 24 24"
@@ -71,20 +76,20 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
               r="10"
               stroke="currentColor"
               strokeWidth="4"
-            ></circle>
+            />
             <path
               className="opacity-75"
               fill="currentColor"
               d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
-            ></path>
+            />
           </svg>
         )}
         {children}
-      </button>
+      </Comp>
     );
   }
 );
 
 Button.displayName = 'Button';
 
-export { Button };
+export { Button, buttonVariants };

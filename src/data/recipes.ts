@@ -1,4 +1,4 @@
-import { Recipe, RecipeCategory } from '@/types';
+import { Recipe, RecipeCategory } from '../components/types';
 
 // Recipe categories
 export const recipeCategories: RecipeCategory[] = [
@@ -110,4 +110,70 @@ export const sampleRecipes: Partial<Recipe>[] = [
       'waffle grow a garden',
     ],
   },
+];
+
+export const popularRecipes = [
+  {
+    name: 'Donut Recipe',
+    slug: 'donut',
+    icon: '🍩',
+    description: 'Learn how to make delicious donuts in Grow a Garden',
+    difficulty: 'Hard',
+    cookingTime: '9 minutes 37 seconds',
+    color: 'from-pink-400 to-red-400',
+  },
+  {
+    name: 'Burger Recipe',
+    slug: 'burger',
+    icon: '🍔',
+    description: 'Master the art of making perfect burgers',
+    difficulty: 'Hard',
+    cookingTime: '10 minutes 32 seconds',
+    color: 'from-orange-400 to-red-400',
+  },
+  {
+    name: 'Pizza Recipe',
+    slug: 'pizza',
+    icon: '🍕',
+    description: 'Create amazing pizzas with the best ingredients',
+    difficulty: 'Medium',
+    cookingTime: '7 minutes 36 seconds',
+    color: 'from-yellow-400 to-orange-400',
+  },
+  {
+    name: 'Cake Recipe',
+    slug: 'cake',
+    icon: '🍰',
+    description: 'Bake beautiful cakes for Chris P',
+    difficulty: 'Easy',
+    cookingTime: '5 minutes 55 seconds',
+    color: 'from-purple-400 to-pink-400',
+  },
+  {
+    name: 'Ice Cream Recipe',
+    slug: 'ice-cream',
+    icon: '🍦',
+    description: 'Make refreshing ice cream treats',
+    difficulty: 'Easy',
+    cookingTime: '5 minutes 48 seconds',
+    color: 'from-blue-400 to-purple-400',
+  },
+  {
+    name: 'Sushi Recipe',
+    slug: 'sushi',
+    icon: '🍣',
+    description: 'Prepare authentic sushi dishes',
+    difficulty: 'Medium',
+    cookingTime: '7 minutes 21 seconds',
+    color: 'from-green-400 to-blue-400',
+  },
+];
+
+export const allRecipes = [
+  { name: 'Hot Dog Recipe', slug: 'hot-dog', icon: '🌭' },
+  { name: 'Waffle Recipe', slug: 'waffle', icon: '🧇' },
+  { name: 'Pie Recipe', slug: 'pie', icon: '🥧' },
+  { name: 'Sandwich Recipe', slug: 'sandwich', icon: '🥪' },
+  { name: 'Salad Recipe', slug: 'salad', icon: '🥗' },
+  { name: 'Soup Recipe', slug: 'soup', icon: '🍲' },
 ];

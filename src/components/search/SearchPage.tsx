@@ -1,197 +1,71 @@
 'use client';
 
-import { SearchBox, SearchResults } from '@/components/ui';
-import { sampleRecipes } from '@/data/recipes';
-import { useSearch } from '@/hooks';
-import { Recipe } from '@/types';
-import { useRouter, useSearchParams } from 'next/navigation';
-import React, { useEffect } from 'react';
+import { allRecipes, popularRecipes } from '@/data/recipes';
+import Link from 'next/link';
+import React, { useState } from 'react';
+import { useSearch } from '../hooks';
 
 export interface SearchPageProps {
-  initialQuery?: string;
-  onRecipeClick?: (recipe: Recipe) => void;
   className?: string;
 }
 
-export const SearchPage: React.FC<SearchPageProps> = ({
-  initialQuery = '',
-  onRecipeClick,
-  className,
-}) => {
-  const router = useRouter();
-  const searchParams = useSearchParams();
+export const SearchPage: React.FC<SearchPageProps> = ({ className }) => {
+  const [query, setQuery] = useState('');
+  const { search } = useSearch();
 
-  const {
-    query,
-    results,
-    isLoading,
-    error,
-    setQuery,
-    search,
-    suggestions,
-    spellingSuggestions,
-    hasMore,
-    loadMore,
-    totalResults,
-    searchTime,
-  } = useSearch({
-    autoSearch: true,
-    enableAnalytics: true,
-    maxResults: 10,
-  });
-
-  // Initialize query from URL params or props
-  useEffect(() => {
-    const urlQuery = searchParams?.get('q') || initialQuery;
-    if (urlQuery && urlQuery !== query) {
-      setQuery(urlQuery);
-    }
-  }, [searchParams, initialQuery, query, setQuery]);
-
-  // Update URL when query changes
-  useEffect(() => {
-    if (query) {
-      const params = new URLSearchParams(searchParams || '');
-      params.set('q', query);
-      router.replace(`/search?${params.toString()}`, { scroll: false });
-    } else {
-      router.replace('/search', { scroll: false });
-    }
-  }, [query, router, searchParams]);
-
-  // Handle search
-  const handleSearch = (searchQuery: string) => {
-    setQuery(searchQuery);
+  const handleSearch = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const value = e.target.value;
+    setQuery(value);
+    search(value);
   };
 
-  // Handle suggestion click
-  const handleSuggestionClick = (suggestion: string) => {
-    setQuery(suggestion);
-  };
-
-  // Handle recipe click
-  const handleRecipeClick = (recipe: Recipe) => {
-    if (onRecipeClick) {
-      onRecipeClick(recipe);
-    } else {
-      // Default behavior: navigate to recipe page
-      router.push(`/recipes/${recipe.slug}`);
-    }
-  };
-
-  // Get popular recipes for no-results fallback
-  const popularRecipes = sampleRecipes.map(recipe => ({
-    ...recipe,
-    ingredients: recipe.ingredients || [],
-    steps: recipe.steps || [],
-    tips: recipe.tips || [],
-    images: recipe.images || [],
-    tags: recipe.tags || [],
-    seoKeywords: recipe.seoKeywords || [],
-    createdAt: recipe.createdAt || new Date(),
-    updatedAt: recipe.updatedAt || new Date(),
-    isActive: recipe.isActive ?? true,
-  })) as Recipe[];
+  const allData = [...popularRecipes, ...allRecipes];
+  const filteredResults = query
+    ? allData.filter(
+        (item) =>
+          item.name.toLowerCase().includes(query.toLowerCase()) ||
+          item.slug.toLowerCase().includes(query.toLowerCase())
+      )
+    : allData;
 
   return (
     <div className={className}>
       {/* Search header */}
       <div className="mb-8">
-        <h1 className="text-3xl font-bold text-gray-900 dark:text-gray-100 mb-4">
+        <h1 className="text-3xl font-bold text-neutral-800 mb-4">
           Search Recipes
         </h1>
-        <p className="text-gray-600 dark:text-gray-400 mb-6">
-          Find the perfect Grow a Garden recipe for your next cooking adventure
+        <p className="text-neutral-600">
+          Find the perfect recipe for your cooking adventure
         </p>
-
-        {/* Search box */}
-        <div className="max-w-2xl">
-          <SearchBox
-            placeholder="Search for recipes, ingredients, or cooking tips..."
-            onSearch={handleSearch}
-            onSuggestionSelect={handleSuggestionClick}
-            autoFocus={!query}
-            maxSuggestions={8}
-          />
-        </div>
       </div>
 
-      {/* Search results */}
-      {query && (
-        <div>
-          {/* Search metadata */}
-          {!isLoading && results.length > 0 && (
-            <div className="mb-4 text-sm text-gray-500 dark:text-gray-400">
-              Search completed in {searchTime.toFixed(0)}ms
-            </div>
-          )}
+      {/* Search input */}
+      <div className="mb-8">
+        <input
+          type="text"
+          placeholder="Search for recipes..."
+          value={query}
+          onChange={handleSearch}
+          className="w-full px-4 py-3 border border-neutral-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
+        />
+      </div>
 
-          {/* Error state */}
-          {error && (
-            <div className="mb-6 p-4 bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-lg">
-              <div className="flex items-center">
-                <div className="text-red-600 dark:text-red-400 text-sm">
-                  <strong>Search Error:</strong> {error}
-                </div>
-              </div>
-            </div>
-          )}
-
-          {/* Results */}
-          <SearchResults
-            results={results}
-            query={query}
-            isLoading={isLoading}
-            onRecipeClick={handleRecipeClick}
-            onSuggestionClick={handleSuggestionClick}
-            showLoadMore={hasMore}
-            onLoadMore={loadMore}
-            totalResults={totalResults}
-            suggestions={spellingSuggestions}
-            popularRecipes={popularRecipes}
-          />
-        </div>
-      )}
-
-      {/* Default state when no query */}
-      {!query && (
-        <div className="text-center py-12">
-          <div className="max-w-md mx-auto">
-            <h2 className="text-xl font-semibold text-gray-900 dark:text-gray-100 mb-4">
-              Start Your Recipe Search
-            </h2>
-            <p className="text-gray-600 dark:text-gray-400 mb-8">
-              Enter a recipe name, ingredient, or cooking technique to find
-              exactly what you're looking for.
-            </p>
-
-            {/* Popular searches */}
-            <div className="space-y-4">
-              <h3 className="text-sm font-medium text-gray-700 dark:text-gray-300">
-                Popular Searches
-              </h3>
-              <div className="flex flex-wrap justify-center gap-2">
-                {[
-                  'donut',
-                  'burger',
-                  'pizza',
-                  'cake',
-                  'ice cream',
-                  'sandwich',
-                ].map(term => (
-                  <button
-                    key={term}
-                    onClick={() => handleSearch(term)}
-                    className="px-3 py-1 text-sm bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 text-gray-700 dark:text-gray-300 rounded-full transition-colors"
-                  >
-                    {term}
-                  </button>
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
-      )}
+      {/* Results */}
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {filteredResults.map((recipe) => (
+          <Link
+            key={recipe.slug}
+            href={`/recipes/${recipe.slug}`}
+            className="block p-6 border border-neutral-200 rounded-lg hover:shadow-lg transition-shadow"
+          >
+            <div className="text-4xl mb-4">{recipe.icon}</div>
+            <h3 className="text-xl font-semibold text-neutral-800 mb-2">
+              {recipe.name}
+            </h3>
+          </Link>
+        ))}
+      </div>
     </div>
   );
 };

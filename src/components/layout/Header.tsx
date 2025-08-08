@@ -1,240 +1,180 @@
 'use client';
 
-import { Button } from '@/components/ui/Button';
-import { Icon } from '@/components/ui/Icon';
-import { Input } from '@/components/ui/Input';
-import { cn } from '@/utils';
 import Link from 'next/link';
-import { useRouter } from 'next/navigation';
-import React, { useEffect, useState } from 'react';
+import { usePathname } from 'next/navigation';
+import { useState } from 'react';
 
-interface HeaderProps {
-  className?: string;
-}
-
-const Header: React.FC<HeaderProps> = ({ className }) => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isDarkMode, setIsDarkMode] = useState(false);
-  const [searchQuery, setSearchQuery] = useState('');
-  const router = useRouter();
-
-  // Initialize theme from localStorage or system preference
-  useEffect(() => {
-    const savedTheme = localStorage.getItem('theme');
-    const systemPrefersDark = window.matchMedia(
-      '(prefers-color-scheme: dark)'
-    ).matches;
-
-    if (savedTheme === 'dark' || (!savedTheme && systemPrefersDark)) {
-      setIsDarkMode(true);
-      document.documentElement.classList.add('dark');
-    } else {
-      setIsDarkMode(false);
-      document.documentElement.classList.remove('dark');
-    }
-  }, []);
-
-  const toggleTheme = () => {
-    const newTheme = !isDarkMode;
-    setIsDarkMode(newTheme);
-
-    if (newTheme) {
-      document.documentElement.classList.add('dark');
-      localStorage.setItem('theme', 'dark');
-    } else {
-      document.documentElement.classList.remove('dark');
-      localStorage.setItem('theme', 'light');
-    }
-  };
-
-  const handleSearch = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (searchQuery.trim()) {
-      router.push(`/search?q=${encodeURIComponent(searchQuery.trim())}`);
-      setSearchQuery('');
-    }
-  };
-
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
-  };
-
-  const closeMenu = () => {
-    setIsMenuOpen(false);
-  };
+const Header = () => {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const pathname = usePathname();
 
   const navigationItems = [
-    { href: '/', label: 'Home', icon: 'home' as const },
-    { href: '/recipes', label: 'All Recipes', icon: 'chef' as const },
-    { href: '/recipes/desserts', label: 'Desserts', icon: 'cookie' as const },
+    { name: 'Home', href: '/', current: pathname === '/' },
+    { name: 'All Recipes', href: '/recipes', current: pathname === '/recipes' },
     {
-      href: '/recipes/main-dishes',
-      label: 'Main Dishes',
-      icon: 'apple' as const,
+      name: 'Donut Recipe',
+      href: '/recipes/donut',
+      current: pathname === '/recipes/donut',
     },
-    { href: '/cooking-events', label: 'Events', icon: 'sparkles' as const },
-    { href: '/guides', label: 'Guides', icon: 'book' as const },
+    {
+      name: 'Burger Recipe',
+      href: '/recipes/burger',
+      current: pathname === '/recipes/burger',
+    },
+    {
+      name: 'Pizza Recipe',
+      href: '/recipes/pizza',
+      current: pathname === '/recipes/pizza',
+    },
+    {
+      name: 'Cake Recipe',
+      href: '/recipes/cake',
+      current: pathname === '/recipes/cake',
+    },
+    {
+      name: 'Ice Cream Recipe',
+      href: '/recipes/ice-cream',
+      current: pathname === '/recipes/ice-cream',
+    },
+    {
+      name: 'Sushi Recipe',
+      href: '/recipes/sushi',
+      current: pathname === '/recipes/sushi',
+    },
+    {
+      name: 'Hot Dog Recipe',
+      href: '/recipes/hot-dog',
+      current: pathname === '/recipes/hot-dog',
+    },
+    {
+      name: 'Waffle Recipe',
+      href: '/recipes/waffle',
+      current: pathname === '/recipes/waffle',
+    },
+    {
+      name: 'Pie Recipe',
+      href: '/recipes/pie',
+      current: pathname === '/recipes/pie',
+    },
+    {
+      name: 'Sandwich Recipe',
+      href: '/recipes/sandwich',
+      current: pathname === '/recipes/sandwich',
+    },
+    {
+      name: 'Salad Recipe',
+      href: '/recipes/salad',
+      current: pathname === '/recipes/salad',
+    },
+    {
+      name: 'Soup Recipe',
+      href: '/recipes/soup',
+      current: pathname === '/recipes/soup',
+    },
+    { name: 'Search', href: '/search', current: pathname === '/search' },
   ];
 
   return (
-    <header
-      className={cn(
-        'sticky top-0 z-50 w-full border-b border-gray-200 dark:border-gray-800',
-        'bg-white/95 dark:bg-dark-900/95 backdrop-blur-sm',
-        'shadow-sm',
-        className
-      )}
-    >
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16">
+    <header className="nav-glass sticky top-0 z-50">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between items-center h-20">
           {/* Logo */}
           <div className="flex items-center">
-            <Link
-              href="/"
-              className="flex items-center space-x-2 text-xl font-bold text-primary-600 dark:text-primary-400 hover:text-primary-700 dark:hover:text-primary-300 transition-colors"
-            >
-              <Icon name="leaf" size="lg" variant="game" />
-              <span className="hidden sm:inline font-orbitron">
-                Grow a Garden Recipes
-              </span>
-              <span className="sm:hidden font-orbitron">GAG Recipes</span>
+            <Link href="/" className="flex items-center space-x-4 group">
+              <div className="w-12 h-12 bg-gradient-primary rounded-2xl flex items-center justify-center text-white text-2xl font-bold shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-110">
+                🍳
+              </div>
+              <div className="hidden sm:block">
+                <h1 className="text-2xl font-display font-bold text-gradient-primary">
+                  Grow a Garden Recipes
+                </h1>
+                <p className="text-sm text-neutral-500">
+                  Complete Cooking Guide
+                </p>
+              </div>
             </Link>
           </div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center space-x-8">
-            {navigationItems.map(item => (
+          <nav className="hidden lg:flex items-center space-x-2">
+            {navigationItems.map((item) => (
               <Link
-                key={item.href}
+                key={item.name}
                 href={item.href}
-                className="nav-link flex items-center space-x-1"
+                className={`px-4 py-3 rounded-xl text-sm font-medium transition-all duration-300 hover:bg-primary-50 hover:text-primary-700 hover:scale-105 ${
+                  item.current
+                    ? 'bg-primary-100 text-primary-700 shadow-md'
+                    : 'text-neutral-700 hover:text-primary-600'
+                }`}
               >
-                <Icon name={item.icon} size="sm" />
-                <span>{item.label}</span>
+                {item.name}
               </Link>
             ))}
           </nav>
 
-          {/* Search Bar - Desktop */}
-          <div className="hidden md:block flex-1 max-w-md mx-8">
-            <form onSubmit={handleSearch}>
-              <Input
-                type="search"
-                placeholder="Search recipes..."
-                variant="search"
-                value={searchQuery}
-                onChange={e => setSearchQuery(e.target.value)}
-                leftIcon={<Icon name="search" size="sm" />}
-                className="w-full"
-              />
-            </form>
+          {/* Mobile menu button */}
+          <div className="lg:hidden">
+            <button
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              className="inline-flex items-center justify-center p-3 rounded-xl text-neutral-700 hover:text-primary-600 hover:bg-primary-50 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-primary-500 transition-all duration-300"
+            >
+              <span className="sr-only">Open main menu</span>
+              {isMobileMenuOpen ? (
+                <svg
+                  className="block h-6 w-6"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M6 18L18 6M6 6l12 12"
+                  />
+                </svg>
+              ) : (
+                <svg
+                  className="block h-6 w-6"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M4 6h16M4 12h16M4 18h16"
+                  />
+                </svg>
+              )}
+            </button>
           </div>
-
-          {/* Right side actions */}
-          <div className="flex items-center space-x-2">
-            {/* Theme Toggle */}
-            <Button
-              variant="ghost"
-              size="sm"
-              onClick={toggleTheme}
-              className="p-2"
-              aria-label={
-                isDarkMode ? 'Switch to light mode' : 'Switch to dark mode'
-              }
-            >
-              <Icon
-                name={isDarkMode ? 'sun' : 'moon'}
-                size="sm"
-                className="transition-transform duration-200"
-              />
-            </Button>
-
-            {/* Mobile Search Button */}
-            <Button
-              variant="ghost"
-              size="sm"
-              className="md:hidden p-2"
-              onClick={() => {
-                // TODO: Implement mobile search modal in future task
-              }}
-              aria-label="Search"
-            >
-              <Icon name="search" size="sm" />
-            </Button>
-
-            {/* Mobile Menu Button */}
-            <Button
-              variant="ghost"
-              size="sm"
-              className="lg:hidden p-2"
-              onClick={toggleMenu}
-              aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
-            >
-              <Icon name={isMenuOpen ? 'close' : 'menu'} size="sm" />
-            </Button>
-          </div>
-        </div>
-
-        {/* Mobile Search Bar */}
-        <div className="md:hidden pb-4">
-          <form onSubmit={handleSearch}>
-            <Input
-              type="search"
-              placeholder="Search recipes..."
-              variant="search"
-              value={searchQuery}
-              onChange={e => setSearchQuery(e.target.value)}
-              leftIcon={<Icon name="search" size="sm" />}
-              className="w-full"
-            />
-          </form>
         </div>
       </div>
 
-      {/* Mobile Navigation Menu */}
-      {isMenuOpen && (
-        <>
-          {/* Backdrop */}
-          <div
-            className="fixed inset-0 bg-black bg-opacity-50 z-40 lg:hidden"
-            onClick={closeMenu}
-          />
-
-          {/* Sidebar */}
-          <div className="fixed top-0 right-0 h-full w-64 bg-white dark:bg-dark-900 shadow-xl z-50 lg:hidden transform transition-transform duration-300 ease-in-out">
-            <div className="flex items-center justify-between p-4 border-b border-gray-200 dark:border-gray-800">
-              <span className="text-lg font-semibold text-gray-900 dark:text-gray-100">
-                Menu
-              </span>
-              <Button
-                variant="ghost"
-                size="sm"
-                onClick={closeMenu}
-                className="p-2"
-                aria-label="Close menu"
+      {/* Mobile menu */}
+      {isMobileMenuOpen && (
+        <div className="lg:hidden glass border-t border-neutral-200/20">
+          <div className="px-4 pt-4 pb-6 space-y-2">
+            {navigationItems.map((item) => (
+              <Link
+                key={item.name}
+                href={item.href}
+                className={`block px-4 py-3 rounded-xl text-base font-medium transition-all duration-300 ${
+                  item.current
+                    ? 'bg-primary-100 text-primary-700'
+                    : 'text-neutral-700 hover:text-primary-600 hover:bg-primary-50'
+                }`}
+                onClick={() => setIsMobileMenuOpen(false)}
               >
-                <Icon name="close" size="sm" />
-              </Button>
-            </div>
-
-            <nav className="p-4">
-              <ul className="space-y-2">
-                {navigationItems.map(item => (
-                  <li key={item.href}>
-                    <Link
-                      href={item.href}
-                      onClick={closeMenu}
-                      className="flex items-center space-x-3 px-3 py-2 rounded-lg text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 hover:text-primary-600 dark:hover:text-primary-400 transition-colors"
-                    >
-                      <Icon name={item.icon} size="sm" />
-                      <span>{item.label}</span>
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </nav>
+                {item.name}
+              </Link>
+            ))}
           </div>
-        </>
+        </div>
       )}
     </header>
   );
