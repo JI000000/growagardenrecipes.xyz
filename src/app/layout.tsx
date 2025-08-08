@@ -1,77 +1,31 @@
 import type { Metadata } from 'next';
-import { Inter, Orbitron } from 'next/font/google';
 import './globals.css';
 
-const inter = Inter({
-  subsets: ['latin'],
-  variable: '--font-inter',
-  display: 'swap',
-});
-
-const orbitron = Orbitron({
-  subsets: ['latin'],
-  variable: '--font-orbitron',
-  display: 'swap',
-});
-
 export const metadata: Metadata = {
-  title: 'Grow a Garden Recipes - Complete Roblox Cooking Guide',
+  metadataBase: new URL('https://growagardenrecipes.xyz'),
+  title: {
+    default: 'Grow a Garden Recipes - Complete Roblox Cooking Guide',
+    template: '%s | Grow a Garden Recipes',
+  },
   description:
-    "Master every recipe in Roblox's most popular cooking game. Find detailed cooking guides, ingredients, and step-by-step instructions for all Grow a Garden recipes.",
+    'Master every recipe in Roblox Grow a Garden! Complete cooking guide with ingredients, cooking times, and step-by-step instructions for all recipes including donut, burger, pizza, cake, and more.',
   keywords: [
     'grow a garden recipes',
-    'roblox cooking recipes',
+    'roblox grow a garden cooking',
+    'grow a garden donut recipe',
+    'grow a garden burger recipe',
+    'grow a garden pizza recipe',
+    'grow a garden cake recipe',
+    'how to make donut in grow a garden',
+    'how to make burger in grow a garden',
+    'how to make pizza in grow a garden',
     'grow a garden cooking guide',
-    'roblox recipes',
-    'cooking recipes grow a garden',
-    'donut recipe grow a garden',
-    'burger recipe grow a garden',
-    'pizza recipe grow a garden',
-    'cake recipe grow a garden',
-    'ice cream recipe grow a garden',
-    'sushi recipe grow a garden',
+    'chris p kitchen recipes',
+    'grow a garden cooking event',
   ],
-  authors: [{ name: 'Grow a Garden Recipes' }],
+  authors: [{ name: 'Grow a Garden Recipes Team' }],
   creator: 'Grow a Garden Recipes',
   publisher: 'Grow a Garden Recipes',
-  formatDetection: {
-    email: false,
-    address: false,
-    telephone: false,
-  },
-  icons: {
-    icon: [
-      { url: '/favicon.ico', sizes: '32x32', type: 'image/x-icon' },
-      { url: '/favicon.svg', type: 'image/svg+xml' },
-    ],
-    apple: [
-      { url: '/favicon.svg', sizes: '180x180', type: 'image/svg+xml' },
-    ],
-  },
-  openGraph: {
-    title: 'Grow a Garden Recipes - Complete Roblox Cooking Guide',
-    description:
-      "Master every recipe in Roblox's most popular cooking game. Find detailed cooking guides, ingredients, and step-by-step instructions for all Grow a Garden recipes.",
-    url: 'https://growagardenrecipes.xyz',
-    siteName: 'Grow a Garden Recipes',
-    locale: 'en_US',
-    type: 'website',
-    images: [
-      {
-        url: '/images/og-image.png',
-        width: 1200,
-        height: 630,
-        alt: 'Grow a Garden Recipes - Complete Roblox Cooking Guide',
-      },
-    ],
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Grow a Garden Recipes - Complete Roblox Cooking Guide',
-    description:
-      "Master every recipe in Roblox's most popular cooking game. Find detailed cooking guides, ingredients, and step-by-step instructions for all Grow a Garden recipes.",
-    images: ['/images/og-image.png'],
-  },
   robots: {
     index: true,
     follow: true,
@@ -83,8 +37,35 @@ export const metadata: Metadata = {
       'max-snippet': -1,
     },
   },
+  openGraph: {
+    type: 'website',
+    locale: 'en_US',
+    url: 'https://growagardenrecipes.xyz',
+    siteName: 'Grow a Garden Recipes',
+    title: 'Grow a Garden Recipes - Complete Roblox Cooking Guide',
+    description:
+      'Master every recipe in Roblox Grow a Garden! Complete cooking guide with ingredients, cooking times, and step-by-step instructions.',
+    images: [
+      {
+        url: '/images/og-image.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Grow a Garden Recipes - Complete Cooking Guide',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Grow a Garden Recipes - Complete Roblox Cooking Guide',
+    description:
+      'Master every recipe in Roblox Grow a Garden! Complete cooking guide with ingredients, cooking times, and step-by-step instructions.',
+    images: ['/images/og-image.jpg'],
+  },
   verification: {
     google: 'your-google-verification-code',
+  },
+  alternates: {
+    canonical: 'https://growagardenrecipes.xyz',
   },
 };
 
@@ -94,8 +75,54 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${inter.variable} ${orbitron.variable}`}>
-      <body className={`${inter.className} antialiased`}>{children}</body>
+    <html lang="en" className="scroll-smooth">
+      <head>
+        <link rel="icon" href="/favicon.ico" />
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+        <link rel="manifest" href="/manifest.json" />
+        <meta name="theme-color" content="#22c55e" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        {/* Google Analytics */}
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-TXQE4RNH1X"></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-TXQE4RNH1X');
+            `,
+          }}
+        />
+
+        {/* Google AdSense */}
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9751155071098091" crossOrigin="anonymous"></script>
+
+        {/* Structured Data for Recipe Website */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'WebSite',
+              name: 'Grow a Garden Recipes',
+              url: 'https://growagardenrecipes.xyz',
+              description:
+                'Complete Roblox Grow a Garden cooking recipes guide',
+              potentialAction: {
+                '@type': 'SearchAction',
+                target:
+                  'https://growagardenrecipes.xyz/search?q={search_term_string}',
+                'query-input': 'required name=search_term_string',
+              },
+            }),
+          }}
+        />
+      </head>
+      <body className="antialiased">
+        <div className="min-h-screen flex flex-col">{children}</div>
+      </body>
     </html>
   );
 }
