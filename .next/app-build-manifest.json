@@ -1,66 +1,30 @@
 {
   "pages": {
-    "/_not-found/page": [
-      "static/chunks/webpack-616e068a201ad621.js",
-      "static/chunks/fd9d1056-6b6ff3bd80b2326c.js",
-      "static/chunks/117-b74aa6f6864fc5b7.js",
-      "static/chunks/main-app-50b16555bfdb666a.js",
-      "static/chunks/app/_not-found/page-c608f578a02c4bf5.js"
+    "/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/page.js"
     ],
     "/layout": [
-      "static/chunks/webpack-616e068a201ad621.js",
-      "static/chunks/fd9d1056-6b6ff3bd80b2326c.js",
-      "static/chunks/117-b74aa6f6864fc5b7.js",
-      "static/chunks/main-app-50b16555bfdb666a.js",
-      "static/css/a5012fccae0d5c2f.css",
-      "static/chunks/app/layout-89ff3253c436cfc3.js"
-    ],
-    "/search/page": [
-      "static/chunks/webpack-616e068a201ad621.js",
-      "static/chunks/fd9d1056-6b6ff3bd80b2326c.js",
-      "static/chunks/117-b74aa6f6864fc5b7.js",
-      "static/chunks/main-app-50b16555bfdb666a.js",
-      "static/chunks/448-5d85ad57c5b5b388.js",
-      "static/chunks/54-d8352acc5b1cfbe8.js",
-      "static/chunks/app/search/page-db6ec08f4cda46af.js"
-    ],
-    "/page": [
-      "static/chunks/webpack-616e068a201ad621.js",
-      "static/chunks/fd9d1056-6b6ff3bd80b2326c.js",
-      "static/chunks/117-b74aa6f6864fc5b7.js",
-      "static/chunks/main-app-50b16555bfdb666a.js",
-      "static/chunks/448-5d85ad57c5b5b388.js",
-      "static/chunks/137-f735fe7b76a5d54b.js",
-      "static/chunks/54-d8352acc5b1cfbe8.js",
-      "static/chunks/app/page-3db1b2a27a0c9e11.js"
-    ],
-    "/how-to-make-donut-in-grow-a-garden/page": [
-      "static/chunks/webpack-616e068a201ad621.js",
-      "static/chunks/fd9d1056-6b6ff3bd80b2326c.js",
-      "static/chunks/117-b74aa6f6864fc5b7.js",
-      "static/chunks/main-app-50b16555bfdb666a.js",
-      "static/chunks/448-5d85ad57c5b5b388.js",
-      "static/chunks/137-f735fe7b76a5d54b.js",
-      "static/chunks/54-d8352acc5b1cfbe8.js",
-      "static/chunks/app/how-to-make-donut-in-grow-a-garden/page-438dc38e194b1775.js"
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/layout.css",
+      "static/chunks/app/layout.js"
     ],
     "/recipes/page": [
-      "static/chunks/webpack-616e068a201ad621.js",
-      "static/chunks/fd9d1056-6b6ff3bd80b2326c.js",
-      "static/chunks/117-b74aa6f6864fc5b7.js",
-      "static/chunks/main-app-50b16555bfdb666a.js",
-      "static/chunks/448-5d85ad57c5b5b388.js",
-      "static/chunks/54-d8352acc5b1cfbe8.js",
-      "static/chunks/app/recipes/page-bd362201af8e57a9.js"
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/recipes/page.js"
     ],
     "/recipes/[slug]/page": [
-      "static/chunks/webpack-616e068a201ad621.js",
-      "static/chunks/fd9d1056-6b6ff3bd80b2326c.js",
-      "static/chunks/117-b74aa6f6864fc5b7.js",
-      "static/chunks/main-app-50b16555bfdb666a.js",
-      "static/chunks/448-5d85ad57c5b5b388.js",
-      "static/chunks/54-d8352acc5b1cfbe8.js",
-      "static/chunks/app/recipes/[slug]/page-e46e5d05160b98ac.js"
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/recipes/[slug]/page.js"
+    ],
+    "/how-to-make-donut-in-grow-a-garden/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/how-to-make-donut-in-grow-a-garden/page.js"
     ]
   }
 }

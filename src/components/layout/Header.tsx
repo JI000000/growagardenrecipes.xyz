@@ -11,12 +11,66 @@ const Header = () => {
   const navigationItems = [
     { name: 'Home', href: '/', current: pathname === '/' },
     { name: 'All Recipes', href: '/recipes', current: pathname === '/recipes' },
-    { name: 'Donut Recipe', href: '/recipes/donut', current: pathname === '/recipes/donut' },
-    { name: 'Burger Recipe', href: '/recipes/burger', current: pathname === '/recipes/burger' },
-    { name: 'Pizza Recipe', href: '/recipes/pizza', current: pathname === '/recipes/pizza' },
-    { name: 'Cake Recipe', href: '/recipes/cake', current: pathname === '/recipes/cake' },
-    { name: 'Ice Cream Recipe', href: '/recipes/ice-cream', current: pathname === '/recipes/ice-cream' },
-    { name: 'Sushi Recipe', href: '/recipes/sushi', current: pathname === '/recipes/sushi' },
+    {
+      name: 'Donut Recipe',
+      href: '/recipes/donut',
+      current: pathname === '/recipes/donut',
+    },
+    {
+      name: 'Burger Recipe',
+      href: '/recipes/burger',
+      current: pathname === '/recipes/burger',
+    },
+    {
+      name: 'Pizza Recipe',
+      href: '/recipes/pizza',
+      current: pathname === '/recipes/pizza',
+    },
+    {
+      name: 'Cake Recipe',
+      href: '/recipes/cake',
+      current: pathname === '/recipes/cake',
+    },
+    {
+      name: 'Ice Cream Recipe',
+      href: '/recipes/ice-cream',
+      current: pathname === '/recipes/ice-cream',
+    },
+    {
+      name: 'Sushi Recipe',
+      href: '/recipes/sushi',
+      current: pathname === '/recipes/sushi',
+    },
+    {
+      name: 'Hot Dog Recipe',
+      href: '/recipes/hot-dog',
+      current: pathname === '/recipes/hot-dog',
+    },
+    {
+      name: 'Waffle Recipe',
+      href: '/recipes/waffle',
+      current: pathname === '/recipes/waffle',
+    },
+    {
+      name: 'Pie Recipe',
+      href: '/recipes/pie',
+      current: pathname === '/recipes/pie',
+    },
+    {
+      name: 'Sandwich Recipe',
+      href: '/recipes/sandwich',
+      current: pathname === '/recipes/sandwich',
+    },
+    {
+      name: 'Salad Recipe',
+      href: '/recipes/salad',
+      current: pathname === '/recipes/salad',
+    },
+    {
+      name: 'Soup Recipe',
+      href: '/recipes/soup',
+      current: pathname === '/recipes/soup',
+    },
     { name: 'Search', href: '/search', current: pathname === '/search' },
   ];
 
@@ -43,7 +97,7 @@ const Header = () => {
 
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center space-x-2">
-            {navigationItems.map(item => (
+            {navigationItems.map((item) => (
               <Link
                 key={item.name}
                 href={item.href}
@@ -105,7 +159,7 @@ const Header = () => {
       {isMobileMenuOpen && (
         <div className="lg:hidden glass border-t border-neutral-200/20">
           <div className="px-4 pt-4 pb-6 space-y-2">
-            {navigationItems.map(item => (
+            {navigationItems.map((item) => (
               <Link
                 key={item.name}
                 href={item.href}
