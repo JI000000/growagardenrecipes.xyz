@@ -1,6 +1,6 @@
 {
   "/recipes/page": "app/recipes/page.js",
+  "/recipes/[slug]/page": "app/recipes/[slug]/page.js",
   "/how-to-make-donut-in-grow-a-garden/page": "app/how-to-make-donut-in-grow-a-garden/page.js",
-  "/page": "app/page.js",
-  "/recipes/[slug]/page": "app/recipes/[slug]/page.js"
+  "/page": "app/page.js"
 }

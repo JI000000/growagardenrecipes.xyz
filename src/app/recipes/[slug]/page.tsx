@@ -50,7 +50,8 @@ const recipes = {
       'Divine: Mochi Mouse, Food Crates',
       'Prismatic: Pancake Stack Cosmetic, Taco Fern Seed',
     ],
-    chrisPCraving: 'Chris P loves donuts during dessert craving hours (usually evening)',
+    chrisPCraving:
+      'Chris P loves donuts during dessert craving hours (usually evening)',
     bestTime: 'Evening hours when Chris P shows dessert cravings',
     ingredientRarity: 'Works with Common to Prismatic ingredients',
   },
@@ -238,7 +239,8 @@ const recipes = {
       'Divine: Mochi Mouse, Food Crates',
       'Prismatic: Pancake Stack Cosmetic, Taco Fern Seed',
     ],
-    chrisPCraving: 'Chris P enjoys ice cream during hot weather or dessert hours',
+    chrisPCraving:
+      'Chris P enjoys ice cream during hot weather or dessert hours',
     bestTime: 'Hot weather periods or evening dessert cravings',
     ingredientRarity: 'Excellent with Common to Uncommon ingredients',
   },
@@ -560,7 +562,8 @@ const recipes = {
       'Divine: Mochi Mouse, Food Crates',
       'Prismatic: Pancake Stack Cosmetic, Taco Fern Seed',
     ],
-    chrisPCraving: 'Chris P enjoys soup during cold weather or comfort food hours',
+    chrisPCraving:
+      'Chris P enjoys soup during cold weather or comfort food hours',
     bestTime: 'Cold weather periods or comfort food cravings',
     ingredientRarity: 'Good with Common to Uncommon ingredients',
   },
