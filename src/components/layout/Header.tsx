@@ -1,21 +1,23 @@
 'use client';
 
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import { useState } from 'react';
 
 const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const pathname = usePathname();
 
   const navigationItems = [
-    { name: 'Home', href: '/', current: true },
-    { name: 'All Recipes', href: '/recipes', current: false },
-    { name: 'Donut Recipe', href: '/recipes/donut', current: false },
-    { name: 'Burger Recipe', href: '/recipes/burger', current: false },
-    { name: 'Pizza Recipe', href: '/recipes/pizza', current: false },
-    { name: 'Cake Recipe', href: '/recipes/cake', current: false },
-    { name: 'Ice Cream Recipe', href: '/recipes/ice-cream', current: false },
-    { name: 'Sushi Recipe', href: '/recipes/sushi', current: false },
-    { name: 'Search', href: '/search', current: false },
+    { name: 'Home', href: '/', current: pathname === '/' },
+    { name: 'All Recipes', href: '/recipes', current: pathname === '/recipes' },
+    { name: 'Donut Recipe', href: '/recipes/donut', current: pathname === '/recipes/donut' },
+    { name: 'Burger Recipe', href: '/recipes/burger', current: pathname === '/recipes/burger' },
+    { name: 'Pizza Recipe', href: '/recipes/pizza', current: pathname === '/recipes/pizza' },
+    { name: 'Cake Recipe', href: '/recipes/cake', current: pathname === '/recipes/cake' },
+    { name: 'Ice Cream Recipe', href: '/recipes/ice-cream', current: pathname === '/recipes/ice-cream' },
+    { name: 'Sushi Recipe', href: '/recipes/sushi', current: pathname === '/recipes/sushi' },
+    { name: 'Search', href: '/search', current: pathname === '/search' },
   ];
 
   return (

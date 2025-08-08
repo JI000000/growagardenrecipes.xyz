@@ -129,11 +129,11 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Popular Recipes */}
+          {/* Recipe Links */}
           <div>
-            <h4 className="text-lg font-semibold mb-4">Popular Recipes</h4>
+            <h4 className="text-lg font-semibold mb-4">Recipe Guides</h4>
             <ul className="space-y-2">
-              {footerLinks.recipes.slice(0, 6).map(link => (
+              {footerLinks.recipes.map((link) => (
                 <li key={link.name}>
                   <Link
                     href={link.href}
@@ -150,7 +150,7 @@ const Footer = () => {
           <div>
             <h4 className="text-lg font-semibold mb-4">How to Make</h4>
             <ul className="space-y-2">
-              {footerLinks.guides.map(link => (
+              {footerLinks.guides.map((link) => (
                 <li key={link.name}>
                   <Link
                     href={link.href}
@@ -167,7 +167,7 @@ const Footer = () => {
           <div>
             <h4 className="text-lg font-semibold mb-4">Resources</h4>
             <ul className="space-y-2">
-              {footerLinks.resources.map(link => (
+              {footerLinks.resources.map((link) => (
                 <li key={link.name}>
                   <Link
                     href={link.href}
@@ -182,9 +182,9 @@ const Footer = () => {
 
           {/* About */}
           <div>
-            <h4 className="text-lg font-semibold mb-4">About</h4>
+            <h4 className="text-lg font-semibold mb-4">About Us</h4>
             <ul className="space-y-2">
-              {footerLinks.about.map(link => (
+              {footerLinks.about.map((link) => (
                 <li key={link.name}>
                   <Link
                     href={link.href}
@@ -199,7 +199,7 @@ const Footer = () => {
         </div>
 
         {/* Bottom Section */}
-        <div className="border-t border-gray-800 mt-8 pt-8">
+        <div className="border-t border-gray-800 mt-12 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="text-center md:text-left mb-4 md:mb-0">
               <p className="text-gray-400 text-sm">
@@ -209,7 +209,7 @@ const Footer = () => {
                 Complete cooking recipe database for Roblox Grow a Garden game
               </p>
             </div>
-            <div className="flex items-center space-x-6">
+            <div className="flex space-x-6">
               <Link
                 href="/sitemap.xml"
                 className="text-gray-400 hover:text-white transition-colors text-sm"
@@ -222,12 +222,12 @@ const Footer = () => {
               >
                 Robots.txt
               </Link>
-              <a
-                href="https://growagardenrecipes.xyz/feed.xml"
+              <Link
+                href="/rss.xml"
                 className="text-gray-400 hover:text-white transition-colors text-sm"
               >
                 RSS Feed
-              </a>
+              </Link>
             </div>
           </div>
         </div>

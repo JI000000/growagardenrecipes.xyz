@@ -83,8 +83,14 @@ export default function RootLayout({
         <meta name="theme-color" content="#22c55e" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
 
+        {/* Google AdSense Meta Tag */}
+        <meta name="google-adsense-account" content="ca-pub-9751155071098091" />
+
         {/* Google Analytics */}
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-TXQE4RNH1X"></script>
+        <script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-TXQE4RNH1X"
+        ></script>
         <script
           dangerouslySetInnerHTML={{
             __html: `
@@ -97,7 +103,11 @@ export default function RootLayout({
         />
 
         {/* Google AdSense */}
-        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9751155071098091" crossOrigin="anonymous"></script>
+        <script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9751155071098091"
+          crossOrigin="anonymous"
+        ></script>
 
         {/* Structured Data for Recipe Website */}
         <script

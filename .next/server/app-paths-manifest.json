@@ -1,7 +1,8 @@
 {
   "/_not-found/page": "app/_not-found/page.js",
-  "/recipes/page": "app/recipes/page.js",
   "/search/page": "app/search/page.js",
   "/page": "app/page.js",
+  "/how-to-make-donut-in-grow-a-garden/page": "app/how-to-make-donut-in-grow-a-garden/page.js",
+  "/recipes/page": "app/recipes/page.js",
   "/recipes/[slug]/page": "app/recipes/[slug]/page.js"
 }

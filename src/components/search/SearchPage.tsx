@@ -22,7 +22,7 @@ export const SearchPage: React.FC<SearchPageProps> = ({ className }) => {
   const allData = [...popularRecipes, ...allRecipes];
   const filteredResults = query
     ? allData.filter(
-        item =>
+        (item) =>
           item.name.toLowerCase().includes(query.toLowerCase()) ||
           item.slug.toLowerCase().includes(query.toLowerCase())
       )
@@ -53,7 +53,7 @@ export const SearchPage: React.FC<SearchPageProps> = ({ className }) => {
 
       {/* Results */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {filteredResults.map(recipe => (
+        {filteredResults.map((recipe) => (
           <Link
             key={recipe.slug}
             href={`/recipes/${recipe.slug}`}
