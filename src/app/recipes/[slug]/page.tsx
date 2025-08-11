@@ -1,5 +1,3 @@
-import Footer from '@/components/layout/Footer';
-import Header from '@/components/layout/Header';
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 
@@ -15,6 +13,10 @@ const recipes = {
     cookingTime: '9 minutes 37 seconds',
     color: 'from-pink-400 to-red-400',
     potColor: 'Variable (depends on ingredients)',
+    chrisPCraving:
+      'Chris P loves donuts during dessert craving hours (usually evening)',
+    bestTime: 'Evening hours when Chris P shows dessert cravings',
+    ingredientRarity: 'Works with Common to Prismatic ingredients',
     ingredients: [
       '1x Strawberry, 1x Tomato, 1x Apple',
       '2x Corn, 1x Watermelon',
@@ -24,6 +26,14 @@ const recipes = {
       '1x Corn, 1x Spiked Mango',
       '1x Tomato, 1x Banana, 2x Corn',
       '2x Tomato, 1x Sugarglaze, 2x Rose',
+    ],
+    alternativeCombinations: [
+      'Common: Corn + Blueberry + Strawberry',
+      'Uncommon: Watermelon + Corn',
+      'Rare: Banana + Watermelon',
+      'Legendary: Sugar Apple + Corn + Tomato',
+      'Mythical: Spiked Mango + Corn',
+      'Divine: Sugarglaze + Rose + Tomato',
     ],
     instructions: [
       "Go to Chris P's Kitchen in the main plaza",
@@ -38,8 +48,8 @@ const recipes = {
       "Watch Chris P's cravings for better rewards",
       'Donuts are one of the most complex recipes to master',
       'Experiment with different ingredient combinations',
-      'Check pot color to confirm you are making the correct recipe',
-      'Donuts are best served when Chris P is craving sweets',
+      'Best served during dessert craving hours',
+      'Variable pot color indicates successful donut recipe',
     ],
     rewards: [
       'Common: Sheckles, Mutation Spray Burnt',
@@ -50,10 +60,8 @@ const recipes = {
       'Divine: Mochi Mouse, Food Crates',
       'Prismatic: Pancake Stack Cosmetic, Taco Fern Seed',
     ],
-    chrisPCraving:
-      'Chris P loves donuts during dessert craving hours (usually evening)',
-    bestTime: 'Evening hours when Chris P shows dessert cravings',
-    ingredientRarity: 'Works with Common to Prismatic ingredients',
+    strategy:
+      "Time-intensive sweet treat worth the wait. Use during Chris P's dessert cravings for maximum rewards.",
   },
   burger: {
     name: 'Burger Recipe',
@@ -64,6 +72,9 @@ const recipes = {
     cookingTime: '10 minutes 32 seconds',
     color: 'from-orange-400 to-red-400',
     potColor: 'Red',
+    chrisPCraving: 'Chris P craves burgers during main meal hours',
+    bestTime: 'Lunch and dinner hours',
+    ingredientRarity: 'Requires Rare to Prismatic ingredients for best results',
     ingredients: [
       '1x Pepper, 1x Corn, 1x Tomato',
       '2x Bell Pepper, 1x Violet Corn',
@@ -71,6 +82,14 @@ const recipes = {
       '1x Pepper, 1x Corn, 1x Tomato, 2x Beanstalk',
       '1x Sugar Apple, 1x Pepper, 1x Corn, 1x Tomato, 1x Sugar Apple',
       '1x Ember Lily, 2x Beanstalk, 1x Corn, 1x Artichoke',
+    ],
+    alternativeCombinations: [
+      'Basic: Pepper + Corn + Tomato',
+      'Uncommon: Bell Pepper + Violet Corn',
+      'Rare: Pepper + Corn + Tomato + Beanstalk',
+      'Legendary: Sugar Apple + Pepper + Corn + Tomato',
+      'Mythical: Ember Lily + Beanstalk + Corn',
+      'Divine: Bone Blossom + Beanstalk + Corn + Tomato',
     ],
     instructions: [
       "Visit Chris P's Kitchen in the main plaza",
@@ -85,8 +104,8 @@ const recipes = {
       'Use Legendary and Mythical ingredients for best results',
       'Perfect for when Chris P is craving burgers',
       'High-tier burgers give the best rewards',
-      'Red pot color confirms you are making a burger',
-      'Burgers are most effective during lunch craving hours',
+      'Red pot color confirms successful burger recipe',
+      'Most complex recipe requiring rare ingredients',
     ],
     rewards: [
       'Common: Sheckles, Mutation Spray Burnt',
@@ -97,9 +116,8 @@ const recipes = {
       'Divine: Mochi Mouse, Food Crates',
       'Prismatic: Pancake Stack Cosmetic, Taco Fern Seed',
     ],
-    chrisPCraving: 'Chris P craves burgers during lunch hours (midday)',
-    bestTime: 'Midday when Chris P shows main dish cravings',
-    ingredientRarity: 'Best results with Rare to Prismatic ingredients',
+    strategy:
+      'Most complex recipe requiring rare ingredients. Red pot indicates burger. Best during main meal cravings.',
   },
   pizza: {
     name: 'Pizza Recipe',
@@ -111,6 +129,9 @@ const recipes = {
     cookingTime: '7 minutes 36 seconds',
     color: 'from-yellow-400 to-orange-400',
     potColor: 'Red-Maroon',
+    chrisPCraving: 'Chris P enjoys pizza during dinner hours',
+    bestTime: 'Dinner hours when Chris P shows Italian food cravings',
+    ingredientRarity: 'Good results with Uncommon to Legendary ingredients',
     ingredients: [
       '1x Strawberry, 1x Pepper, 1x Corn, 1x Tomato',
       '2x Corn, 2x Apple, 1x Pepper',
@@ -118,6 +139,14 @@ const recipes = {
       '1x Cauliflower, 1x Paradise Petal, 2x Blood Banana, 1x Pepper',
       '1x Giant Pinecone, 1x Corn, 1x Apple, 1x Pepper, 1x Strawberry',
       '1x Bell Pepper, 1x Pepper, 1x Tomato, 1x Corn, 1x Pineapple',
+    ],
+    alternativeCombinations: [
+      'Basic: Strawberry + Pepper + Corn + Tomato',
+      'Uncommon: Corn + Apple + Pepper',
+      'Rare: Bell Pepper + Pepper + Tomato + Corn + Peach',
+      'Legendary: Cauliflower + Paradise Petal + Blood Banana + Pepper',
+      'Mythical: Giant Pinecone + Corn + Apple + Pepper + Strawberry',
+      'Divine: Bell Pepper + Pepper + Tomato + Corn + Pineapple',
     ],
     instructions: [
       "Head to Chris P's Kitchen in the main plaza",
@@ -144,9 +173,8 @@ const recipes = {
       'Divine: Mochi Mouse, Food Crates',
       'Prismatic: Pancake Stack Cosmetic, Taco Fern Seed',
     ],
-    chrisPCraving: 'Chris P enjoys pizza during dinner hours',
-    bestTime: 'Dinner hours when Chris P shows Italian food cravings',
-    ingredientRarity: 'Good results with Uncommon to Legendary ingredients',
+    strategy:
+      'Great mid-tier recipe for consistent rewards. Red-maroon pot indicates pizza. Perfect for beginners.',
   },
   cake: {
     name: 'Cake Recipe',
@@ -157,6 +185,9 @@ const recipes = {
     cookingTime: '5 minutes 55 seconds',
     color: 'from-purple-400 to-pink-400',
     potColor: 'Teal or Lemon Yellow',
+    chrisPCraving: 'Chris P loves cakes during dessert craving hours',
+    bestTime: 'Evening hours for dessert cravings',
+    ingredientRarity: 'Works well with Common to Rare ingredients',
     ingredients: [
       '2x Corn, 2x Strawberry',
       '2x Blueberry, 1x Corn, 1x Tomato',
@@ -165,6 +196,15 @@ const recipes = {
       '2x Corn, 2x Banana, 1x Watermelon',
       '1x Blueberry, 1x Grape, 1x Apple, 1x Corn',
       '2x Tomato, 2x Banana',
+    ],
+    alternativeCombinations: [
+      'Basic: Corn + Strawberry',
+      'Uncommon: Blueberry + Corn + Tomato',
+      'Rare: Banana + Strawberry + Pumpkin',
+      'Legendary: Corn + Watermelon',
+      'Mythical: Banana + Watermelon',
+      'Divine: Blueberry + Grape + Apple + Corn',
+      'Prismatic: Tomato + Banana',
     ],
     instructions: [
       "Go to Chris P's Kitchen in the main plaza",
@@ -191,9 +231,8 @@ const recipes = {
       'Divine: Mochi Mouse, Food Crates',
       'Prismatic: Pancake Stack Cosmetic, Taco Fern Seed',
     ],
-    chrisPCraving: 'Chris P loves cakes during dessert craving hours',
-    bestTime: 'Evening hours for dessert cravings',
-    ingredientRarity: 'Works well with Common to Rare ingredients',
+    strategy:
+      'Perfect for beginners. Teal or lemon yellow pot confirms cake. Great for quick rewards.',
   },
   'ice-cream': {
     name: 'Ice Cream Recipe',
@@ -204,6 +243,10 @@ const recipes = {
     cookingTime: '5 minutes 48 seconds',
     color: 'from-blue-400 to-purple-400',
     potColor: 'Yellow',
+    chrisPCraving:
+      'Chris P enjoys ice cream during hot weather or dessert hours',
+    bestTime: 'Hot weather periods or evening dessert cravings',
+    ingredientRarity: 'Excellent with Common to Uncommon ingredients',
     ingredients: [
       '1x Corn, 1x Blueberry',
       '1x Corn, 1x Strawberry',
@@ -213,6 +256,15 @@ const recipes = {
       '1x Corn, 1x Mango',
       '1x Corn, 1x Spiked Mango',
       '1x Banana, 1x Coconut',
+    ],
+    alternativeCombinations: [
+      'Basic: Corn + Blueberry',
+      'Uncommon: Corn + Strawberry',
+      'Rare: Corn + Raspberry',
+      'Legendary: Banana + Lingonberry',
+      'Mythical: Corn + Mango',
+      'Divine: Spiked Mango + Coconut',
+      'Prismatic: Banana + Coconut',
     ],
     instructions: [
       "Visit Chris P's Kitchen in the main plaza",
@@ -239,10 +291,8 @@ const recipes = {
       'Divine: Mochi Mouse, Food Crates',
       'Prismatic: Pancake Stack Cosmetic, Taco Fern Seed',
     ],
-    chrisPCraving:
-      'Chris P enjoys ice cream during hot weather or dessert hours',
-    bestTime: 'Hot weather periods or evening dessert cravings',
-    ingredientRarity: 'Excellent with Common to Uncommon ingredients',
+    strategy:
+      'One of the easiest recipes to master. Yellow pot indicates ice cream. Perfect for hot weather cravings.',
   },
   sushi: {
     name: 'Sushi Recipe',
@@ -253,6 +303,9 @@ const recipes = {
     cookingTime: '7 minutes 21 seconds',
     color: 'from-green-400 to-blue-400',
     potColor: 'Turquoise',
+    chrisPCraving: 'Chris P enjoys sushi during dinner hours',
+    bestTime: 'Dinner hours for Asian cuisine cravings',
+    ingredientRarity: 'Requires Rare bamboo, works with Uncommon to Legendary',
     ingredients: [
       '4x Bamboo, 1x Corn',
       '1x Bamboo, 2x Corn, 1x Spiked Mango',
@@ -260,6 +313,15 @@ const recipes = {
       '3x Bamboo, 1x Corn, 1x Maple Apple',
       '3x Bamboo, 1x Hive Fruit, 1x Corn',
       '1x Bamboo, 1x Lilac, 1x Lucky Bamboo, 1x Mango, 1x Violet Corn',
+    ],
+    alternativeCombinations: [
+      'Basic: Bamboo + Corn',
+      'Uncommon: Bamboo + Spiked Mango',
+      'Rare: Bamboo + Tomato + Corn',
+      'Legendary: Bamboo + Maple Apple + Corn',
+      'Mythical: Bamboo + Hive Fruit + Corn',
+      'Divine: Bamboo + Lilac + Lucky Bamboo + Mango + Violet Corn',
+      'Prismatic: Bamboo + Lilac + Lucky Bamboo + Mango + Violet Corn',
     ],
     instructions: [
       "Go to Chris P's Kitchen in the main plaza",
@@ -286,9 +348,8 @@ const recipes = {
       'Divine: Mochi Mouse, Food Crates',
       'Prismatic: Pancake Stack Cosmetic, Taco Fern Seed',
     ],
-    chrisPCraving: 'Chris P enjoys sushi during dinner hours',
-    bestTime: 'Dinner hours for Asian cuisine cravings',
-    ingredientRarity: 'Requires Rare bamboo, works with Uncommon to Legendary',
+    strategy:
+      'Requires Rare bamboo. Turquoise pot confirms sushi. Perfect for Asian cuisine cravings.',
   },
   'hot-dog': {
     name: 'Hot Dog Recipe',
@@ -299,6 +360,9 @@ const recipes = {
     cookingTime: '6 minutes 45 seconds',
     color: 'from-red-400 to-orange-400',
     potColor: 'Tan',
+    chrisPCraving: 'Chris P enjoys hot dogs during lunch or snack hours',
+    bestTime: 'Lunch hours or snack craving periods',
+    ingredientRarity: 'Good with Common to Rare ingredients',
     ingredients: [
       '1x Pepper, 1x Corn, 1x Tomato',
       '2x Corn, 1x Bell Pepper',
@@ -306,6 +370,14 @@ const recipes = {
       '1x Corn, 1x Tomato, 1x Pepper, 1x Bone Blossom',
       '1x Corn, 1x Tomato, 1x Pepper, 1x Sugar Apple',
       '1x Corn, 1x Tomato, 1x Pepper, 1x Ember Lily',
+    ],
+    alternativeCombinations: [
+      'Basic: Pepper + Corn + Tomato',
+      'Uncommon: Corn + Bell Pepper',
+      'Rare: Corn + Tomato + Pepper + Beanstalk',
+      'Legendary: Corn + Tomato + Pepper + Bone Blossom',
+      'Mythical: Corn + Tomato + Pepper + Sugar Apple',
+      'Divine: Corn + Tomato + Pepper + Ember Lily',
     ],
     instructions: [
       "Visit Chris P's Kitchen in the main plaza",
@@ -332,9 +404,8 @@ const recipes = {
       'Divine: Mochi Mouse, Food Crates',
       'Prismatic: Pancake Stack Cosmetic, Taco Fern Seed',
     ],
-    chrisPCraving: 'Chris P enjoys hot dogs during lunch or snack hours',
-    bestTime: 'Lunch hours or snack craving periods',
-    ingredientRarity: 'Good with Common to Rare ingredients',
+    strategy:
+      'Great mid-tier recipe for consistent rewards. Tan pot indicates hot dog. Perfect for quick meals.',
   },
   waffle: {
     name: 'Waffle Recipe',
@@ -345,6 +416,9 @@ const recipes = {
     cookingTime: '5 minutes 30 seconds',
     color: 'from-yellow-400 to-amber-400',
     potColor: 'Various (depends on ingredients)',
+    chrisPCraving: 'Chris P loves waffles during breakfast hours',
+    bestTime: 'Morning hours for breakfast cravings',
+    ingredientRarity: 'Excellent with Common to Uncommon ingredients',
     ingredients: [
       '2x Corn, 1x Strawberry',
       '2x Corn, 1x Blueberry',
@@ -352,6 +426,14 @@ const recipes = {
       '2x Corn, 1x Apple',
       '2x Corn, 1x Watermelon',
       '2x Corn, 1x Mango',
+    ],
+    alternativeCombinations: [
+      'Basic: Corn + Strawberry',
+      'Uncommon: Corn + Blueberry',
+      'Rare: Corn + Banana',
+      'Legendary: Corn + Apple',
+      'Mythical: Corn + Watermelon',
+      'Divine: Corn + Mango',
     ],
     instructions: [
       "Go to Chris P's Kitchen in the main plaza",
@@ -378,9 +460,8 @@ const recipes = {
       'Divine: Mochi Mouse, Food Crates',
       'Prismatic: Pancake Stack Cosmetic, Taco Fern Seed',
     ],
-    chrisPCraving: 'Chris P loves waffles during breakfast hours',
-    bestTime: 'Morning hours for breakfast cravings',
-    ingredientRarity: 'Excellent with Common to Uncommon ingredients',
+    strategy:
+      'Perfect for beginners. Use sweet fruits for better waffle quality. Great for breakfast cravings.',
   },
   pie: {
     name: 'Pie Recipe',
@@ -391,6 +472,9 @@ const recipes = {
     cookingTime: '7 minutes 15 seconds',
     color: 'from-orange-400 to-red-400',
     potColor: 'Green',
+    chrisPCraving: 'Chris P enjoys pies during dessert hours',
+    bestTime: 'Evening hours for dessert cravings',
+    ingredientRarity: 'Good with Common to Rare ingredients',
     ingredients: [
       '2x Corn, 2x Apple',
       '2x Corn, 2x Strawberry',
@@ -398,6 +482,14 @@ const recipes = {
       '2x Corn, 2x Banana',
       '2x Corn, 2x Peach',
       '2x Corn, 2x Cherry',
+    ],
+    alternativeCombinations: [
+      'Basic: Corn + Apple',
+      'Uncommon: Corn + Strawberry',
+      'Rare: Corn + Blueberry',
+      'Legendary: Corn + Banana',
+      'Mythical: Corn + Peach',
+      'Divine: Corn + Cherry',
     ],
     instructions: [
       "Visit Chris P's Kitchen in the main plaza",
@@ -424,9 +516,8 @@ const recipes = {
       'Divine: Mochi Mouse, Food Crates',
       'Prismatic: Pancake Stack Cosmetic, Taco Fern Seed',
     ],
-    chrisPCraving: 'Chris P enjoys pies during dessert hours',
-    bestTime: 'Evening hours for dessert cravings',
-    ingredientRarity: 'Good with Common to Rare ingredients',
+    strategy:
+      'Great for dessert cravings. Green pot confirms pie. Perfect for special occasions.',
   },
   sandwich: {
     name: 'Sandwich Recipe',
@@ -437,6 +528,9 @@ const recipes = {
     cookingTime: '5 minutes 20 seconds',
     color: 'from-green-400 to-yellow-400',
     potColor: 'Orange',
+    chrisPCraving: 'Chris P enjoys sandwiches during lunch hours',
+    bestTime: 'Lunch hours for quick meal cravings',
+    ingredientRarity: 'Excellent with Common ingredients',
     ingredients: [
       '1x Corn, 1x Tomato, 1x Pepper',
       '1x Corn, 1x Tomato, 1x Bell Pepper',
@@ -444,6 +538,14 @@ const recipes = {
       '1x Corn, 1x Tomato, 1x Strawberry',
       '1x Corn, 1x Tomato, 1x Banana',
       '1x Corn, 1x Tomato, 1x Blueberry',
+    ],
+    alternativeCombinations: [
+      'Basic: Corn + Tomato + Pepper',
+      'Uncommon: Corn + Tomato + Bell Pepper',
+      'Rare: Corn + Tomato + Apple',
+      'Legendary: Corn + Tomato + Strawberry',
+      'Mythical: Corn + Tomato + Banana',
+      'Divine: Corn + Tomato + Blueberry',
     ],
     instructions: [
       "Go to Chris P's Kitchen in the main plaza",
@@ -470,9 +572,8 @@ const recipes = {
       'Divine: Mochi Mouse, Food Crates',
       'Prismatic: Pancake Stack Cosmetic, Taco Fern Seed',
     ],
-    chrisPCraving: 'Chris P enjoys sandwiches during lunch hours',
-    bestTime: 'Lunch hours for quick meal cravings',
-    ingredientRarity: 'Excellent with Common ingredients',
+    strategy:
+      'Perfect for beginners. Use fresh vegetables for better quality. Great for quick meals.',
   },
   salad: {
     name: 'Salad Recipe',
@@ -483,6 +584,9 @@ const recipes = {
     cookingTime: '4 minutes 50 seconds',
     color: 'from-green-400 to-emerald-400',
     potColor: 'Red',
+    chrisPCraving: 'Chris P enjoys salads during healthy meal hours',
+    bestTime: 'Any time for healthy meal cravings',
+    ingredientRarity: 'Perfect with Common ingredients',
     ingredients: [
       '2x Tomato, 1x Corn',
       '2x Bell Pepper, 1x Corn',
@@ -490,6 +594,14 @@ const recipes = {
       '2x Strawberry, 1x Corn',
       '2x Blueberry, 1x Corn',
       '2x Banana, 1x Corn',
+    ],
+    alternativeCombinations: [
+      'Basic: Tomato + Corn',
+      'Uncommon: Bell Pepper + Corn',
+      'Rare: Apple + Corn',
+      'Legendary: Strawberry + Corn',
+      'Mythical: Blueberry + Corn',
+      'Divine: Banana + Corn',
     ],
     instructions: [
       "Visit Chris P's Kitchen in the main plaza",
@@ -516,9 +628,8 @@ const recipes = {
       'Divine: Mochi Mouse, Food Crates',
       'Prismatic: Pancake Stack Cosmetic, Taco Fern Seed',
     ],
-    chrisPCraving: 'Chris P enjoys salads during healthy meal hours',
-    bestTime: 'Any time for healthy meal cravings',
-    ingredientRarity: 'Perfect with Common ingredients',
+    strategy:
+      'Perfect for health-conscious players. Red pot confirms salad. Quick preparation and consistent rewards.',
   },
   soup: {
     name: 'Soup Recipe',
@@ -529,6 +640,10 @@ const recipes = {
     cookingTime: '6 minutes 30 seconds',
     color: 'from-orange-400 to-red-400',
     potColor: 'Any Color',
+    chrisPCraving:
+      'Chris P enjoys soup during cold weather or comfort food hours',
+    bestTime: 'Cold weather periods or comfort food cravings',
+    ingredientRarity: 'Good with Common to Uncommon ingredients',
     ingredients: [
       '2x Corn, 1x Tomato, 1x Pepper',
       '2x Corn, 1x Tomato, 1x Bell Pepper',
@@ -536,6 +651,14 @@ const recipes = {
       '2x Corn, 1x Tomato, 1x Strawberry',
       '2x Corn, 1x Tomato, 1x Banana',
       '2x Corn, 1x Tomato, 1x Blueberry',
+    ],
+    alternativeCombinations: [
+      'Basic: Corn + Tomato + Pepper',
+      'Uncommon: Corn + Tomato + Bell Pepper',
+      'Rare: Corn + Tomato + Apple',
+      'Legendary: Corn + Tomato + Strawberry',
+      'Mythical: Corn + Tomato + Banana',
+      'Divine: Corn + Tomato + Blueberry',
     ],
     instructions: [
       "Go to Chris P's Kitchen in the main plaza",
@@ -562,10 +685,8 @@ const recipes = {
       'Divine: Mochi Mouse, Food Crates',
       'Prismatic: Pancake Stack Cosmetic, Taco Fern Seed',
     ],
-    chrisPCraving:
-      'Chris P enjoys soup during cold weather or comfort food hours',
-    bestTime: 'Cold weather periods or comfort food cravings',
-    ingredientRarity: 'Good with Common to Uncommon ingredients',
+    strategy:
+      'Great for cold weather cravings. Any pot color can indicate soup. Perfect for warming up.',
   },
 };
 
@@ -624,8 +745,6 @@ export default function RecipePage({ params }: PageProps) {
 
   return (
     <>
-      <Header />
-
       <main className="flex-1">
         {/* Hero Section */}
         <section className="bg-gradient-to-br from-green-50 via-blue-50 to-purple-50 py-16 px-4">
@@ -844,8 +963,6 @@ export default function RecipePage({ params }: PageProps) {
           </div>
         </section>
       </main>
-
-      <Footer />
     </>
   );
 }

@@ -1,329 +1,184 @@
-import Footer from '@/components/layout/Footer';
-import Header from '@/components/layout/Header';
+import QuickRecipeSearch from '@/components/search/QuickRecipeSearch';
+import { allRecipes, recipeCategories } from '@/data/recipes';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'All Recipes - Grow a Garden Recipes',
+  title: 'All Recipes - Complete Grow a Garden Cooking Guide',
   description:
-    'Complete collection of all cooking recipes in Roblox Grow a Garden. Find detailed guides for donut, burger, pizza, cake, ice cream, sushi and more recipes.',
+    'Browse all Grow a Garden recipes by category. Find recipes by difficulty, cooking time, and ingredients. Complete collection of cooking recipes for Roblox Grow a Garden.',
   keywords: [
-    'grow a garden recipes',
-    'all recipes grow a garden',
-    'roblox grow a garden cooking',
-    'grow a garden donut recipe',
-    'grow a garden burger recipe',
-    'grow a garden pizza recipe',
-    'grow a garden cake recipe',
-    'grow a garden ice cream recipe',
-    'grow a garden sushi recipe',
+    'all recipes in grow a garden',
+    'grow a garden recipes list',
+    'cooking recipes grow a garden',
+    'grow a garden cooking recipes',
+    'all cooking recipes in grow a garden',
+    'grow a garden recipes by category',
+    'easy recipes grow a garden',
+    'hard recipes grow a garden',
+    'grow a garden recipe database',
+    'how to make [recipe] in grow a garden',
+    '[recipe] recipe grow a garden',
   ],
+  openGraph: {
+    title: 'All Recipes - Complete Grow a Garden Cooking Guide',
+    description:
+      'Browse all Grow a Garden recipes by category. Find recipes by difficulty, cooking time, and ingredients.',
+    url: 'https://growagardenrecipes.xyz/recipes',
+    siteName: 'Grow a Garden Recipes',
+    images: [
+      {
+        url: '/images/all-recipes.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'All Grow a Garden Recipes - Complete Collection',
+      },
+    ],
+    locale: 'en_US',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'All Recipes - Complete Grow a Garden Cooking Guide',
+    description:
+      'Browse all Grow a Garden recipes by category. Find recipes by difficulty, cooking time, and ingredients.',
+    images: ['/images/all-recipes.jpg'],
+  },
 };
 
 export default function RecipesPage() {
   return (
     <>
-      <Header />
+      {/* Hero Section with Search */}
+      <section className="bg-gradient-to-br from-green-50 via-blue-50 to-purple-50 min-h-screen flex items-center justify-center relative overflow-hidden">
+        <div className="relative z-10 text-center px-4 max-w-6xl mx-auto">
+          <h1 className="text-5xl md:text-6xl lg:text-7xl font-display font-bold text-gradient-primary mb-6 animate-fade-in-up">
+            All Recipes
+          </h1>
+          <h2 className="text-2xl md:text-3xl lg:text-4xl text-neutral-700 mb-6 max-w-4xl mx-auto leading-relaxed animate-fade-in-up">
+            Complete Grow a Garden Cooking Guide
+          </h2>
 
-      <main className="flex-1">
-        <div className="min-h-screen bg-gradient-to-br from-green-50 to-blue-50">
-          {/* Hero Section */}
-          <div className="bg-gradient-to-r from-green-600 to-blue-600 text-white py-20">
-            <div className="container mx-auto px-6 text-center">
-              <h1 className="text-5xl md:text-7xl font-bold mb-6">
-                Grow a Garden Recipes
-              </h1>
-              <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
-                Complete collection of all cooking recipes in Roblox Grow a
-                Garden
-              </p>
-              <div className="flex flex-wrap justify-center gap-4">
-                <span className="bg-white/20 px-4 py-2 rounded-full">
-                  Donut Recipe
-                </span>
-                <span className="bg-white/20 px-4 py-2 rounded-full">
-                  Burger Recipe
-                </span>
-                <span className="bg-white/20 px-4 py-2 rounded-full">
-                  Pizza Recipe
-                </span>
-                <span className="bg-white/20 px-4 py-2 rounded-full">
-                  Cake Recipe
-                </span>
-                <span className="bg-white/20 px-4 py-2 rounded-full">
-                  Ice Cream Recipe
-                </span>
-                <span className="bg-white/20 px-4 py-2 rounded-full">
-                  Sushi Recipe
-                </span>
-              </div>
-            </div>
-          </div>
+          {/* Quick Search */}
+          <QuickRecipeSearch
+            recipes={allRecipes.map((r) => ({
+              name: r.name,
+              slug: r.slug,
+              icon: r.icon,
+              description: r.description,
+            }))}
+            className="mb-10 animate-fade-in-up"
+          />
 
-          {/* Recipe Categories */}
-          <div className="container mx-auto px-6 py-16">
-            <h2 className="text-4xl font-bold text-center mb-12 text-gray-800">
-              All Recipes in Grow a Garden
-            </h2>
+          <p className="text-lg md:text-xl text-neutral-600 mb-12 max-w-3xl mx-auto leading-relaxed animate-fade-in-up">
+            Browse our complete collection of{' '}
+            <strong>all recipes in grow a garden</strong>. Find recipes by
+            category, difficulty, and cooking time. Master every dish in Roblox
+            Grow a Garden!
+          </p>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {/* Donut Recipes */}
-              <div className="bg-white rounded-2xl shadow-lg p-6 hover:shadow-xl transition-shadow">
-                <div className="text-4xl mb-4">🍩</div>
-                <h3 className="text-2xl font-bold mb-4 text-gray-800">
-                  Donut Recipes
-                </h3>
-                <p className="text-gray-600 mb-4">
-                  Learn how to make donuts in Grow a Garden with our detailed
-                  guides.
-                </p>
-                <div className="space-y-2">
-                  <a
-                    href="/recipes/donut"
-                    className="block text-green-600 hover:text-green-700 font-medium"
-                  >
-                    How to make a donut in Grow a Garden
-                  </a>
-                  <a
-                    href="/recipes/donut"
-                    className="block text-green-600 hover:text-green-700 font-medium"
-                  >
-                    Donut recipe Grow a Garden
-                  </a>
-                </div>
-              </div>
-
-              {/* Burger Recipes */}
-              <div className="bg-white rounded-2xl shadow-lg p-6 hover:shadow-xl transition-shadow">
-                <div className="text-4xl mb-4">🍔</div>
-                <h3 className="text-2xl font-bold mb-4 text-gray-800">
-                  Burger Recipes
-                </h3>
-                <p className="text-gray-600 mb-4">
-                  Master burger making in Grow a Garden with step-by-step
-                  instructions.
-                </p>
-                <div className="space-y-2">
-                  <a
-                    href="/recipes/burger"
-                    className="block text-green-600 hover:text-green-700 font-medium"
-                  >
-                    How to make a burger in Grow a Garden
-                  </a>
-                  <a
-                    href="/recipes/burger"
-                    className="block text-green-600 hover:text-green-700 font-medium"
-                  >
-                    Burger recipe Grow a Garden
-                  </a>
-                </div>
-              </div>
-
-              {/* Pizza Recipes */}
-              <div className="bg-white rounded-2xl shadow-lg p-6 hover:shadow-xl transition-shadow">
-                <div className="text-4xl mb-4">🍕</div>
-                <h3 className="text-2xl font-bold mb-4 text-gray-800">
-                  Pizza Recipes
-                </h3>
-                <p className="text-gray-600 mb-4">
-                  Create delicious pizzas in Grow a Garden with our expert tips.
-                </p>
-                <div className="space-y-2">
-                  <a
-                    href="/recipes/pizza"
-                    className="block text-green-600 hover:text-green-700 font-medium"
-                  >
-                    How to make pizza in Grow a Garden
-                  </a>
-                  <a
-                    href="/recipes/pizza"
-                    className="block text-green-600 hover:text-green-700 font-medium"
-                  >
-                    Pizza recipe Grow a Garden
-                  </a>
-                </div>
-              </div>
-
-              {/* Cake Recipes */}
-              <div className="bg-white rounded-2xl shadow-lg p-6 hover:shadow-xl transition-shadow">
-                <div className="text-4xl mb-4">🍰</div>
-                <h3 className="text-2xl font-bold mb-4 text-gray-800">
-                  Cake Recipes
-                </h3>
-                <p className="text-gray-600 mb-4">
-                  Bake perfect cakes in Grow a Garden with our comprehensive
-                  guides.
-                </p>
-                <div className="space-y-2">
-                  <a
-                    href="/recipes/cake"
-                    className="block text-green-600 hover:text-green-700 font-medium"
-                  >
-                    How to make a cake in Grow a Garden
-                  </a>
-                  <a
-                    href="/recipes/cake"
-                    className="block text-green-600 hover:text-green-700 font-medium"
-                  >
-                    Cake recipe Grow a Garden
-                  </a>
-                </div>
-              </div>
-
-              {/* Ice Cream Recipes */}
-              <div className="bg-white rounded-2xl shadow-lg p-6 hover:shadow-xl transition-shadow">
-                <div className="text-4xl mb-4">🍦</div>
-                <h3 className="text-2xl font-bold mb-4 text-gray-800">
-                  Ice Cream Recipes
-                </h3>
-                <p className="text-gray-600 mb-4">
-                  Make refreshing ice cream in Grow a Garden with our detailed
-                  steps.
-                </p>
-                <div className="space-y-2">
-                  <a
-                    href="/recipes/ice-cream"
-                    className="block text-green-600 hover:text-green-700 font-medium"
-                  >
-                    How to make ice cream in Grow a Garden
-                  </a>
-                  <a
-                    href="/recipes/ice-cream"
-                    className="block text-green-600 hover:text-green-700 font-medium"
-                  >
-                    Ice cream recipe Grow a Garden
-                  </a>
-                </div>
-              </div>
-
-              {/* Sushi Recipes */}
-              <div className="bg-white rounded-2xl shadow-lg p-6 hover:shadow-xl transition-shadow">
-                <div className="text-4xl mb-4">🍣</div>
-                <h3 className="text-2xl font-bold mb-4 text-gray-800">
-                  Sushi Recipes
-                </h3>
-                <p className="text-gray-600 mb-4">
-                  Create authentic sushi in Grow a Garden with our expert
-                  techniques.
-                </p>
-                <div className="space-y-2">
-                  <a
-                    href="/recipes/sushi"
-                    className="block text-green-600 hover:text-green-700 font-medium"
-                  >
-                    How to make sushi in Grow a Garden
-                  </a>
-                  <a
-                    href="/recipes/sushi"
-                    className="block text-green-600 hover:text-green-700 font-medium"
-                  >
-                    Sushi recipe Grow a Garden
-                  </a>
-                </div>
-              </div>
-            </div>
-
-            {/* Additional Recipes Section */}
-            <div className="mt-16">
-              <h3 className="text-3xl font-bold text-center mb-8 text-gray-800">
-                More Cooking Recipes
+          {/* Quick Stats */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-4 animate-fade-in-up">
+            <div className="hero-card p-6 text-center">
+              <h3 className="text-3xl font-bold text-gradient-primary mb-2">
+                {allRecipes.length}+
               </h3>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                <div className="bg-white rounded-xl shadow-md p-4 text-center">
-                  <div className="text-3xl mb-2">🌭</div>
-                  <h4 className="font-bold text-gray-800">Hot Dog</h4>
-                  <a
-                    href="/recipes/hot-dog"
-                    className="text-green-600 hover:text-green-700 text-sm"
-                  >
-                    How to make a hot dog in Grow a Garden
-                  </a>
-                </div>
-                <div className="bg-white rounded-xl shadow-md p-4 text-center">
-                  <div className="text-3xl mb-2">🧇</div>
-                  <h4 className="font-bold text-gray-800">Waffle</h4>
-                  <a
-                    href="/recipes/waffle"
-                    className="text-green-600 hover:text-green-700 text-sm"
-                  >
-                    How to make a waffle in Grow a Garden
-                  </a>
-                </div>
-                <div className="bg-white rounded-xl shadow-md p-4 text-center">
-                  <div className="text-3xl mb-2">🥗</div>
-                  <h4 className="font-bold text-gray-800">Salad</h4>
-                  <a
-                    href="/recipes/salad"
-                    className="text-green-600 hover:text-green-700 text-sm"
-                  >
-                    How to make a salad in Grow a Garden
-                  </a>
-                </div>
-                <div className="bg-white rounded-xl shadow-md p-4 text-center">
-                  <div className="text-3xl mb-2">🥪</div>
-                  <h4 className="font-bold text-gray-800">Sandwich</h4>
-                  <a
-                    href="/recipes/sandwich"
-                    className="text-green-600 hover:text-green-700 text-sm"
-                  >
-                    How to make a sandwich in Grow a Garden
-                  </a>
-                </div>
-                <div className="bg-white rounded-xl shadow-md p-4 text-center">
-                  <div className="text-3xl mb-2">🥧</div>
-                  <h4 className="font-bold text-gray-800">Pie</h4>
-                  <a
-                    href="/recipes/pie"
-                    className="text-green-600 hover:text-green-700 text-sm"
-                  >
-                    How to make a pie in Grow a Garden
-                  </a>
-                </div>
-              </div>
+              <p className="text-neutral-600">Total Recipes</p>
             </div>
-
-            {/* SEO Content */}
-            <div className="mt-16 bg-white rounded-2xl shadow-lg p-8">
-              <h3 className="text-3xl font-bold mb-6 text-gray-800">
-                Complete Grow a Garden Cooking Guide
+            <div className="hero-card p-6 text-center">
+              <h3 className="text-3xl font-bold text-gradient-secondary mb-2">
+                {recipeCategories.length}
               </h3>
-              <div className="prose max-w-none text-gray-700">
-                <p className="text-lg mb-4">
-                  Welcome to the ultimate Grow a Garden recipes collection!
-                  Whether you&apos;re looking for
-                  <strong>donut recipe grow a garden</strong>,{' '}
-                  <strong>burger recipe grow a garden</strong>, or{' '}
-                  <strong>pizza recipe grow a garden</strong>, we&apos;ve got
-                  you covered with detailed step-by-step instructions.
-                </p>
-                <p className="text-lg mb-4">
-                  Our comprehensive guides include{' '}
-                  <strong>how to make a donut in grow a garden</strong>,
-                  <strong>how to make a burger in grow a garden</strong>,{' '}
-                  <strong>how to make pizza in grow a garden</strong>, and many
-                  more recipes. Each guide features:
-                </p>
-                <ul className="list-disc pl-6 mb-4 space-y-2">
-                  <li>Complete ingredient lists</li>
-                  <li>Step-by-step cooking instructions</li>
-                  <li>Pro tips and tricks</li>
-                  <li>Common mistakes to avoid</li>
-                  <li>Variations and customizations</li>
-                </ul>
-                <p className="text-lg">
-                  From <strong>cake recipe grow a garden</strong> to{' '}
-                  <strong>ice cream recipe grow a garden</strong>, and{' '}
-                  <strong>sushi recipe grow a garden</strong>, discover all the
-                  cooking recipes Grow a Garden has to offer. Our guides are
-                  perfect for both beginners and experienced players looking to
-                  master every recipe in this popular Roblox cooking game.
-                </p>
-              </div>
+              <p className="text-neutral-600">Categories</p>
+            </div>
+            <div className="hero-card p-6 text-center">
+              <h3 className="text-3xl font-bold text-gradient-game mb-2">
+                100%
+              </h3>
+              <p className="text-neutral-600">Tested & Verified</p>
             </div>
           </div>
         </div>
-      </main>
+      </section>
 
-      <Footer />
+      {/* Quick Filter Bar */}
+      <section className="py-8 bg-white border-b border-neutral-200 sticky top-0 z-10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-wrap gap-4 justify-center">
+            <button className="px-6 py-3 bg-primary-600 text-white rounded-xl font-semibold hover:bg-primary-700 transition-colors">
+              All Recipes
+            </button>
+            {recipeCategories.map((category) => (
+              <a
+                key={category.slug}
+                href={`/categories/${category.slug}`}
+                className="px-6 py-3 bg-neutral-100 text-neutral-700 rounded-xl font-semibold hover:bg-neutral-200 transition-colors"
+              >
+                {category.name}
+              </a>
+            ))}
+          </div>
+          {/* Local filters (UI only for now) */}
+          <div className="mt-4 flex flex-wrap items-center justify-center gap-3 text-sm">
+            <span className="text-neutral-500">Filter:</span>
+            <select className="px-3 py-2 rounded-xl bg-neutral-100 text-neutral-700">
+              <option>Any Difficulty</option>
+              <option>Easy</option>
+              <option>Medium</option>
+              <option>Hard</option>
+            </select>
+            <select className="px-3 py-2 rounded-xl bg-neutral-100 text-neutral-700">
+              <option>Any Time</option>
+              <option>≤ 5 minutes</option>
+              <option>5–8 minutes</option>
+              <option>≥ 8 minutes</option>
+            </select>
+            <span className="text-neutral-400">
+              (Filters are local UI; full behavior coming next)
+            </span>
+          </div>
+        </div>
+      </section>
+
+      {/* All Recipes Grid - Main Content */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-display font-bold text-gradient-primary mb-6">
+              Complete Recipe Collection
+            </h2>
+            <h3 className="text-xl md:text-2xl text-neutral-600 mb-8">
+              Every recipe in Grow a Garden
+            </h3>
+            <p className="text-lg text-neutral-500 max-w-3xl mx-auto">
+              Explore our complete database of{' '}
+              <strong>all cooking recipes in grow a garden</strong>. From simple
+              salads to complex burgers, we have every recipe covered.
+            </p>
+          </div>
+
+          {/* Recipe Grid */}
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+            {allRecipes.map((recipe, index) => (
+              <a
+                key={recipe.slug}
+                href={`/recipes/${recipe.slug}`}
+                className="card-modern group p-6 text-center transform hover:scale-105 transition-all duration-300"
+                style={{ animationDelay: `${index * 50}ms` }}
+              >
+                <div className="text-4xl mb-3 group-hover:scale-110 transition-transform duration-300">
+                  {recipe.icon}
+                </div>
+                <h4 className="text-lg font-semibold text-neutral-800 group-hover:text-primary-600 transition-colors duration-300">
+                  {recipe.name}
+                </h4>
+                <p className="text-sm text-neutral-500 mt-2">
+                  {recipe.difficulty} • {recipe.cookingTime}
+                </p>
+              </a>
+            ))}
+          </div>
+        </div>
+      </section>
     </>
   );
 }

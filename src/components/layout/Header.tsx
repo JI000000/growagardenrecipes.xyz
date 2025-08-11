@@ -12,66 +12,13 @@ const Header = () => {
     { name: 'Home', href: '/', current: pathname === '/' },
     { name: 'All Recipes', href: '/recipes', current: pathname === '/recipes' },
     {
-      name: 'Donut Recipe',
-      href: '/recipes/donut',
-      current: pathname === '/recipes/donut',
+      name: 'Cooking Events',
+      href: '/cooking-events',
+      current: pathname === '/cooking-events',
     },
-    {
-      name: 'Burger Recipe',
-      href: '/recipes/burger',
-      current: pathname === '/recipes/burger',
-    },
-    {
-      name: 'Pizza Recipe',
-      href: '/recipes/pizza',
-      current: pathname === '/recipes/pizza',
-    },
-    {
-      name: 'Cake Recipe',
-      href: '/recipes/cake',
-      current: pathname === '/recipes/cake',
-    },
-    {
-      name: 'Ice Cream Recipe',
-      href: '/recipes/ice-cream',
-      current: pathname === '/recipes/ice-cream',
-    },
-    {
-      name: 'Sushi Recipe',
-      href: '/recipes/sushi',
-      current: pathname === '/recipes/sushi',
-    },
-    {
-      name: 'Hot Dog Recipe',
-      href: '/recipes/hot-dog',
-      current: pathname === '/recipes/hot-dog',
-    },
-    {
-      name: 'Waffle Recipe',
-      href: '/recipes/waffle',
-      current: pathname === '/recipes/waffle',
-    },
-    {
-      name: 'Pie Recipe',
-      href: '/recipes/pie',
-      current: pathname === '/recipes/pie',
-    },
-    {
-      name: 'Sandwich Recipe',
-      href: '/recipes/sandwich',
-      current: pathname === '/recipes/sandwich',
-    },
-    {
-      name: 'Salad Recipe',
-      href: '/recipes/salad',
-      current: pathname === '/recipes/salad',
-    },
-    {
-      name: 'Soup Recipe',
-      href: '/recipes/soup',
-      current: pathname === '/recipes/soup',
-    },
-    { name: 'Search', href: '/search', current: pathname === '/search' },
+    { name: 'Game Codes', href: '/codes', current: pathname === '/codes' },
+    { name: 'Game Wiki', href: '/wiki', current: pathname === '/wiki' },
+    { name: 'FAQ', href: '/faq', current: pathname === '/faq' },
   ];
 
   return (
