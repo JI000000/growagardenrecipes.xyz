@@ -6,9 +6,9 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'Salad Recipe - Grow a Garden Cooking Guide',
+  title: 'How to Make Salads in Grow a Garden - Complete Guide 2025',
   description:
-    'Prepare healthy salads in Grow a Garden with this fresh recipe guide. Ingredients, cooking times, and step-by-step instructions.',
+    'Master how to prepare healthy Salads in Grow a Garden with our complete guide (Updated 2025). Step-by-step instructions, ingredients list, cooking times, and bonus tips.',
   keywords: [
     'salad recipe grow a garden',
     'how to make salad in grow a garden',
@@ -18,11 +18,13 @@ export const metadata: Metadata = {
     'salad rewards grow a garden',
     'salad perfect timing grow a garden',
     'prismatic salad grow a garden',
+    'salad 2025 update grow a garden',
+    'roblox grow a garden salad',
   ],
   openGraph: {
-    title: 'Salad Recipe - Grow a Garden Cooking Guide',
+    title: 'How to Make Salads in Grow a Garden - Complete Guide',
     description:
-      'Prepare healthy salads in Grow a Garden with this fresh recipe guide. Ingredients, cooking times, and step-by-step instructions.',
+      'Master how to prepare healthy Salads in Grow a Garden with our complete guide. Step-by-step instructions, ingredients list, and cooking times.',
     url: 'https://growagardenrecipes.xyz/recipes/salad',
     siteName: 'Grow a Garden Recipes',
     images: [
@@ -30,11 +32,18 @@ export const metadata: Metadata = {
         url: '/images/salad-recipe.jpg',
         width: 1200,
         height: 630,
-        alt: 'Salad Recipe in Grow a Garden',
+        alt: 'Salad Recipe in Grow a Garden - Complete Guide',
       },
     ],
     locale: 'en_US',
-    type: 'article',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'How to Make Salads in Grow a Garden - Complete Guide',
+    description:
+      'Master how to prepare healthy Salads in Grow a Garden with our complete guide. Step-by-step instructions, ingredients list, and cooking times.',
+    images: ['/images/salad-recipe.jpg'],
   },
 };
 
@@ -82,77 +91,87 @@ export default function SaladRecipePage() {
         difficulty={saladRecipe.difficulty}
       />
 
-      {/* Breadcrumbs */}
-      <Breadcrumbs
-        items={[
-          { name: 'Home', href: '/' },
-          { name: 'Recipes', href: '/recipes' },
-          { name: 'Salad Recipe', href: '/recipes/salad' },
-        ]}
-      />
+      {/* 面包屑导航 */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-4">
+        <Breadcrumbs
+          items={[
+            { name: 'Home', href: '/' },
+            { name: 'Recipes', href: '/recipes' },
+            { name: 'Salad Recipe' },
+          ]}
+        />
+      </div>
 
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-green-50 via-lime-50 to-yellow-50 pt-10 pb-24 relative overflow-hidden">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div className="text-center lg:text-left">
-              <span className="inline-block px-4 py-1 rounded-full bg-green-100 text-green-800 text-sm font-medium mb-4">
-                Snack Recipe
+      <section className="bg-gradient-to-br from-green-50 via-lime-50 to-yellow-50 pt-8 pb-16 relative overflow-hidden">
+        <div className="absolute inset-0 overflow-hidden opacity-20">
+          <div className="absolute top-20 left-10 w-32 h-32 bg-green-200 rounded-full blur-3xl animate-pulse"></div>
+          <div
+            className="absolute bottom-20 right-10 w-40 h-40 bg-lime-200 rounded-full blur-3xl animate-pulse"
+            style={{ animationDelay: '1s' }}
+          ></div>
+        </div>
+
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-8">
+            <div className="md:w-1/2">
+              <span className="inline-block px-4 py-1 bg-green-100 text-green-800 rounded-full text-sm font-medium mb-4">
+                SNACK RECIPE
               </span>
-              <h1 className="text-4xl md:text-5xl font-display font-bold text-green-900 mb-6">
-                Salad Recipe
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-green-900 mb-6">
+                How to Make Salads
               </h1>
-              <div className="flex flex-wrap items-center justify-center lg:justify-start gap-4 mb-8">
-                <div className="flex items-center">
-                  <span className="text-green-800 mr-2">⏱️</span>
-                  <span className="text-green-800 font-medium">
+              <h2 className="text-xl md:text-2xl text-green-800 mb-6">
+                Complete Grow a Garden Recipe Guide
+              </h2>
+              <p className="text-lg text-green-700 mb-8 leading-relaxed">
+                Master the perfect{' '}
+                <strong>salad recipe in Grow a Garden</strong> with our
+                comprehensive guide. Learn the exact ingredients, cooking times,
+                and special techniques for creating the most refreshing and
+                rewarding healthy dish.
+              </p>
+              <div className="flex flex-wrap gap-4 mb-8">
+                <div className="bg-white/80 backdrop-blur rounded-lg px-4 py-2 flex items-center gap-2">
+                  <span className="text-green-600">⏱️</span>
+                  <span className="text-sm font-medium text-green-900">
                     {saladRecipe.cookingTime}
                   </span>
                 </div>
-                <div className="flex items-center">
-                  <span className="text-green-800 mr-2">⭐</span>
-                  <span className="text-green-800 font-medium">
+                <div className="bg-white/80 backdrop-blur rounded-lg px-4 py-2 flex items-center gap-2">
+                  <span className="text-green-600">⭐</span>
+                  <span className="text-sm font-medium text-green-900">
                     {saladRecipe.difficulty}
                   </span>
                 </div>
-                <div className="flex items-center">
-                  <span className="text-green-800 mr-2">🔄</span>
-                  <span className="text-green-800 font-medium">
-                    Updated: {saladRecipe.lastUpdated}
+                <div className="bg-white/80 backdrop-blur rounded-lg px-4 py-2 flex items-center gap-2">
+                  <span className="text-green-600">🧩</span>
+                  <span className="text-sm font-medium text-green-900">
+                    {saladRecipe.ingredients.length} Ingredients
                   </span>
                 </div>
               </div>
-              <p className="text-lg text-green-800 mb-8 max-w-2xl mx-auto lg:mx-0">
-                {saladRecipe.description} Learn the perfect timing, ingredients,
-                and techniques to create fresh salads that will earn you maximum
-                rewards.
-              </p>
-              <div className="flex flex-wrap gap-4 justify-center lg:justify-start">
-                <a
-                  href="#ingredients"
-                  className="btn-primary px-6 py-3 rounded-xl shadow-lg hover:shadow-xl transition-all"
-                >
-                  View Ingredients
-                </a>
-                <a
-                  href="#steps"
-                  className="btn-secondary px-6 py-3 rounded-xl shadow-lg hover:shadow-xl transition-all"
-                >
-                  Preparation Steps
-                </a>
+
+              {/* 分享按钮 */}
+              <div className="mb-6">
                 <RecipeShareButtons
-                  title="Salad Recipe - Grow a Garden"
-                  description="Prepare healthy salads in Grow a Garden with this fresh recipe guide."
+                  title="How to Make Salads - Grow a Garden"
+                  description="Check out this refreshing Salad recipe for Grow a Garden!"
                   colorScheme="green"
                 />
               </div>
             </div>
-            <div className="flex justify-center lg:justify-end">
-              <div className="relative w-64 h-64 md:w-80 md:h-80">
-                <div className="absolute inset-0 flex items-center justify-center text-9xl animate-float">
-                  {saladRecipe.icon}
+            <div className="md:w-1/2 flex justify-center">
+              <div className="relative">
+                <div className="w-64 h-64 flex items-center justify-center bg-gradient-to-br from-green-200 to-lime-300 rounded-full shadow-xl">
+                  <span className="text-9xl">{saladRecipe.icon}</span>
                 </div>
-                <div className="absolute inset-0 bg-gradient-to-r from-green-500 to-lime-500 rounded-full opacity-10 blur-3xl animate-pulse"></div>
+                <div
+                  className="absolute -top-4 -right-4 w-20 h-20 bg-white rounded-full shadow-lg flex items-center justify-center animate-bounce"
+                  style={{ animationDuration: '2s' }}
+                >
+                  <span className="text-3xl">🥬</span>
+                </div>
               </div>
             </div>
           </div>

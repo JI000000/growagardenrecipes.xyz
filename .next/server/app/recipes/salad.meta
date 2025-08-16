@@ -1,5 +1,5 @@
 {
   "headers": {
-    "x-next-cache-tags": "_N_T_/layout,_N_T_/recipes/layout,_N_T_/recipes/salad/layout,_N_T_/recipes/salad/page,_N_T_/recipes/salad"
+    "x-next-cache-tags": "_N_T_/layout,_N_T_/recipes/layout,_N_T_/recipes/[slug]/layout,_N_T_/recipes/[slug]/page,_N_T_/recipes/salad"
   }
 }

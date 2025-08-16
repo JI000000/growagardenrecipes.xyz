@@ -6,9 +6,9 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'Waffle Recipe - Grow a Garden Cooking Guide',
+  title: 'How to Make Waffles in Grow a Garden - Complete Guide 2025',
   description:
-    'Make perfect waffles in Grow a Garden with this delicious recipe guide. Ingredients, cooking times, and step-by-step instructions.',
+    'Master how to make perfect Waffles in Grow a Garden with our complete guide (Updated 2025). Step-by-step instructions, ingredients list, cooking times, and bonus tips.',
   keywords: [
     'waffle recipe grow a garden',
     'how to make waffle in grow a garden',
@@ -18,11 +18,13 @@ export const metadata: Metadata = {
     'waffle rewards grow a garden',
     'waffle perfect timing grow a garden',
     'prismatic waffle grow a garden',
+    'waffle 2025 update grow a garden',
+    'roblox grow a garden waffle',
   ],
   openGraph: {
-    title: 'Waffle Recipe - Grow a Garden Cooking Guide',
+    title: 'How to Make Waffles in Grow a Garden - Complete Guide',
     description:
-      'Make perfect waffles in Grow a Garden with this delicious recipe guide. Ingredients, cooking times, and step-by-step instructions.',
+      'Master how to make perfect Waffles in Grow a Garden with our complete guide. Step-by-step instructions, ingredients list, and cooking times.',
     url: 'https://growagardenrecipes.xyz/recipes/waffle',
     siteName: 'Grow a Garden Recipes',
     images: [
@@ -30,11 +32,18 @@ export const metadata: Metadata = {
         url: '/images/waffle-recipe.jpg',
         width: 1200,
         height: 630,
-        alt: 'Waffle Recipe in Grow a Garden',
+        alt: 'Waffle Recipe in Grow a Garden - Complete Guide',
       },
     ],
     locale: 'en_US',
-    type: 'article',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'How to Make Waffles in Grow a Garden - Complete Guide',
+    description:
+      'Master how to make perfect Waffles in Grow a Garden with our complete guide. Step-by-step instructions, ingredients list, and cooking times.',
+    images: ['/images/waffle-recipe.jpg'],
   },
 };
 
@@ -53,23 +62,23 @@ export default function WaffleRecipePage() {
         recipeName={waffleRecipe.name}
         recipeDescription={`${waffleRecipe.description}. Updated for 2025.`}
         recipeImage="/images/recipe-placeholder.jpg"
-        datePublished={waffleRecipe.lastUpdated || "2025-08-15"}
+        datePublished={waffleRecipe.lastUpdated || '2025-08-15'}
         prepTime="PT10M"
         cookTime={`PT${waffleRecipe.cookingTime.replace(' minutes ', 'M').replace(' seconds', 'S')}`}
         totalTime={`PT${waffleRecipe.cookingTime.replace(' minutes ', 'M').replace(' seconds', 'S')}`}
         recipeYield="1 serving"
-        recipeCategory={waffleRecipe.category || "snacks"}
+        recipeCategory={waffleRecipe.category || 'snacks'}
         recipeCuisine="Game Food"
-        ingredients={waffleRecipe.ingredients.map(ing => ({
+        ingredients={waffleRecipe.ingredients.map((ing) => ({
           name: ing.name,
           quantity: ing.quantity,
-          unit: "piece"
+          unit: 'piece',
         }))}
-        instructions={waffleRecipe.steps.map(step => ({
+        instructions={waffleRecipe.steps.map((step) => ({
           step: step.step,
           description: step.description,
           timing: step.timing,
-          tip: step.tip
+          tip: step.tip,
         }))}
         keywords={[
           'waffle recipe grow a garden',
@@ -82,77 +91,87 @@ export default function WaffleRecipePage() {
         difficulty={waffleRecipe.difficulty}
       />
 
-      {/* Breadcrumbs */}
-      <Breadcrumbs
-        items={[
-          { name: 'Home', href: '/' },
-          { name: 'Recipes', href: '/recipes' },
-          { name: 'Waffle Recipe', href: '/recipes/waffle' },
-        ]}
-      />
+      {/* 面包屑导航 */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-4">
+        <Breadcrumbs
+          items={[
+            { name: 'Home', href: '/' },
+            { name: 'Recipes', href: '/recipes' },
+            { name: 'Waffle Recipe' },
+          ]}
+        />
+      </div>
 
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-yellow-50 via-amber-50 to-orange-50 pt-10 pb-24 relative overflow-hidden">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div className="text-center lg:text-left">
-              <span className="inline-block px-4 py-1 rounded-full bg-yellow-100 text-yellow-800 text-sm font-medium mb-4">
-                Snack Recipe
+      <section className="bg-gradient-to-br from-yellow-50 via-amber-50 to-orange-50 pt-8 pb-16 relative overflow-hidden">
+        <div className="absolute inset-0 overflow-hidden opacity-20">
+          <div className="absolute top-20 left-10 w-32 h-32 bg-amber-200 rounded-full blur-3xl animate-pulse"></div>
+          <div
+            className="absolute bottom-20 right-10 w-40 h-40 bg-yellow-200 rounded-full blur-3xl animate-pulse"
+            style={{ animationDelay: '1s' }}
+          ></div>
+        </div>
+
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-8">
+            <div className="md:w-1/2">
+              <span className="inline-block px-4 py-1 bg-amber-100 text-amber-800 rounded-full text-sm font-medium mb-4">
+                SNACK RECIPE
               </span>
-              <h1 className="text-4xl md:text-5xl font-display font-bold text-yellow-900 mb-6">
-                Waffle Recipe
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-amber-900 mb-6">
+                How to Make Waffles
               </h1>
-              <div className="flex flex-wrap items-center justify-center lg:justify-start gap-4 mb-8">
-                <div className="flex items-center">
-                  <span className="text-yellow-800 mr-2">⏱️</span>
-                  <span className="text-yellow-800 font-medium">
+              <h2 className="text-xl md:text-2xl text-amber-800 mb-6">
+                Complete Grow a Garden Recipe Guide
+              </h2>
+              <p className="text-lg text-amber-700 mb-8 leading-relaxed">
+                Master the perfect{' '}
+                <strong>waffle recipe in Grow a Garden</strong> with our
+                comprehensive guide. Learn the exact ingredients, cooking times,
+                and special techniques for creating the most delicious and
+                rewarding breakfast treat.
+              </p>
+              <div className="flex flex-wrap gap-4 mb-8">
+                <div className="bg-white/80 backdrop-blur rounded-lg px-4 py-2 flex items-center gap-2">
+                  <span className="text-amber-600">⏱️</span>
+                  <span className="text-sm font-medium text-amber-900">
                     {waffleRecipe.cookingTime}
                   </span>
                 </div>
-                <div className="flex items-center">
-                  <span className="text-yellow-800 mr-2">⭐</span>
-                  <span className="text-yellow-800 font-medium">
+                <div className="bg-white/80 backdrop-blur rounded-lg px-4 py-2 flex items-center gap-2">
+                  <span className="text-amber-600">⭐</span>
+                  <span className="text-sm font-medium text-amber-900">
                     {waffleRecipe.difficulty}
                   </span>
                 </div>
-                <div className="flex items-center">
-                  <span className="text-yellow-800 mr-2">🔄</span>
-                  <span className="text-yellow-800 font-medium">
-                    Updated: {waffleRecipe.lastUpdated}
+                <div className="bg-white/80 backdrop-blur rounded-lg px-4 py-2 flex items-center gap-2">
+                  <span className="text-amber-600">🧩</span>
+                  <span className="text-sm font-medium text-amber-900">
+                    {waffleRecipe.ingredients.length} Ingredients
                   </span>
                 </div>
               </div>
-              <p className="text-lg text-yellow-800 mb-8 max-w-2xl mx-auto lg:mx-0">
-                {waffleRecipe.description} Learn the perfect timing, ingredients,
-                and techniques to create delicious waffles that will earn you
-                maximum rewards.
-              </p>
-              <div className="flex flex-wrap gap-4 justify-center lg:justify-start">
-                <a
-                  href="#ingredients"
-                  className="btn-primary px-6 py-3 rounded-xl shadow-lg hover:shadow-xl transition-all"
-                >
-                  View Ingredients
-                </a>
-                <a
-                  href="#steps"
-                  className="btn-secondary px-6 py-3 rounded-xl shadow-lg hover:shadow-xl transition-all"
-                >
-                  Cooking Steps
-                </a>
+
+              {/* 分享按钮 */}
+              <div className="mb-6">
                 <RecipeShareButtons
-                  title="Waffle Recipe - Grow a Garden"
-                  description="Make perfect waffles in Grow a Garden with this delicious recipe guide."
+                  title="How to Make Waffles - Grow a Garden"
+                  description="Check out this delicious Waffle recipe for Grow a Garden!"
                   colorScheme="yellow"
                 />
               </div>
             </div>
-            <div className="flex justify-center lg:justify-end">
-              <div className="relative w-64 h-64 md:w-80 md:h-80">
-                <div className="absolute inset-0 flex items-center justify-center text-9xl animate-float">
-                  {waffleRecipe.icon}
+            <div className="md:w-1/2 flex justify-center">
+              <div className="relative">
+                <div className="w-64 h-64 flex items-center justify-center bg-gradient-to-br from-amber-200 to-yellow-300 rounded-full shadow-xl">
+                  <span className="text-9xl">{waffleRecipe.icon}</span>
                 </div>
-                <div className="absolute inset-0 bg-gradient-to-r from-yellow-500 to-amber-500 rounded-full opacity-10 blur-3xl animate-pulse"></div>
+                <div
+                  className="absolute -top-4 -right-4 w-20 h-20 bg-white rounded-full shadow-lg flex items-center justify-center animate-bounce"
+                  style={{ animationDuration: '2s' }}
+                >
+                  <span className="text-3xl">🍯</span>
+                </div>
               </div>
             </div>
           </div>
@@ -167,7 +186,8 @@ export default function WaffleRecipePage() {
               Waffle Ingredients
             </h2>
             <p className="text-lg text-yellow-700 max-w-3xl mx-auto">
-              Gather these ingredients to make the perfect waffle in Grow a Garden.
+              Gather these ingredients to make the perfect waffle in Grow a
+              Garden.
             </p>
           </div>
 
@@ -343,7 +363,9 @@ export default function WaffleRecipePage() {
                   <h4 className="font-bold text-yellow-800 mb-2">
                     Normal Quality
                   </h4>
-                  <p className="text-yellow-700">{waffleRecipe.rewards.normal}</p>
+                  <p className="text-yellow-700">
+                    {waffleRecipe.rewards.normal}
+                  </p>
                 </div>
 
                 <div className="bg-white rounded-lg p-4 border border-yellow-100">
@@ -412,7 +434,7 @@ export default function WaffleRecipePage() {
               ))}
             </div>
           </div>
-          
+
           {/* Prismatic Waffle Section */}
           <div
             id="prismatic"
@@ -426,14 +448,14 @@ export default function WaffleRecipePage() {
                 Legendary Difficulty
               </span>
             </div>
-            
+
             <p className="text-purple-700 mb-6">
               The Prismatic version of Waffle is a breakfast delicacy sought
               after by morning chefs. This legendary dish requires special
               ingredients and perfect timing, offering exceptional rewards and
               unique game benefits.
             </p>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
               <div className="bg-white/80 backdrop-blur rounded-lg p-5 border border-purple-100">
                 <h4 className="font-bold text-purple-800 mb-3">
@@ -459,7 +481,7 @@ export default function WaffleRecipePage() {
                   </li>
                 </ul>
               </div>
-              
+
               <div className="bg-white/80 backdrop-blur rounded-lg p-5 border border-purple-100">
                 <h4 className="font-bold text-purple-800 mb-3">
                   Special Rewards
@@ -484,7 +506,7 @@ export default function WaffleRecipePage() {
                 </ul>
               </div>
             </div>
-            
+
             <div className="text-center">
               <Link
                 href="/recipes/prismatic"

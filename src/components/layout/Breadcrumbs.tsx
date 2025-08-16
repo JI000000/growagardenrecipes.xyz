@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 interface BreadcrumbItem {
   name: string;
-  href: string;
+  href?: string;
 }
 
 interface BreadcrumbsProps {
@@ -19,10 +19,10 @@ export default function Breadcrumbs({ items }: BreadcrumbsProps) {
           const isLast = index === items.length - 1;
           
           return (
-            <li key={item.href} className="flex items-center">
+            <li key={item.href || `item-${index}`} className="flex items-center">
               {index > 0 && <span className="mx-2 text-neutral-400">/</span>}
               
-              {isLast ? (
+              {isLast || !item.href ? (
                 <span className="font-medium text-neutral-900">{item.name}</span>
               ) : (
                 <Link 
