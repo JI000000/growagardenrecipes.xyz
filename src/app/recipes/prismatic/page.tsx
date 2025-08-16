@@ -46,7 +46,7 @@ export const metadata: Metadata = {
   },
 };
 
-// 假设的Prismatic食谱数据 - 实际项目中可从数据源获取
+// 创建Prismatic食谱数据，为每个普通食谱创建对应的Prismatic版本
 const prismaticRecipes = allRecipes.map((recipe) => ({
   ...recipe,
   name: `Prismatic ${recipe.name.replace(' Recipe', '')}`,
@@ -54,6 +54,15 @@ const prismaticRecipes = allRecipes.map((recipe) => ({
   difficulty: 'Legendary',
   description: `Learn how to make amazing Prismatic ${recipe.name.replace(' Recipe', '')} in Grow a Garden`,
   isPrismatic: true,
+  cookingTime: recipe.slug === 'pizza' ? '7m 36s' : 
+               recipe.slug === 'burger' ? '6m 15s' : 
+               recipe.slug === 'cake' ? '8m 45s' : 
+               recipe.slug === 'ice-cream' ? '5m 20s' : 
+               recipe.slug === 'sushi' ? '9m 10s' : 
+               recipe.slug === 'porridge' ? '4m 45s' : 
+               recipe.slug === 'sandwich' ? '4m 30s' : 
+               recipe.slug === 'hot-dog' ? '5m 50s' : 
+               '6m 00s',
 }));
 
 export default function PrismaticRecipesPage() {
@@ -549,6 +558,130 @@ export default function PrismaticRecipesPage() {
         </div>
       </section>
 
+      {/* Prismatic vs Regular Recipes */}
+      <section className="py-20 bg-gradient-to-br from-blue-50 to-indigo-50">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2
+              className="text-4xl md:text-5xl font-display font-bold mb-6"
+              style={{ color: '#4f46e5' }}
+            >
+              Prismatic vs Regular Recipes
+            </h2>
+            <h3 className="text-xl md:text-2xl text-neutral-600 mb-8">
+              Understanding the key differences
+            </h3>
+          </div>
+          
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
+            <div className="bg-white rounded-xl p-8 shadow-lg border border-blue-100">
+              <div className="flex items-center mb-6">
+                <div className="text-4xl mr-4">🍳</div>
+                <h3 className="text-2xl font-bold text-blue-900">Regular Recipes</h3>
+              </div>
+              
+              <ul className="space-y-4">
+                <li className="flex items-start">
+                  <span className="text-blue-500 mr-2 mt-1">•</span>
+                  <div>
+                    <strong className="text-blue-800">Ingredients:</strong>
+                    <p className="text-neutral-600">Use standard ingredients found throughout the game world</p>
+                  </div>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-blue-500 mr-2 mt-1">•</span>
+                  <div>
+                    <strong className="text-blue-800">Difficulty:</strong>
+                    <p className="text-neutral-600">Easy to Medium difficulty, forgiving timing windows</p>
+                  </div>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-blue-500 mr-2 mt-1">•</span>
+                  <div>
+                    <strong className="text-blue-800">Rewards:</strong>
+                    <p className="text-neutral-600">Standard Sheckles and occasional common items</p>
+                  </div>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-blue-500 mr-2 mt-1">•</span>
+                  <div>
+                    <strong className="text-blue-800">Availability:</strong>
+                    <p className="text-neutral-600">Can be cooked anytime, anywhere with basic equipment</p>
+                  </div>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-blue-500 mr-2 mt-1">•</span>
+                  <div>
+                    <strong className="text-blue-800">Purpose:</strong>
+                    <p className="text-neutral-600">Daily cooking tasks, basic progression, learning game mechanics</p>
+                  </div>
+                </li>
+              </ul>
+              
+              <div className="mt-8 text-center">
+                <Link
+                  href="/recipes"
+                  className="inline-block px-6 py-3 bg-blue-600 text-white rounded-lg font-medium hover:bg-blue-700 transition-all shadow-md"
+                >
+                  Browse Regular Recipes
+                </Link>
+              </div>
+            </div>
+            
+            <div className="bg-gradient-to-br from-purple-50 to-indigo-50 rounded-xl p-8 shadow-lg border border-purple-200">
+              <div className="flex items-center mb-6">
+                <div className="text-4xl mr-4">🌈</div>
+                <h3 className="text-2xl font-bold text-purple-900">Prismatic Recipes</h3>
+              </div>
+              
+              <ul className="space-y-4">
+                <li className="flex items-start">
+                  <span className="text-purple-500 mr-2 mt-1">•</span>
+                  <div>
+                    <strong className="text-purple-800">Ingredients:</strong>
+                    <p className="text-neutral-600">Require rare Prismatic-tier ingredients only obtainable through special means</p>
+                  </div>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-purple-500 mr-2 mt-1">•</span>
+                  <div>
+                    <strong className="text-purple-800">Difficulty:</strong>
+                    <p className="text-neutral-600">Legendary difficulty with precise timing and special conditions</p>
+                  </div>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-purple-500 mr-2 mt-1">•</span>
+                  <div>
+                    <strong className="text-purple-800">Rewards:</strong>
+                    <p className="text-neutral-600">Premium Sheckles (5x normal), guaranteed rare items, special effects</p>
+                  </div>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-purple-500 mr-2 mt-1">•</span>
+                  <div>
+                    <strong className="text-purple-800">Availability:</strong>
+                    <p className="text-neutral-600">Require special conditions (moon phases, special equipment, badges)</p>
+                  </div>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-purple-500 mr-2 mt-1">•</span>
+                  <div>
+                    <strong className="text-purple-800">Purpose:</strong>
+                    <p className="text-neutral-600">End-game content, special achievements, attracting spirits, unique buffs</p>
+                  </div>
+                </li>
+              </ul>
+              
+              <div className="mt-8 text-center">
+                <span className="inline-block px-6 py-3 bg-gradient-to-r from-purple-600 to-indigo-600 text-white rounded-lg font-medium shadow-md">
+                  You're Viewing Prismatic Recipes
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
       {/* FAQ Section */}
       <section className="py-20 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">

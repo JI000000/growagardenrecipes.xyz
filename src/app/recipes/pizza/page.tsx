@@ -583,6 +583,84 @@ export default function PizzaRecipePage() {
               ))}
             </div>
           </div>
+
+          {/* Prismatic Pizza Section */}
+          <div className="max-w-4xl mx-auto mt-16 bg-gradient-to-br from-purple-50 to-indigo-50 rounded-xl p-8 border border-purple-200 shadow-lg">
+            <div className="flex items-center justify-between mb-6">
+              <h3 className="text-2xl font-bold text-purple-900 flex items-center">
+                <span className="text-3xl mr-3">🌈</span> Prismatic Pizza
+              </h3>
+              <span className="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-sm font-medium">
+                Legendary Difficulty
+              </span>
+            </div>
+
+            <p className="text-purple-700 mb-6">
+              The Prismatic version of Pizza is one of the most rewarding
+              recipes in Grow a Garden. This special variant requires
+              Prismatic-tier ingredients and precise timing, but offers
+              exceptional rewards and unique effects.
+            </p>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+              <div className="bg-white/80 backdrop-blur rounded-lg p-5 border border-purple-100">
+                <h4 className="font-bold text-purple-800 mb-3">
+                  Prismatic Requirements
+                </h4>
+                <ul className="space-y-2 text-purple-700">
+                  <li className="flex items-center">
+                    <span className="text-purple-500 mr-2">•</span>
+                    All ingredients must be Prismatic-tier quality
+                  </li>
+                  <li className="flex items-center">
+                    <span className="text-purple-500 mr-2">•</span>
+                    Perfect timing (exactly 7 minutes 36 seconds)
+                  </li>
+                  <li className="flex items-center">
+                    <span className="text-purple-500 mr-2">•</span>
+                    Must be cooked during a Rainbow Phase (occurs every 3 hours)
+                  </li>
+                  <li className="flex items-center">
+                    <span className="text-purple-500 mr-2">•</span>
+                    Requires the "Rainbow Chef" ability (unlocked at level 40)
+                  </li>
+                </ul>
+              </div>
+
+              <div className="bg-white/80 backdrop-blur rounded-lg p-5 border border-purple-100">
+                <h4 className="font-bold text-purple-800 mb-3">
+                  Special Rewards
+                </h4>
+                <ul className="space-y-2 text-purple-700">
+                  <li className="flex items-center">
+                    <span className="text-purple-500 mr-2">•</span>
+                    Premium Sheckles (400-500)
+                  </li>
+                  <li className="flex items-center">
+                    <span className="text-purple-500 mr-2">•</span>
+                    Guaranteed Rare Item
+                  </li>
+                  <li className="flex items-center">
+                    <span className="text-purple-500 mr-2">•</span>
+                    25% chance to attract the Raiju spirit
+                  </li>
+                  <li className="flex items-center">
+                    <span className="text-purple-500 mr-2">•</span>
+                    "Pizza Master" temporary title (24 hours)
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div className="text-center">
+              <Link
+                href="/recipes/prismatic"
+                className="inline-block px-6 py-3 bg-gradient-to-r from-purple-600 to-indigo-600 text-white rounded-lg font-medium hover:from-purple-700 hover:to-indigo-700 transition-all shadow-md"
+              >
+                View All Prismatic Recipes
+              </Link>
+            </div>
+          </div>
         </div>
       </section>
 
