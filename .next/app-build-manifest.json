@@ -1,298 +1,105 @@
 {
   "pages": {
-    "/not-found": [
-      "static/chunks/webpack-9d964d8cb0d81fe9.js",
-      "static/chunks/fd9d1056-314442b610634306.js",
-      "static/chunks/117-0bdc3e77dca9cf7c.js",
-      "static/chunks/main-app-50b16555bfdb666a.js",
-      "static/chunks/972-88318e8ebe6dbf2c.js",
-      "static/chunks/app/not-found-64a01273632127d5.js"
-    ],
-    "/_not-found/page": [
-      "static/chunks/webpack-9d964d8cb0d81fe9.js",
-      "static/chunks/fd9d1056-314442b610634306.js",
-      "static/chunks/117-0bdc3e77dca9cf7c.js",
-      "static/chunks/main-app-50b16555bfdb666a.js",
-      "static/chunks/app/_not-found/page-0379efb20aaa8db2.js"
+    "/recipes/salad/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/recipes/salad/page.js"
     ],
     "/layout": [
-      "static/chunks/webpack-9d964d8cb0d81fe9.js",
-      "static/chunks/fd9d1056-314442b610634306.js",
-      "static/chunks/117-0bdc3e77dca9cf7c.js",
-      "static/chunks/main-app-50b16555bfdb666a.js",
-      "static/css/6da2ea0a05a7e2ab.css",
-      "static/chunks/972-88318e8ebe6dbf2c.js",
-      "static/chunks/257-b1c42d4ecd80550a.js",
-      "static/chunks/344-2bc2f4f402dddc45.js",
-      "static/chunks/app/layout-bd829ac6633fe3b2.js"
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/layout.css",
+      "static/chunks/app/layout.js"
     ],
-    "/categories/[slug]/page": [
-      "static/chunks/webpack-9d964d8cb0d81fe9.js",
-      "static/chunks/fd9d1056-314442b610634306.js",
-      "static/chunks/117-0bdc3e77dca9cf7c.js",
-      "static/chunks/main-app-50b16555bfdb666a.js",
-      "static/chunks/app/categories/[slug]/page-bdb0e195f4cc238a.js"
+    "/not-found": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/not-found.js"
     ],
-    "/categories/page": [
-      "static/chunks/webpack-9d964d8cb0d81fe9.js",
-      "static/chunks/fd9d1056-314442b610634306.js",
-      "static/chunks/117-0bdc3e77dca9cf7c.js",
-      "static/chunks/main-app-50b16555bfdb666a.js",
-      "static/chunks/972-88318e8ebe6dbf2c.js",
-      "static/chunks/app/categories/page-4892d4fdcf772a33.js"
-    ],
-    "/faq/page": [
-      "static/chunks/webpack-9d964d8cb0d81fe9.js",
-      "static/chunks/fd9d1056-314442b610634306.js",
-      "static/chunks/117-0bdc3e77dca9cf7c.js",
-      "static/chunks/main-app-50b16555bfdb666a.js",
-      "static/chunks/app/faq/page-48e9d7aac6e14acc.js"
-    ],
-    "/disclaimer/page": [
-      "static/chunks/webpack-9d964d8cb0d81fe9.js",
-      "static/chunks/fd9d1056-314442b610634306.js",
-      "static/chunks/117-0bdc3e77dca9cf7c.js",
-      "static/chunks/main-app-50b16555bfdb666a.js",
-      "static/chunks/972-88318e8ebe6dbf2c.js",
-      "static/chunks/app/disclaimer/page-a7b2783b39c8b8d8.js"
-    ],
-    "/contact/page": [
-      "static/chunks/webpack-9d964d8cb0d81fe9.js",
-      "static/chunks/fd9d1056-314442b610634306.js",
-      "static/chunks/117-0bdc3e77dca9cf7c.js",
-      "static/chunks/main-app-50b16555bfdb666a.js",
-      "static/chunks/972-88318e8ebe6dbf2c.js",
-      "static/chunks/app/contact/page-64f798bfafd65673.js"
-    ],
-    "/privacy-policy/page": [
-      "static/chunks/webpack-9d964d8cb0d81fe9.js",
-      "static/chunks/fd9d1056-314442b610634306.js",
-      "static/chunks/117-0bdc3e77dca9cf7c.js",
-      "static/chunks/main-app-50b16555bfdb666a.js",
-      "static/chunks/972-88318e8ebe6dbf2c.js",
-      "static/chunks/app/privacy-policy/page-8e30c9ccc23f7f4f.js"
-    ],
-    "/cooking-events/page": [
-      "static/chunks/webpack-9d964d8cb0d81fe9.js",
-      "static/chunks/fd9d1056-314442b610634306.js",
-      "static/chunks/117-0bdc3e77dca9cf7c.js",
-      "static/chunks/main-app-50b16555bfdb666a.js",
-      "static/chunks/app/cooking-events/page-dc3fc7b73aa977c1.js"
-    ],
-    "/page": [
-      "static/chunks/webpack-9d964d8cb0d81fe9.js",
-      "static/chunks/fd9d1056-314442b610634306.js",
-      "static/chunks/117-0bdc3e77dca9cf7c.js",
-      "static/chunks/main-app-50b16555bfdb666a.js",
-      "static/chunks/app/page-fff42c008a180985.js"
-    ],
-    "/recipes/[slug]/page": [
-      "static/chunks/webpack-9d964d8cb0d81fe9.js",
-      "static/chunks/fd9d1056-314442b610634306.js",
-      "static/chunks/117-0bdc3e77dca9cf7c.js",
-      "static/chunks/main-app-50b16555bfdb666a.js",
-      "static/chunks/app/recipes/[slug]/page-25d926a4eb948805.js"
-    ],
-    "/recipes/burger/page": [
-      "static/chunks/webpack-9d964d8cb0d81fe9.js",
-      "static/chunks/fd9d1056-314442b610634306.js",
-      "static/chunks/117-0bdc3e77dca9cf7c.js",
-      "static/chunks/main-app-50b16555bfdb666a.js",
-      "static/chunks/972-88318e8ebe6dbf2c.js",
-      "static/chunks/257-b1c42d4ecd80550a.js",
-      "static/chunks/344-2bc2f4f402dddc45.js",
-      "static/chunks/216-b05104e12ed748b9.js",
-      "static/chunks/app/recipes/burger/page-56c58f6970ca332c.js"
+    "/_not-found/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/_not-found/page.js"
     ],
     "/recipes/page": [
-      "static/chunks/webpack-9d964d8cb0d81fe9.js",
-      "static/chunks/fd9d1056-314442b610634306.js",
-      "static/chunks/117-0bdc3e77dca9cf7c.js",
-      "static/chunks/main-app-50b16555bfdb666a.js",
-      "static/chunks/app/recipes/page-b9d827421c5cb1ae.js"
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/recipes/page.js"
     ],
     "/recipes/donut/page": [
-      "static/chunks/webpack-9d964d8cb0d81fe9.js",
-      "static/chunks/fd9d1056-314442b610634306.js",
-      "static/chunks/117-0bdc3e77dca9cf7c.js",
-      "static/chunks/main-app-50b16555bfdb666a.js",
-      "static/chunks/972-88318e8ebe6dbf2c.js",
-      "static/chunks/257-b1c42d4ecd80550a.js",
-      "static/chunks/344-2bc2f4f402dddc45.js",
-      "static/chunks/app/recipes/donut/page-a5a64ae2dbd638a3.js"
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/recipes/donut/page.js"
     ],
-    "/recipes/hot-dog/page": [
-      "static/chunks/webpack-9d964d8cb0d81fe9.js",
-      "static/chunks/fd9d1056-314442b610634306.js",
-      "static/chunks/117-0bdc3e77dca9cf7c.js",
-      "static/chunks/main-app-50b16555bfdb666a.js",
-      "static/chunks/972-88318e8ebe6dbf2c.js",
-      "static/chunks/257-b1c42d4ecd80550a.js",
-      "static/chunks/344-2bc2f4f402dddc45.js",
-      "static/chunks/216-b05104e12ed748b9.js",
-      "static/chunks/app/recipes/hot-dog/page-0a1306af36f2263a.js"
+    "/recipes/burger/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/recipes/burger/page.js"
     ],
     "/recipes/pizza/page": [
-      "static/chunks/webpack-9d964d8cb0d81fe9.js",
-      "static/chunks/fd9d1056-314442b610634306.js",
-      "static/chunks/117-0bdc3e77dca9cf7c.js",
-      "static/chunks/main-app-50b16555bfdb666a.js",
-      "static/chunks/972-88318e8ebe6dbf2c.js",
-      "static/chunks/257-b1c42d4ecd80550a.js",
-      "static/chunks/344-2bc2f4f402dddc45.js",
-      "static/chunks/216-b05104e12ed748b9.js",
-      "static/chunks/app/recipes/pizza/page-0ff2bb9707239e6f.js"
-    ],
-    "/recipes/ice-cream/page": [
-      "static/chunks/webpack-9d964d8cb0d81fe9.js",
-      "static/chunks/fd9d1056-314442b610634306.js",
-      "static/chunks/117-0bdc3e77dca9cf7c.js",
-      "static/chunks/main-app-50b16555bfdb666a.js",
-      "static/chunks/972-88318e8ebe6dbf2c.js",
-      "static/chunks/257-b1c42d4ecd80550a.js",
-      "static/chunks/344-2bc2f4f402dddc45.js",
-      "static/chunks/216-b05104e12ed748b9.js",
-      "static/chunks/app/recipes/ice-cream/page-339c45dacc759fe7.js"
-    ],
-    "/recipes/porridge/page": [
-      "static/chunks/webpack-9d964d8cb0d81fe9.js",
-      "static/chunks/fd9d1056-314442b610634306.js",
-      "static/chunks/117-0bdc3e77dca9cf7c.js",
-      "static/chunks/main-app-50b16555bfdb666a.js",
-      "static/chunks/972-88318e8ebe6dbf2c.js",
-      "static/chunks/257-b1c42d4ecd80550a.js",
-      "static/chunks/344-2bc2f4f402dddc45.js",
-      "static/chunks/216-b05104e12ed748b9.js",
-      "static/chunks/app/recipes/porridge/page-8db57b3ec641242b.js"
-    ],
-    "/codes/page": [
-      "static/chunks/webpack-9d964d8cb0d81fe9.js",
-      "static/chunks/fd9d1056-314442b610634306.js",
-      "static/chunks/117-0bdc3e77dca9cf7c.js",
-      "static/chunks/main-app-50b16555bfdb666a.js",
-      "static/chunks/app/codes/page-61ea22b5b5c3ea6b.js"
-    ],
-    "/recipes/pie/page": [
-      "static/chunks/webpack-9d964d8cb0d81fe9.js",
-      "static/chunks/fd9d1056-314442b610634306.js",
-      "static/chunks/117-0bdc3e77dca9cf7c.js",
-      "static/chunks/main-app-50b16555bfdb666a.js",
-      "static/chunks/972-88318e8ebe6dbf2c.js",
-      "static/chunks/257-b1c42d4ecd80550a.js",
-      "static/chunks/344-2bc2f4f402dddc45.js",
-      "static/chunks/app/recipes/pie/page-8b1ecef1aa64d146.js"
-    ],
-    "/recipes/salad/page": [
-      "static/chunks/webpack-9d964d8cb0d81fe9.js",
-      "static/chunks/fd9d1056-314442b610634306.js",
-      "static/chunks/117-0bdc3e77dca9cf7c.js",
-      "static/chunks/main-app-50b16555bfdb666a.js",
-      "static/chunks/972-88318e8ebe6dbf2c.js",
-      "static/chunks/257-b1c42d4ecd80550a.js",
-      "static/chunks/344-2bc2f4f402dddc45.js",
-      "static/chunks/app/recipes/salad/page-184e57799dbd7844.js"
-    ],
-    "/recipes/sandwich/page": [
-      "static/chunks/webpack-9d964d8cb0d81fe9.js",
-      "static/chunks/fd9d1056-314442b610634306.js",
-      "static/chunks/117-0bdc3e77dca9cf7c.js",
-      "static/chunks/main-app-50b16555bfdb666a.js",
-      "static/chunks/972-88318e8ebe6dbf2c.js",
-      "static/chunks/257-b1c42d4ecd80550a.js",
-      "static/chunks/344-2bc2f4f402dddc45.js",
-      "static/chunks/216-b05104e12ed748b9.js",
-      "static/chunks/app/recipes/sandwich/page-a08ebe042ef26877.js"
-    ],
-    "/recipes/prismatic/page": [
-      "static/chunks/webpack-9d964d8cb0d81fe9.js",
-      "static/chunks/fd9d1056-314442b610634306.js",
-      "static/chunks/117-0bdc3e77dca9cf7c.js",
-      "static/chunks/main-app-50b16555bfdb666a.js",
-      "static/chunks/972-88318e8ebe6dbf2c.js",
-      "static/chunks/app/recipes/prismatic/page-08eddd5860b337ae.js"
-    ],
-    "/search/page": [
-      "static/chunks/webpack-9d964d8cb0d81fe9.js",
-      "static/chunks/fd9d1056-314442b610634306.js",
-      "static/chunks/117-0bdc3e77dca9cf7c.js",
-      "static/chunks/main-app-50b16555bfdb666a.js",
-      "static/chunks/app/search/page-a3a02ab4a579ca35.js"
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/recipes/pizza/page.js"
     ],
     "/recipes/cake/page": [
-      "static/chunks/webpack-9d964d8cb0d81fe9.js",
-      "static/chunks/fd9d1056-314442b610634306.js",
-      "static/chunks/117-0bdc3e77dca9cf7c.js",
-      "static/chunks/main-app-50b16555bfdb666a.js",
-      "static/chunks/972-88318e8ebe6dbf2c.js",
-      "static/chunks/257-b1c42d4ecd80550a.js",
-      "static/chunks/344-2bc2f4f402dddc45.js",
-      "static/chunks/216-b05104e12ed748b9.js",
-      "static/chunks/app/recipes/cake/page-b148fe6d6de23497.js"
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/recipes/cake/page.js"
     ],
-    "/terms-of-service/page": [
-      "static/chunks/webpack-9d964d8cb0d81fe9.js",
-      "static/chunks/fd9d1056-314442b610634306.js",
-      "static/chunks/117-0bdc3e77dca9cf7c.js",
-      "static/chunks/main-app-50b16555bfdb666a.js",
-      "static/chunks/972-88318e8ebe6dbf2c.js",
-      "static/chunks/app/terms-of-service/page-d8603eb72593f3c0.js"
+    "/recipes/ice-cream/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/recipes/ice-cream/page.js"
     ],
     "/recipes/sushi/page": [
-      "static/chunks/webpack-9d964d8cb0d81fe9.js",
-      "static/chunks/fd9d1056-314442b610634306.js",
-      "static/chunks/117-0bdc3e77dca9cf7c.js",
-      "static/chunks/main-app-50b16555bfdb666a.js",
-      "static/chunks/972-88318e8ebe6dbf2c.js",
-      "static/chunks/257-b1c42d4ecd80550a.js",
-      "static/chunks/344-2bc2f4f402dddc45.js",
-      "static/chunks/216-b05104e12ed748b9.js",
-      "static/chunks/app/recipes/sushi/page-deb3a86fcd129625.js"
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/recipes/sushi/page.js"
     ],
-    "/wiki/characters/page": [
-      "static/chunks/webpack-9d964d8cb0d81fe9.js",
-      "static/chunks/fd9d1056-314442b610634306.js",
-      "static/chunks/117-0bdc3e77dca9cf7c.js",
-      "static/chunks/main-app-50b16555bfdb666a.js",
-      "static/chunks/972-88318e8ebe6dbf2c.js",
-      "static/chunks/app/wiki/characters/page-15f165b6523a0f6e.js"
-    ],
-    "/wiki/page": [
-      "static/chunks/webpack-9d964d8cb0d81fe9.js",
-      "static/chunks/fd9d1056-314442b610634306.js",
-      "static/chunks/117-0bdc3e77dca9cf7c.js",
-      "static/chunks/main-app-50b16555bfdb666a.js",
-      "static/chunks/972-88318e8ebe6dbf2c.js",
-      "static/chunks/app/wiki/page-815140d14e29645b.js"
-    ],
-    "/recipes/prismatic-fusion/page": [
-      "static/chunks/webpack-9d964d8cb0d81fe9.js",
-      "static/chunks/fd9d1056-314442b610634306.js",
-      "static/chunks/117-0bdc3e77dca9cf7c.js",
-      "static/chunks/main-app-50b16555bfdb666a.js",
-      "static/chunks/972-88318e8ebe6dbf2c.js",
-      "static/chunks/257-b1c42d4ecd80550a.js",
-      "static/chunks/344-2bc2f4f402dddc45.js",
-      "static/chunks/app/recipes/prismatic-fusion/page-0ce8288c71767e7f.js"
-    ],
-    "/recipes/soup/page": [
-      "static/chunks/webpack-9d964d8cb0d81fe9.js",
-      "static/chunks/fd9d1056-314442b610634306.js",
-      "static/chunks/117-0bdc3e77dca9cf7c.js",
-      "static/chunks/main-app-50b16555bfdb666a.js",
-      "static/chunks/972-88318e8ebe6dbf2c.js",
-      "static/chunks/257-b1c42d4ecd80550a.js",
-      "static/chunks/344-2bc2f4f402dddc45.js",
-      "static/chunks/app/recipes/soup/page-3e31afed803bd85b.js"
+    "/recipes/hot-dog/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/recipes/hot-dog/page.js"
     ],
     "/recipes/waffle/page": [
-      "static/chunks/webpack-9d964d8cb0d81fe9.js",
-      "static/chunks/fd9d1056-314442b610634306.js",
-      "static/chunks/117-0bdc3e77dca9cf7c.js",
-      "static/chunks/main-app-50b16555bfdb666a.js",
-      "static/chunks/972-88318e8ebe6dbf2c.js",
-      "static/chunks/257-b1c42d4ecd80550a.js",
-      "static/chunks/344-2bc2f4f402dddc45.js",
-      "static/chunks/app/recipes/waffle/page-14aba365a4c866d7.js"
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/recipes/waffle/page.js"
+    ],
+    "/recipes/soup/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/recipes/soup/page.js"
+    ],
+    "/recipes/sandwich/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/recipes/sandwich/page.js"
+    ],
+    "/recipes/prismatic/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/recipes/prismatic/page.js"
+    ],
+    "/recipes/prismatic-fusion/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/recipes/prismatic-fusion/page.js"
+    ],
+    "/categories/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/categories/page.js"
+    ],
+    "/categories/[slug]/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/categories/[slug]/page.js"
+    ],
+    "/recipes/pie/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/recipes/pie/page.js"
     ]
   }
 }

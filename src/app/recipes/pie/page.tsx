@@ -160,6 +160,33 @@ export default function PieRecipePage() {
                   colorScheme="amber"
                 />
               </div>
+
+              <div className="mt-6 flex flex-wrap gap-4 justify-center md:justify-start">
+                <a
+                  href="#ingredients"
+                  className="px-6 py-3 bg-amber-500 hover:bg-amber-600 text-white rounded-xl font-medium transition-colors shadow-md hover:shadow-lg"
+                >
+                  View Ingredients
+                </a>
+                <a
+                  href="#steps"
+                  className="px-6 py-3 bg-orange-500 hover:bg-orange-600 text-white rounded-xl font-medium transition-colors shadow-md hover:shadow-lg"
+                >
+                  Preparation Steps
+                </a>
+                <a
+                  href="#rewards"
+                  className="px-6 py-3 bg-amber-700 hover:bg-amber-800 text-white rounded-xl font-medium transition-colors shadow-md hover:shadow-lg"
+                >
+                  Rewards & Tips
+                </a>
+                <a
+                  href="#prismatic"
+                  className="px-6 py-3 bg-gradient-to-r from-purple-600 to-indigo-600 text-white rounded-xl font-medium hover:from-purple-700 hover:to-indigo-700 transition-all shadow-md hover:shadow-lg"
+                >
+                  Prismatic Pie
+                </a>
+              </div>
             </div>
             <div className="md:w-1/2 flex justify-center">
               <div className="relative">

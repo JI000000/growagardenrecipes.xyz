@@ -217,6 +217,12 @@ export default function IceCreamRecipePage() {
             >
               Rewards & Tips
             </a>
+            <a
+              href="#prismatic"
+              className="px-6 py-3 bg-gradient-to-r from-purple-600 to-indigo-600 text-white rounded-xl font-medium hover:from-purple-700 hover:to-indigo-700 transition-all shadow-md hover:shadow-lg"
+            >
+              Prismatic Ice Cream
+            </a>
           </div>
         </div>
       </section>
