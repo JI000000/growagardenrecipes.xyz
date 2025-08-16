@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import {
   Breadcrumbs,
   RecipeShareButtons,
@@ -484,9 +485,12 @@ export default function SushiRecipePage() {
               ))}
             </div>
           </div>
-          
+
           {/* Prismatic Sushi Section */}
-          <div id="prismatic" className="max-w-4xl mx-auto mt-16 bg-gradient-to-br from-purple-50 to-indigo-50 rounded-xl p-8 border border-purple-200 shadow-lg">
+          <div
+            id="prismatic"
+            className="max-w-4xl mx-auto mt-16 bg-gradient-to-br from-purple-50 to-indigo-50 rounded-xl p-8 border border-purple-200 shadow-lg"
+          >
             <div className="flex items-center justify-between mb-6">
               <h3 className="text-2xl font-bold text-purple-900 flex items-center">
                 <span className="text-3xl mr-3">🌈</span> Prismatic Sushi
@@ -495,16 +499,19 @@ export default function SushiRecipePage() {
                 Legendary Difficulty
               </span>
             </div>
-            
+
             <p className="text-purple-700 mb-6">
-              The Prismatic version of Sushi is an exquisite delicacy sought after by culinary virtuosos. 
-              This legendary dish requires rare ingredients and precise timing, 
-              offering exceptional rewards and unique game benefits.
+              The Prismatic version of Sushi is an exquisite delicacy sought
+              after by culinary virtuosos. This legendary dish requires rare
+              ingredients and precise timing, offering exceptional rewards and
+              unique game benefits.
             </p>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
               <div className="bg-white/80 backdrop-blur rounded-lg p-5 border border-purple-100">
-                <h4 className="font-bold text-purple-800 mb-3">Prismatic Requirements</h4>
+                <h4 className="font-bold text-purple-800 mb-3">
+                  Prismatic Requirements
+                </h4>
                 <ul className="space-y-2 text-purple-700">
                   <li className="flex items-center">
                     <span className="text-purple-500 mr-2">•</span>
@@ -516,17 +523,21 @@ export default function SushiRecipePage() {
                   </li>
                   <li className="flex items-center">
                     <span className="text-purple-500 mr-2">•</span>
-                    Must be prepared during Ocean Festival (seasonal in-game event)
+                    Must be prepared during Ocean Festival (seasonal in-game
+                    event)
                   </li>
                   <li className="flex items-center">
                     <span className="text-purple-500 mr-2">•</span>
-                    Requires the "Sushi Master" badge (complete 40 perfect seafood recipes)
+                    Requires the &quot;Sushi Master&quot; badge (complete 40
+                    perfect seafood recipes)
                   </li>
                 </ul>
               </div>
-              
+
               <div className="bg-white/80 backdrop-blur rounded-lg p-5 border border-purple-100">
-                <h4 className="font-bold text-purple-800 mb-3">Special Rewards</h4>
+                <h4 className="font-bold text-purple-800 mb-3">
+                  Special Rewards
+                </h4>
                 <ul className="space-y-2 text-purple-700">
                   <li className="flex items-center">
                     <span className="text-purple-500 mr-2">•</span>
@@ -542,12 +553,12 @@ export default function SushiRecipePage() {
                   </li>
                   <li className="flex items-center">
                     <span className="text-purple-500 mr-2">•</span>
-                    "Ocean Sovereign" temporary title (24 hours)
+                    &quot;Ocean Sovereign&quot; temporary title (24 hours)
                   </li>
                 </ul>
               </div>
             </div>
-            
+
             <div className="text-center">
               <Link
                 href="/recipes/prismatic"

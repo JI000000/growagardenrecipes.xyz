@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import { Breadcrumbs } from '@/components/layout';
 import { RecipeStructuredData } from '@/components/recipes';
 import { RecipeShareButtons } from '@/components/share';
@@ -160,8 +161,6 @@ export default function WaffleRecipePage() {
                   colorScheme="yellow"
                 />
               </div>
-
-
             </div>
             <div className="md:w-1/2 flex justify-center">
               <div className="relative">
@@ -505,8 +504,8 @@ export default function WaffleRecipePage() {
                   </li>
                   <li className="flex items-center">
                     <span className="text-purple-500 mr-2">•</span>
-                    Requires the "Morning Chef" badge (complete 25 perfect
-                    breakfast recipes)
+                    Requires the &quot;Morning Chef&quot; badge (complete 25
+                    perfect breakfast recipes)
                   </li>
                 </ul>
               </div>
@@ -530,7 +529,7 @@ export default function WaffleRecipePage() {
                   </li>
                   <li className="flex items-center">
                     <span className="text-purple-500 mr-2">•</span>
-                    "Waffle Wizard" temporary title (24 hours)
+                    &quot;Waffle Wizard&quot; temporary title (24 hours)
                   </li>
                 </ul>
               </div>

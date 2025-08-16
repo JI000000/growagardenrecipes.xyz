@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import {
   Breadcrumbs,
   RecipeShareButtons,
@@ -531,8 +532,8 @@ export default function CakeRecipePage() {
                   </li>
                   <li className="flex items-center">
                     <span className="text-purple-500 mr-2">•</span>
-                    Requires the "Dessert Master" badge (complete 30 perfect
-                    desserts)
+                    Requires the &quot;Dessert Master&quot; badge (complete 30
+                    perfect desserts)
                   </li>
                 </ul>
               </div>
@@ -556,7 +557,7 @@ export default function CakeRecipePage() {
                   </li>
                   <li className="flex items-center">
                     <span className="text-purple-500 mr-2">•</span>
-                    "Cake Connoisseur" temporary title (24 hours)
+                    &quot;Cake Connoisseur&quot; temporary title (24 hours)
                   </li>
                 </ul>
               </div>

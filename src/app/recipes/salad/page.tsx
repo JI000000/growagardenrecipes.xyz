@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import { Breadcrumbs } from '@/components/layout';
 import { RecipeStructuredData } from '@/components/recipes';
 import { RecipeShareButtons } from '@/components/share';
@@ -62,23 +63,23 @@ export default function SaladRecipePage() {
         recipeName={saladRecipe.name}
         recipeDescription={`${saladRecipe.description}. Updated for 2025.`}
         recipeImage="/images/recipe-placeholder.jpg"
-        datePublished={saladRecipe.lastUpdated || "2025-08-15"}
+        datePublished={saladRecipe.lastUpdated || '2025-08-15'}
         prepTime="PT10M"
         cookTime={`PT${saladRecipe.cookingTime.replace(' minutes ', 'M').replace(' seconds', 'S')}`}
         totalTime={`PT${saladRecipe.cookingTime.replace(' minutes ', 'M').replace(' seconds', 'S')}`}
         recipeYield="1 serving"
-        recipeCategory={saladRecipe.category || "snacks"}
+        recipeCategory={saladRecipe.category || 'snacks'}
         recipeCuisine="Game Food"
-        ingredients={saladRecipe.ingredients.map(ing => ({
+        ingredients={saladRecipe.ingredients.map((ing) => ({
           name: ing.name,
           quantity: ing.quantity,
-          unit: "piece"
+          unit: 'piece',
         }))}
-        instructions={saladRecipe.steps.map(step => ({
+        instructions={saladRecipe.steps.map((step) => ({
           step: step.step,
           description: step.description,
           timing: step.timing,
-          tip: step.tip
+          tip: step.tip,
         }))}
         keywords={[
           'salad recipe grow a garden',
@@ -160,8 +161,6 @@ export default function SaladRecipePage() {
                   colorScheme="green"
                 />
               </div>
-
-
             </div>
             <div className="md:w-1/2 flex justify-center">
               <div className="relative">
@@ -502,8 +501,8 @@ export default function SaladRecipePage() {
                   </li>
                   <li className="flex items-center">
                     <span className="text-purple-500 mr-2">•</span>
-                    Requires the "Garden Master" badge (complete 35 perfect
-                    vegetable recipes)
+                    Requires the &quot;Garden Master&quot; badge (complete 35
+                    perfect vegetable recipes)
                   </li>
                 </ul>
               </div>
@@ -527,7 +526,7 @@ export default function SaladRecipePage() {
                   </li>
                   <li className="flex items-center">
                     <span className="text-purple-500 mr-2">•</span>
-                    "Garden Guardian" temporary title (24 hours)
+                    &quot;Garden Guardian&quot; temporary title (24 hours)
                   </li>
                 </ul>
               </div>

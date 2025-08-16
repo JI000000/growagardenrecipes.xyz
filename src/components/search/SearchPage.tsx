@@ -1,4 +1,5 @@
 'use client';
+/* eslint-disable react-hooks/exhaustive-deps */
 
 import { allRecipes, popularRecipes } from '@/data/recipes';
 import Link from 'next/link';
@@ -22,7 +23,11 @@ export const SearchPage: React.FC<SearchPageProps> = ({ className }) => {
     search(value);
   };
 
-  const allData = [...popularRecipes, ...allRecipes];
+  // Memoize the combined data array to avoid re-creating it on every render
+  const allData = useMemo(
+    () => [...popularRecipes, ...allRecipes],
+    [popularRecipes, allRecipes]
+  );
 
   const filteredResults = useMemo(() => {
     let results = allData;

@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import type { Metadata } from 'next';
 import Link from 'next/link';
 
@@ -430,8 +431,8 @@ export default function CharactersPage() {
               Character Details
             </h2>
             <p className="text-lg text-emerald-700 max-w-3xl mx-auto">
-              Learn about each character's abilities, friendship levels, and how
-              to maximize your interactions with them.
+              Learn about each character&apos;s abilities, friendship levels,
+              and how to maximize your interactions with them.
             </p>
           </div>
 
@@ -631,8 +632,8 @@ export default function CharactersPage() {
               </h3>
               <p className="text-emerald-700 mb-4">
                 When both characters are at max friendship level, combining
-                Tanuki's Seed Blessing with Kodama's Spirit Growth creates the
-                "Nature's Harmony" effect, which:
+                Tanuki&apos;s Seed Blessing with Kodama&apos;s Spirit Growth
+                creates the &quot;Nature&apos;s Harmony&quot; effect, which:
               </p>
               <ul className="space-y-2 text-emerald-700">
                 <li className="flex items-start">
@@ -656,15 +657,15 @@ export default function CharactersPage() {
                 Kitsune + Raiju Combination
               </h3>
               <p className="text-emerald-700 mb-4">
-                The "Elemental Fusion" effect occurs when Kitsune's Fox Fire and
-                Raiju's Electric Shield are activated within 10 minutes of each
-                other:
+                The &quot;Elemental Fusion&quot; effect occurs when
+                Kitsune&apos;s Fox Fire and Raiju&apos;s Electric Shield are
+                activated within 10 minutes of each other:
               </p>
               <ul className="space-y-2 text-emerald-700">
                 <li className="flex items-start">
                   <span className="text-emerald-500 mr-2">•</span>
-                  Creates "Storm Fire" cooking effect, reducing cooking time by
-                  50%
+                  Creates &quot;Storm Fire&quot; cooking effect, reducing
+                  cooking time by 50%
                 </li>
                 <li className="flex items-start">
                   <span className="text-emerald-500 mr-2">•</span>
@@ -682,24 +683,24 @@ export default function CharactersPage() {
                 All Four Characters Strategy
               </h3>
               <p className="text-emerald-700 mb-4">
-                The ultimate "Spirit Garden" effect occurs during the Equinox
-                Festival when all four characters are present at level 5
+                The ultimate &quot;Spirit Garden&quot; effect occurs during the
+                Equinox Festival when all four characters are present at level 5
                 friendship:
               </p>
               <ul className="space-y-2 text-emerald-700">
                 <li className="flex items-start">
                   <span className="text-emerald-500 mr-2">•</span>
-                  Creates a permanent "Mystical Garden" plot where Prismatic
-                  ingredients can grow
+                  Creates a permanent &quot;Mystical Garden&quot; plot where
+                  Prismatic ingredients can grow
                 </li>
                 <li className="flex items-start">
                   <span className="text-emerald-500 mr-2">•</span>
-                  Unlocks the "Spirit Feast" special event where all characters
-                  gather
+                  Unlocks the &quot;Spirit Feast&quot; special event where all
+                  characters gather
                 </li>
                 <li className="flex items-start">
                   <span className="text-emerald-500 mr-2">•</span>
-                  Grants the "Spirit Gardener" title and unique garden
+                  Grants the &quot;Spirit Gardener&quot; title and unique garden
                   decorations
                 </li>
                 <li className="flex items-start">
@@ -875,8 +876,8 @@ export default function CharactersPage() {
                 Yes, giving disliked foods or failing character-specific quests
                 can reduce friendship points. Avoiding a character for more than
                 14 in-game days will also cause a small friendship decay. The
-                2025 update added a "Friendship Stabilizer" item from the
-                Premium Shop that prevents friendship decay for 30 days.
+                2025 update added a &quot;Friendship Stabilizer&quot; item from
+                the Premium Shop that prevents friendship decay for 30 days.
               </p>
             </div>
           </div>

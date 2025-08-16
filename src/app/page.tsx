@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import { allRecipes } from '@/data/recipes';
 import type { Metadata } from 'next';
 
@@ -181,13 +182,14 @@ export default function HomePage() {
             style={{ animationDelay: '2s' }}
           ></div>
         </div>
-        
+
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <span className="inline-block px-6 py-2 bg-purple-100 text-purple-800 rounded-full text-sm font-semibold mb-4">
               LEGENDARY RECIPES
             </span>
-            <h2 className="text-4xl md:text-5xl font-display font-bold mb-6"
+            <h2
+              className="text-4xl md:text-5xl font-display font-bold mb-6"
               style={{
                 background: 'linear-gradient(to right, #9333ea, #4f46e5)',
                 WebkitBackgroundClip: 'text',
@@ -200,11 +202,12 @@ export default function HomePage() {
               Master the rarest and most rewarding dishes in Grow a Garden
             </h3>
             <p className="text-lg text-neutral-500 max-w-3xl mx-auto mb-12">
-              Unlock incredible rewards and special effects with Prismatic recipes. These legendary 
-              dishes require perfect timing, rare ingredients, and special conditions, but offer 
-              the game's most valuable rewards.
+              Unlock incredible rewards and special effects with Prismatic
+              recipes. These legendary dishes require perfect timing, rare
+              ingredients, and special conditions, but offer the game&apos;s
+              most valuable rewards.
             </p>
-            
+
             <div className="flex justify-center">
               <a
                 href="/recipes/prismatic"
@@ -214,7 +217,7 @@ export default function HomePage() {
               </a>
             </div>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
             {/* Featured Prismatic Recipes */}
             <a
@@ -245,7 +248,7 @@ export default function HomePage() {
                 Legendary • 7m 36s
               </p>
             </a>
-            
+
             <a
               href="/recipes/burger#prismatic"
               className="card-modern group p-6 text-center transform hover:scale-105 transition-all duration-300 rounded-xl"
@@ -274,7 +277,7 @@ export default function HomePage() {
                 Legendary • 6m 15s
               </p>
             </a>
-            
+
             <a
               href="/recipes/cake#prismatic"
               className="card-modern group p-6 text-center transform hover:scale-105 transition-all duration-300 rounded-xl"
@@ -303,7 +306,7 @@ export default function HomePage() {
                 Legendary • 8m 45s
               </p>
             </a>
-            
+
             <a
               href="/recipes/ice-cream#prismatic"
               className="card-modern group p-6 text-center transform hover:scale-105 transition-all duration-300 rounded-xl"
@@ -335,7 +338,7 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-      
+
       {/* Quick Access Section */}
       <section className="py-20 bg-gradient-to-br from-primary-50 to-secondary-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

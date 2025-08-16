@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import QuickRecipeSearch from '@/components/search/QuickRecipeSearch';
 import { allRecipes } from '@/data/recipes';
 import type { Metadata } from 'next';
@@ -220,7 +221,8 @@ export default function PrismaticRecipesPage() {
               </p>
               <p className="text-neutral-600">
                 New in 2025: Prismatic dishes now have a chance to grant the
-                "Rainbow Chef" status effect, doubling all rewards for 24 hours.
+                &quot;Rainbow Chef&quot; status effect, doubling all rewards for
+                24 hours.
               </p>
             </div>
 
@@ -230,8 +232,8 @@ export default function PrismaticRecipesPage() {
               </h3>
               <p className="text-neutral-600 mb-4">
                 Prismatic recipes require perfect timing during cooking. The
-                "Prismatic Window" appears for only 2 seconds, and you must
-                serve the dish precisely during this moment.
+                &quot;Prismatic Window&quot; appears for only 2 seconds, and you
+                must serve the dish precisely during this moment.
               </p>
               <p className="text-neutral-600">
                 Our guides include exact timing markers to help you master this
@@ -245,8 +247,8 @@ export default function PrismaticRecipesPage() {
               </h3>
               <p className="text-neutral-600 mb-4">
                 The 2025 update introduced special mechanics for Prismatic
-                cooking, including the rhythm-based "Rainbow Stir" and the
-                precision-based "Prismatic Pour."
+                cooking, including the rhythm-based &quot;Rainbow Stir&quot; and
+                the precision-based &quot;Prismatic Pour.&quot;
               </p>
               <p className="text-neutral-600">
                 Each recipe has unique mechanics that we cover in detail in our
@@ -322,7 +324,7 @@ export default function PrismaticRecipesPage() {
 
           {/* Recipe Grid */}
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mb-16">
-            {prismaticRecipes.map((recipe, index) => (
+            {prismaticRecipes.map((recipe) => (
               <div
                 key={recipe.slug}
                 className="card-modern group p-6 text-center transform hover:scale-105 transition-all duration-300 rounded-xl"
@@ -371,7 +373,7 @@ export default function PrismaticRecipesPage() {
             <p className="text-neutral-600 mb-6">
               The 2025 update introduced Prismatic Fusion - a revolutionary
               cooking mechanic that allows you to combine two Prismatic dishes
-              for unique effects and bonuses. Here's how it works:
+              for unique effects and bonuses. Here&apos;s how it works:
             </p>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
@@ -394,15 +396,15 @@ export default function PrismaticRecipesPage() {
                 <ul className="text-sm text-neutral-600 space-y-2">
                   <li>
                     <strong>Prismatic Pizza + Prismatic Ice Cream</strong>:
-                    "Festival Feast" - 3x XP for 1 hour
+                    &quot;Festival Feast&quot; - 3x XP for 1 hour
                   </li>
                   <li>
-                    <strong>Prismatic Burger + Prismatic Cake</strong>: "Royal
-                    Banquet" - 2x Sheckles from all sources
+                    <strong>Prismatic Burger + Prismatic Cake</strong>:
+                    &quot;Royal Banquet&quot; - 2x Sheckles from all sources
                   </li>
                   <li>
                     <strong>Prismatic Donut + Prismatic Sushi</strong>:
-                    "Culinary Genius" - Rare ingredient drop rate +25%
+                    &quot;Culinary Genius&quot; - Rare ingredient drop rate +25%
                   </li>
                 </ul>
               </div>
@@ -467,8 +469,8 @@ export default function PrismaticRecipesPage() {
                 Feeding Chris P. Bacon with multiple Prismatic dishes in a
                 specific order triggers special combination bonuses. For
                 example, serving Prismatic Pizza followed by Prismatic Ice Cream
-                within 5 minutes grants the "Festival Feast" bonus, increasing
-                rewards by an additional 50%.
+                within 5 minutes grants the &quot;Festival Feast&quot; bonus,
+                increasing rewards by an additional 50%.
               </p>
             </div>
 
@@ -477,8 +479,8 @@ export default function PrismaticRecipesPage() {
                 🧩 Ingredient Substitutions
               </h3>
               <p className="text-neutral-600">
-                If you're missing specific Prismatic ingredients, certain rare
-                substitutions work at 80% effectiveness. For example,
+                If you&apos;re missing specific Prismatic ingredients, certain
+                rare substitutions work at 80% effectiveness. For example,
                 Divine-tier ingredients combined with Rainbow Essence (purchased
                 from the Mystic Vendor during special events) can substitute for
                 most Prismatic ingredients.
@@ -713,7 +715,7 @@ export default function PrismaticRecipesPage() {
 
               <div className="mt-8 text-center">
                 <span className="inline-block px-6 py-3 bg-gradient-to-r from-purple-600 to-indigo-600 text-white rounded-lg font-medium shadow-md">
-                  You're Viewing Prismatic Recipes
+                  You&apos;re Viewing Prismatic Recipes
                 </span>
               </div>
             </div>
@@ -768,10 +770,10 @@ export default function PrismaticRecipesPage() {
               </h4>
               <p className="text-neutral-600">
                 Absolutely! Prismatic dishes provide 5x the normal rewards,
-                exclusive items, and special status effects. They're essential
-                for advanced progression, especially for unlocking the Legendary
-                Chef achievements and the special garden areas introduced in the
-                2025 update.
+                exclusive items, and special status effects. They&apos;re
+                essential for advanced progression, especially for unlocking the
+                Legendary Chef achievements and the special garden areas
+                introduced in the 2025 update.
               </p>
             </div>
 

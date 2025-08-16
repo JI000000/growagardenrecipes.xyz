@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import { Breadcrumbs } from '@/components/layout';
 import { RecipeStructuredData } from '@/components/recipes';
 import { RecipeShareButtons } from '@/components/share';
@@ -160,8 +161,6 @@ export default function DonutRecipePage() {
                   colorScheme="pink"
                 />
               </div>
-
-
             </div>
             <div className="md:w-1/2 flex justify-center">
               <div className="relative">
@@ -501,8 +500,8 @@ export default function DonutRecipePage() {
                   </li>
                   <li className="flex items-center">
                     <span className="text-purple-500 mr-2">•</span>
-                    Requires the "Master Baker" badge (complete 25 perfect
-                    desserts)
+                    Requires the &quot;Master Baker&quot; badge (complete 25
+                    perfect desserts)
                   </li>
                 </ul>
               </div>
@@ -526,7 +525,7 @@ export default function DonutRecipePage() {
                   </li>
                   <li className="flex items-center">
                     <span className="text-purple-500 mr-2">•</span>
-                    "Donut Master" temporary title (24 hours)
+                    &quot;Donut Master&quot; temporary title (24 hours)
                   </li>
                 </ul>
               </div>

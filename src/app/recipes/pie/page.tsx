@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import { Breadcrumbs } from '@/components/layout';
 import { RecipeStructuredData } from '@/components/recipes';
 import { RecipeShareButtons } from '@/components/share';
@@ -62,23 +63,23 @@ export default function PieRecipePage() {
         recipeName={pieRecipe.name}
         recipeDescription={`${pieRecipe.description}. Updated for 2025.`}
         recipeImage="/images/recipe-placeholder.jpg"
-        datePublished={pieRecipe.lastUpdated || "2025-08-15"}
+        datePublished={pieRecipe.lastUpdated || '2025-08-15'}
         prepTime="PT10M"
         cookTime={`PT${pieRecipe.cookingTime.replace(' minutes ', 'M').replace(' seconds', 'S')}`}
         totalTime={`PT${pieRecipe.cookingTime.replace(' minutes ', 'M').replace(' seconds', 'S')}`}
         recipeYield="1 serving"
-        recipeCategory={pieRecipe.category || "desserts"}
+        recipeCategory={pieRecipe.category || 'desserts'}
         recipeCuisine="Game Food"
-        ingredients={pieRecipe.ingredients.map(ing => ({
+        ingredients={pieRecipe.ingredients.map((ing) => ({
           name: ing.name,
           quantity: ing.quantity,
-          unit: "piece"
+          unit: 'piece',
         }))}
-        instructions={pieRecipe.steps.map(step => ({
+        instructions={pieRecipe.steps.map((step) => ({
           step: step.step,
           description: step.description,
           timing: step.timing,
-          tip: step.tip
+          tip: step.tip,
         }))}
         keywords={[
           'pie recipe grow a garden',
@@ -125,11 +126,10 @@ export default function PieRecipePage() {
                 Complete Grow a Garden Recipe Guide
               </h2>
               <p className="text-lg text-amber-700 mb-8 leading-relaxed">
-                Master the perfect{' '}
-                <strong>pie recipe in Grow a Garden</strong> with our
-                comprehensive guide. Learn the exact ingredients, cooking times,
-                and special techniques for creating the most delicious and
-                rewarding dessert.
+                Master the perfect <strong>pie recipe in Grow a Garden</strong>{' '}
+                with our comprehensive guide. Learn the exact ingredients,
+                cooking times, and special techniques for creating the most
+                delicious and rewarding dessert.
               </p>
               <div className="flex flex-wrap gap-4 mb-8">
                 <div className="bg-white/80 backdrop-blur rounded-lg px-4 py-2 flex items-center gap-2">
@@ -160,8 +160,6 @@ export default function PieRecipePage() {
                   colorScheme="amber"
                 />
               </div>
-
-
             </div>
             <div className="md:w-1/2 flex justify-center">
               <div className="relative">
@@ -500,8 +498,8 @@ export default function PieRecipePage() {
                   </li>
                   <li className="flex items-center">
                     <span className="text-purple-500 mr-2">•</span>
-                    Requires the "Pastry Chef" badge (complete 30 perfect
-                    desserts)
+                    Requires the &quot;Pastry Chef&quot; badge (complete 30
+                    perfect desserts)
                   </li>
                 </ul>
               </div>
@@ -525,7 +523,7 @@ export default function PieRecipePage() {
                   </li>
                   <li className="flex items-center">
                     <span className="text-purple-500 mr-2">•</span>
-                    "Pie Perfectionist" temporary title (24 hours)
+                    &quot;Pie Perfectionist&quot; temporary title (24 hours)
                   </li>
                 </ul>
               </div>

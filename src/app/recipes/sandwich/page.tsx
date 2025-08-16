@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import {
   Breadcrumbs,
   RecipeShareButtons,
@@ -99,7 +100,8 @@ export default function SandwichRecipePage() {
         ingredients={sandwichRecipe.ingredients.map((ing) => ({
           name: ing.name,
           quantity: ing.quantity,
-          unit: ing.name === 'Bread' || ing.name === 'Cheese' ? 'slice' : 'unit',
+          unit:
+            ing.name === 'Bread' || ing.name === 'Cheese' ? 'slice' : 'unit',
         }))}
         instructions={sandwichRecipe.steps.map((step) => ({
           step: step.step,
@@ -151,8 +153,8 @@ export default function SandwichRecipePage() {
                 Master the perfect{' '}
                 <strong>sandwich recipe in Grow a Garden</strong> with our
                 comprehensive guide. Learn the exact ingredients, preparation
-                times, and special techniques for creating the most delicious and
-                rewarding sandwich.
+                times, and special techniques for creating the most delicious
+                and rewarding sandwich.
               </p>
 
               <div className="flex flex-wrap gap-4 mb-8">
@@ -375,13 +377,13 @@ export default function SandwichRecipePage() {
               </li>
               <li className="flex items-start">
                 <span className="text-green-500 mr-2">•</span>
-                <strong>0:45-1:30:</strong> The cheese should be spread evenly on
-                the bread
+                <strong>0:45-1:30:</strong> The cheese should be spread evenly
+                on the bread
               </li>
               <li className="flex items-start">
                 <span className="text-green-500 mr-2">•</span>
-                <strong>1:30-2:15:</strong> The ham should be placed and slightly
-                folded
+                <strong>1:30-2:15:</strong> The ham should be placed and
+                slightly folded
               </li>
               <li className="flex items-start">
                 <span className="text-green-500 mr-2">•</span>
@@ -493,9 +495,12 @@ export default function SandwichRecipePage() {
               ))}
             </div>
           </div>
-          
+
           {/* Prismatic Sandwich Section */}
-          <div id="prismatic" className="max-w-4xl mx-auto mt-16 bg-gradient-to-br from-purple-50 to-indigo-50 rounded-xl p-8 border border-purple-200 shadow-lg">
+          <div
+            id="prismatic"
+            className="max-w-4xl mx-auto mt-16 bg-gradient-to-br from-purple-50 to-indigo-50 rounded-xl p-8 border border-purple-200 shadow-lg"
+          >
             <div className="flex items-center justify-between mb-6">
               <h3 className="text-2xl font-bold text-purple-900 flex items-center">
                 <span className="text-3xl mr-3">🌈</span> Prismatic Sandwich
@@ -504,16 +509,19 @@ export default function SandwichRecipePage() {
                 Legendary Difficulty
               </span>
             </div>
-            
+
             <p className="text-purple-700 mb-6">
-              The Prismatic version of Sandwich is a culinary masterpiece sought after by elite chefs. 
-              This legendary snack requires special ingredients and perfect timing, 
-              offering substantial rewards and unique game effects.
+              The Prismatic version of Sandwich is a culinary masterpiece sought
+              after by elite chefs. This legendary snack requires special
+              ingredients and perfect timing, offering substantial rewards and
+              unique game effects.
             </p>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
               <div className="bg-white/80 backdrop-blur rounded-lg p-5 border border-purple-100">
-                <h4 className="font-bold text-purple-800 mb-3">Prismatic Requirements</h4>
+                <h4 className="font-bold text-purple-800 mb-3">
+                  Prismatic Requirements
+                </h4>
                 <ul className="space-y-2 text-purple-700">
                   <li className="flex items-center">
                     <span className="text-purple-500 mr-2">•</span>
@@ -525,17 +533,21 @@ export default function SandwichRecipePage() {
                   </li>
                   <li className="flex items-center">
                     <span className="text-purple-500 mr-2">•</span>
-                    Must be prepared during Lunch Rush hours (11AM-1PM game time)
+                    Must be prepared during Lunch Rush hours (11AM-1PM game
+                    time)
                   </li>
                   <li className="flex items-center">
                     <span className="text-purple-500 mr-2">•</span>
-                    Requires the "Sandwich Artist" badge (complete 15 perfect sandwich recipes)
+                    Requires the &quot;Sandwich Artist&quot; badge (complete 15
+                    perfect sandwich recipes)
                   </li>
                 </ul>
               </div>
-              
+
               <div className="bg-white/80 backdrop-blur rounded-lg p-5 border border-purple-100">
-                <h4 className="font-bold text-purple-800 mb-3">Special Rewards</h4>
+                <h4 className="font-bold text-purple-800 mb-3">
+                  Special Rewards
+                </h4>
                 <ul className="space-y-2 text-purple-700">
                   <li className="flex items-center">
                     <span className="text-purple-500 mr-2">•</span>
@@ -551,12 +563,12 @@ export default function SandwichRecipePage() {
                   </li>
                   <li className="flex items-center">
                     <span className="text-purple-500 mr-2">•</span>
-                    "Sandwich Sage" temporary title (24 hours)
+                    &quot;Sandwich Sage&quot; temporary title (24 hours)
                   </li>
                 </ul>
               </div>
             </div>
-            
+
             <div className="text-center">
               <Link
                 href="/recipes/prismatic"

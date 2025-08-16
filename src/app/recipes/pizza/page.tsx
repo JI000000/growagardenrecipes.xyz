@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import {
   Breadcrumbs,
   RecipeShareButtons,
@@ -591,7 +592,10 @@ export default function PizzaRecipePage() {
           </div>
 
           {/* Prismatic Pizza Section */}
-          <div id="prismatic" className="max-w-4xl mx-auto mt-16 bg-gradient-to-br from-purple-50 to-indigo-50 rounded-xl p-8 border border-purple-200 shadow-lg">
+          <div
+            id="prismatic"
+            className="max-w-4xl mx-auto mt-16 bg-gradient-to-br from-purple-50 to-indigo-50 rounded-xl p-8 border border-purple-200 shadow-lg"
+          >
             <div className="flex items-center justify-between mb-6">
               <h3 className="text-2xl font-bold text-purple-900 flex items-center">
                 <span className="text-3xl mr-3">🌈</span> Prismatic Pizza
@@ -628,7 +632,8 @@ export default function PizzaRecipePage() {
                   </li>
                   <li className="flex items-center">
                     <span className="text-purple-500 mr-2">•</span>
-                    Requires the "Rainbow Chef" ability (unlocked at level 40)
+                    Requires the &quot;Rainbow Chef&quot; ability (unlocked at
+                    level 40)
                   </li>
                 </ul>
               </div>
@@ -652,7 +657,7 @@ export default function PizzaRecipePage() {
                   </li>
                   <li className="flex items-center">
                     <span className="text-purple-500 mr-2">•</span>
-                    "Pizza Master" temporary title (24 hours)
+                    &quot;Pizza Master&quot; temporary title (24 hours)
                   </li>
                 </ul>
               </div>

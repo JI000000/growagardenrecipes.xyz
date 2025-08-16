@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import { Breadcrumbs } from '@/components/layout';
 import { RecipeStructuredData } from '@/components/recipes';
 import { RecipeShareButtons } from '@/components/share';
@@ -62,23 +63,23 @@ export default function SoupRecipePage() {
         recipeName={soupRecipe.name}
         recipeDescription={`${soupRecipe.description}. Updated for 2025.`}
         recipeImage="/images/recipe-placeholder.jpg"
-        datePublished={soupRecipe.lastUpdated || "2025-08-15"}
+        datePublished={soupRecipe.lastUpdated || '2025-08-15'}
         prepTime="PT10M"
         cookTime={`PT${soupRecipe.cookingTime.replace(' minutes ', 'M').replace(' seconds', 'S')}`}
         totalTime={`PT${soupRecipe.cookingTime.replace(' minutes ', 'M').replace(' seconds', 'S')}`}
         recipeYield="1 serving"
-        recipeCategory={soupRecipe.category || "snacks"}
+        recipeCategory={soupRecipe.category || 'snacks'}
         recipeCuisine="Game Food"
-        ingredients={soupRecipe.ingredients.map(ing => ({
+        ingredients={soupRecipe.ingredients.map((ing) => ({
           name: ing.name,
           quantity: ing.quantity,
-          unit: "piece"
+          unit: 'piece',
         }))}
-        instructions={soupRecipe.steps.map(step => ({
+        instructions={soupRecipe.steps.map((step) => ({
           step: step.step,
           description: step.description,
           timing: step.timing,
-          tip: step.tip
+          tip: step.tip,
         }))}
         keywords={[
           'soup recipe grow a garden',
@@ -125,11 +126,10 @@ export default function SoupRecipePage() {
                 Complete Grow a Garden Recipe Guide
               </h2>
               <p className="text-lg text-orange-700 mb-8 leading-relaxed">
-                Master the perfect{' '}
-                <strong>soup recipe in Grow a Garden</strong> with our
-                comprehensive guide. Learn the exact ingredients, cooking times,
-                and special techniques for creating the most comforting and
-                rewarding warm dish.
+                Master the perfect <strong>soup recipe in Grow a Garden</strong>{' '}
+                with our comprehensive guide. Learn the exact ingredients,
+                cooking times, and special techniques for creating the most
+                comforting and rewarding warm dish.
               </p>
               <div className="flex flex-wrap gap-4 mb-8">
                 <div className="bg-white/80 backdrop-blur rounded-lg px-4 py-2 flex items-center gap-2">
@@ -160,8 +160,6 @@ export default function SoupRecipePage() {
                   colorScheme="orange"
                 />
               </div>
-
-
             </div>
             <div className="md:w-1/2 flex justify-center">
               <div className="relative">
@@ -215,7 +213,8 @@ export default function SoupRecipePage() {
               Soup Ingredients
             </h2>
             <p className="text-lg text-orange-700 max-w-3xl mx-auto">
-              Gather these ingredients to make the perfect soup in Grow a Garden.
+              Gather these ingredients to make the perfect soup in Grow a
+              Garden.
             </p>
           </div>
 
@@ -397,7 +396,9 @@ export default function SoupRecipePage() {
                   <h4 className="font-bold text-orange-800 mb-2">
                     Perfect Timing
                   </h4>
-                  <p className="text-orange-700">{soupRecipe.rewards.perfect}</p>
+                  <p className="text-orange-700">
+                    {soupRecipe.rewards.perfect}
+                  </p>
                 </div>
 
                 <div className="bg-white rounded-lg p-4 border border-orange-100">
@@ -457,7 +458,7 @@ export default function SoupRecipePage() {
               ))}
             </div>
           </div>
-          
+
           {/* Prismatic Soup Section */}
           <div
             id="prismatic"
@@ -471,14 +472,14 @@ export default function SoupRecipePage() {
                 Legendary Difficulty
               </span>
             </div>
-            
+
             <p className="text-purple-700 mb-6">
-              The Prismatic version of Soup is a warming delicacy sought
-              after by culinary masters. This legendary dish requires special
+              The Prismatic version of Soup is a warming delicacy sought after
+              by culinary masters. This legendary dish requires special
               ingredients and perfect timing, offering exceptional rewards and
               unique game benefits.
             </p>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
               <div className="bg-white/80 backdrop-blur rounded-lg p-5 border border-purple-100">
                 <h4 className="font-bold text-purple-800 mb-3">
@@ -499,12 +500,12 @@ export default function SoupRecipePage() {
                   </li>
                   <li className="flex items-center">
                     <span className="text-purple-500 mr-2">•</span>
-                    Requires the "Soup Specialist" badge (complete 30 perfect
-                    soup recipes)
+                    Requires the &quot;Soup Specialist&quot; badge (complete 30
+                    perfect soup recipes)
                   </li>
                 </ul>
               </div>
-              
+
               <div className="bg-white/80 backdrop-blur rounded-lg p-5 border border-purple-100">
                 <h4 className="font-bold text-purple-800 mb-3">
                   Special Rewards
@@ -524,12 +525,12 @@ export default function SoupRecipePage() {
                   </li>
                   <li className="flex items-center">
                     <span className="text-purple-500 mr-2">•</span>
-                    "Soup Sage" temporary title (24 hours)
+                    &quot;Soup Sage&quot; temporary title (24 hours)
                   </li>
                 </ul>
               </div>
             </div>
-            
+
             <div className="text-center">
               <Link
                 href="/recipes/prismatic"

@@ -1,10 +1,7 @@
 {
-  "/recipes/page": "app/recipes/page.js",
-  "/recipes/pie/page": "app/recipes/pie/page.js",
-  "/recipes/soup/page": "app/recipes/soup/page.js",
-  "/_not-found/page": "app/_not-found/page.js",
   "/recipes/sushi/page": "app/recipes/sushi/page.js",
   "/recipes/hot-dog/page": "app/recipes/hot-dog/page.js",
   "/recipes/sandwich/page": "app/recipes/sandwich/page.js",
-  "/recipes/porridge/page": "app/recipes/porridge/page.js"
+  "/recipes/porridge/page": "app/recipes/porridge/page.js",
+  "/recipes/prismatic/page": "app/recipes/prismatic/page.js"
 }

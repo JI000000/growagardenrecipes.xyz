@@ -1,6 +1,7 @@
+/* eslint-disable react/no-unescaped-entities */
+import { Breadcrumbs } from '@/components/layout';
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { Breadcrumbs } from '@/components/layout';
 
 export const metadata: Metadata = {
   title: 'Prismatic Fusion Guide - Grow a Garden 2025',
@@ -83,9 +84,10 @@ export default function PrismaticFusionPage() {
               </h2>
               <p className="text-lg text-purple-700 mb-8 leading-relaxed">
                 Master the revolutionary{' '}
-                <strong>Prismatic Fusion mechanic in Grow a Garden</strong> with our
-                comprehensive guide. Learn how to combine Prismatic dishes for unique
-                effects, bonuses, and rare rewards in the 2025 update.
+                <strong>Prismatic Fusion mechanic in Grow a Garden</strong> with
+                our comprehensive guide. Learn how to combine Prismatic dishes
+                for unique effects, bonuses, and rare rewards in the 2025
+                update.
               </p>
             </div>
             <div className="md:w-1/2 flex justify-center">
@@ -113,9 +115,9 @@ export default function PrismaticFusionPage() {
               Prismatic Fusion Process
             </h2>
             <p className="text-xl text-neutral-600 max-w-3xl mx-auto">
-              The 2025 update introduced Prismatic Fusion - a revolutionary cooking
-              mechanic that allows you to combine two Prismatic dishes for unique
-              effects and bonuses.
+              The 2025 update introduced Prismatic Fusion - a revolutionary
+              cooking mechanic that allows you to combine two Prismatic dishes
+              for unique effects and bonuses.
             </p>
           </div>
 
@@ -134,9 +136,15 @@ export default function PrismaticFusionPage() {
                       Create Two Different Prismatic Dishes
                     </h4>
                     <p className="text-neutral-600">
-                      First, you'll need to cook two different Prismatic recipes. Check
-                      our <Link href="/recipes/prismatic" className="text-purple-600 hover:text-purple-800">Prismatic Recipes</Link> page
-                      for detailed guides on creating each Prismatic dish.
+                      First, you&apos;ll need to cook two different Prismatic
+                      recipes. Check our{' '}
+                      <Link
+                        href="/recipes/prismatic"
+                        className="text-purple-600 hover:text-purple-800"
+                      >
+                        Prismatic Recipes
+                      </Link>{' '}
+                      page for detailed guides on creating each Prismatic dish.
                     </p>
                   </div>
                 </li>
@@ -149,9 +157,9 @@ export default function PrismaticFusionPage() {
                       Place Both on the Fusion Altar
                     </h4>
                     <p className="text-neutral-600">
-                      Visit the Fusion Altar located in the Prismatic Garden (unlocked
-                      at level 50). Place both Prismatic dishes on the altar's
-                      designated spots.
+                      Visit the Fusion Altar located in the Prismatic Garden
+                      (unlocked at level 50). Place both Prismatic dishes on the
+                      altar&apos;s designated spots.
                     </p>
                   </div>
                 </li>
@@ -165,8 +173,8 @@ export default function PrismaticFusionPage() {
                     </h4>
                     <p className="text-neutral-600">
                       A rhythm-based mini-game will start. Follow the on-screen
-                      prompts to perform the Fusion Dance. The better your timing,
-                      the higher quality your fusion will be.
+                      prompts to perform the Fusion Dance. The better your
+                      timing, the higher quality your fusion will be.
                     </p>
                   </div>
                 </li>
@@ -179,8 +187,9 @@ export default function PrismaticFusionPage() {
                       Collect Your New Fused Prismatic Dish
                     </h4>
                     <p className="text-neutral-600">
-                      Upon successful completion, the two dishes will fuse into a new
-                      Prismatic dish with combined properties and special effects.
+                      Upon successful completion, the two dishes will fuse into
+                      a new Prismatic dish with combined properties and special
+                      effects.
                     </p>
                   </div>
                 </li>
@@ -210,7 +219,8 @@ export default function PrismaticFusionPage() {
                   <strong>Effect:</strong> 3x XP for 1 hour
                 </p>
                 <p className="text-neutral-600 mt-2">
-                  <strong>Best Used:</strong> During special events or when grinding levels
+                  <strong>Best Used:</strong> During special events or when
+                  grinding levels
                 </p>
               </div>
 
@@ -233,7 +243,8 @@ export default function PrismaticFusionPage() {
                   <strong>Effect:</strong> 2x Sheckles from all sources
                 </p>
                 <p className="text-neutral-600 mt-2">
-                  <strong>Best Used:</strong> When farming currency or during market days
+                  <strong>Best Used:</strong> When farming currency or during
+                  market days
                 </p>
               </div>
 
@@ -256,7 +267,8 @@ export default function PrismaticFusionPage() {
                   <strong>Effect:</strong> Rare ingredient drop rate +25%
                 </p>
                 <p className="text-neutral-600 mt-2">
-                  <strong>Best Used:</strong> When farming rare ingredients or during full moon phases
+                  <strong>Best Used:</strong> When farming rare ingredients or
+                  during full moon phases
                 </p>
               </div>
             </div>
@@ -272,7 +284,8 @@ export default function PrismaticFusionPage() {
               Advanced Fusion Tips
             </h2>
             <p className="text-xl text-neutral-600 max-w-3xl mx-auto">
-              Master these advanced techniques to maximize your Prismatic Fusion results
+              Master these advanced techniques to maximize your Prismatic Fusion
+              results
             </p>
           </div>
 
@@ -283,9 +296,10 @@ export default function PrismaticFusionPage() {
                 Lunar Phase Timing
               </h3>
               <p className="text-neutral-600">
-                Perform fusions during the full moon phase (both in-game and real-world)
-                for a 50% boost to all fusion effects. The 2025 update synchronized
-                in-game lunar phases with real-world moon cycles.
+                Perform fusions during the full moon phase (both in-game and
+                real-world) for a 50% boost to all fusion effects. The 2025
+                update synchronized in-game lunar phases with real-world moon
+                cycles.
               </p>
             </div>
 
@@ -295,9 +309,10 @@ export default function PrismaticFusionPage() {
                 Perfect Dance Timing
               </h3>
               <p className="text-neutral-600">
-                Practice the Fusion Dance mini-game to achieve "Perfect" timing on all
-                steps. This increases the duration of fusion effects by up to 30% and
-                has a chance to add bonus effects.
+                Practice the Fusion Dance mini-game to achieve
+                &quot;Perfect&quot; timing on all steps. This increases the
+                duration of fusion effects by up to 30% and has a chance to add
+                bonus effects.
               </p>
             </div>
 
@@ -307,9 +322,9 @@ export default function PrismaticFusionPage() {
                 Experimental Combinations
               </h3>
               <p className="text-neutral-600">
-                Don't limit yourself to known combinations! The 2025 update includes
-                hidden fusion pairs with unique effects. Try combining different
-                Prismatic dishes to discover secret combinations.
+                Don&apos;t limit yourself to known combinations! The 2025 update
+                includes hidden fusion pairs with unique effects. Try combining
+                different Prismatic dishes to discover secret combinations.
               </p>
             </div>
           </div>
@@ -324,7 +339,8 @@ export default function PrismaticFusionPage() {
               Fusion Rewards & Achievements
             </h2>
             <p className="text-xl text-neutral-600 max-w-3xl mx-auto">
-              Track your progress and earn special rewards through the Fusion system
+              Track your progress and earn special rewards through the Fusion
+              system
             </p>
           </div>
 
@@ -336,7 +352,9 @@ export default function PrismaticFusionPage() {
               <div className="space-y-4">
                 <div className="bg-purple-50 p-4 rounded-lg border border-purple-100">
                   <div className="flex justify-between items-center">
-                    <h4 className="font-bold text-purple-900">Novice Fusion Chef</h4>
+                    <h4 className="font-bold text-purple-900">
+                      Novice Fusion Chef
+                    </h4>
                     <span className="text-sm bg-purple-200 text-purple-800 px-2 py-1 rounded">
                       5 Fusions
                     </span>
@@ -378,7 +396,8 @@ export default function PrismaticFusionPage() {
                     </span>
                   </div>
                   <p className="text-neutral-600 mt-2">
-                    Reward: Rainbow Chef title + Prismatic Chef Hat (legendary cosmetic)
+                    Reward: Rainbow Chef title + Prismatic Chef Hat (legendary
+                    cosmetic)
                   </p>
                 </div>
               </div>
@@ -402,7 +421,8 @@ export default function PrismaticFusionPage() {
                 <div className="bg-indigo-50 p-4 rounded-lg border border-indigo-100">
                   <h4 className="font-bold text-indigo-900">Perfect Fusion</h4>
                   <p className="text-neutral-600 mt-1">
-                    Achieve perfect timing on all steps of the Fusion Dance mini-game
+                    Achieve perfect timing on all steps of the Fusion Dance
+                    mini-game
                   </p>
                   <p className="text-indigo-700 mt-2 font-medium">
                     Reward: Fusion Dance Emote (legendary emote)
@@ -442,7 +462,8 @@ export default function PrismaticFusionPage() {
               Related Guides & Resources
             </h2>
             <p className="text-xl text-neutral-600 max-w-3xl mx-auto">
-              Explore these related guides to master all aspects of Prismatic cooking
+              Explore these related guides to master all aspects of Prismatic
+              cooking
             </p>
           </div>
 
@@ -456,7 +477,8 @@ export default function PrismaticFusionPage() {
                 Prismatic Recipes
               </h3>
               <p className="text-neutral-600">
-                Complete guide to all Prismatic recipes, ingredients, and cooking methods
+                Complete guide to all Prismatic recipes, ingredients, and
+                cooking methods
               </p>
             </Link>
 
@@ -469,7 +491,8 @@ export default function PrismaticFusionPage() {
                 Cooking Events
               </h3>
               <p className="text-neutral-600">
-                Special events with increased Prismatic ingredient drops and fusion bonuses
+                Special events with increased Prismatic ingredient drops and
+                fusion bonuses
               </p>
             </Link>
 
@@ -482,7 +505,8 @@ export default function PrismaticFusionPage() {
                 Game Mechanics Wiki
               </h3>
               <p className="text-neutral-600">
-                Detailed explanations of all game mechanics, including Prismatic cooking
+                Detailed explanations of all game mechanics, including Prismatic
+                cooking
               </p>
             </Link>
           </div>
@@ -496,8 +520,8 @@ export default function PrismaticFusionPage() {
             Ready to Master Prismatic Fusion?
           </h2>
           <p className="text-xl mb-8 max-w-3xl mx-auto">
-            Start with our individual Prismatic recipe guides and work your way up to
-            becoming a Fusion Master!
+            Start with our individual Prismatic recipe guides and work your way
+            up to becoming a Fusion Master!
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Link

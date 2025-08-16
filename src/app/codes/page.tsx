@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -154,8 +155,8 @@ export default function CodesPage() {
                 </h3>
               </div>
               <p className="text-neutral-600">
-                Navigate to the "Codes" tab in the Settings menu. It should be
-                the third option from the left.
+                Navigate to the &quot;Codes&quot; tab in the Settings menu. It
+                should be the third option from the left.
               </p>
             </div>
 
@@ -170,8 +171,8 @@ export default function CodesPage() {
               </div>
               <p className="text-neutral-600">
                 Type or paste the code into the text field and click the
-                "Redeem" button. Your rewards will be added to your inventory
-                immediately.
+                &quot;Redeem&quot; button. Your rewards will be added to your
+                inventory immediately.
               </p>
             </div>
           </div>
@@ -336,7 +337,7 @@ export default function CodesPage() {
               </div>
               <p className="text-neutral-600">
                 Codes are case sensitive, so make sure to enter them exactly as
-                shown. It's best to copy and paste codes to avoid typos.
+                shown. It&apos;s best to copy and paste codes to avoid typos.
               </p>
             </div>
 
@@ -350,7 +351,7 @@ export default function CodesPage() {
               <p className="text-neutral-600">
                 We update this page regularly with new codes as they are
                 released. Bookmark this page and check back often to make sure
-                you don't miss any codes.
+                you don&apos;t miss any codes.
               </p>
             </div>
           </div>

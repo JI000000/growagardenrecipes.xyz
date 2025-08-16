@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import type { Metadata } from 'next';
 import Link from 'next/link';
 
@@ -199,8 +200,8 @@ export default function WikiPage() {
               </p>
               <p className="text-neutral-600">
                 This can increase reward quality by 200-300% compared to regular
-                feeding. The 2025 update added special weekly "Gourmet
-                Challenges" where completing all daily cravings unlocks
+                feeding. The 2025 update added special weekly &quot;Gourmet
+                Challenges&quot; where completing all daily cravings unlocks
                 exclusive rewards.
               </p>
             </div>
@@ -215,8 +216,8 @@ export default function WikiPage() {
               </p>
               <p className="text-neutral-600">
                 Higher tier ingredients and matching cravings result in better
-                rewards. The 2025 update added the "Rainbow Chef" status effect,
-                doubling rewards for 24 hours.
+                rewards. The 2025 update added the &quot;Rainbow Chef&quot;
+                status effect, doubling rewards for 24 hours.
               </p>
             </div>
 
