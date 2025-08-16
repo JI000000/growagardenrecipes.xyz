@@ -1,5 +1,63 @@
 import { Recipe, RecipeCategory } from '../components/types';
 
+// 食材稀有度定义
+export type IngredientRarity =
+  | 'Common'
+  | 'Uncommon'
+  | 'Rare'
+  | 'Legendary'
+  | 'Mythical'
+  | 'Divine'
+  | 'Prismatic';
+
+// 食材接口定义
+export interface Ingredient {
+  name: string;
+  rarity: IngredientRarity;
+  location?: string;
+  description?: string;
+}
+
+// 食谱食材数据
+export interface RecipeIngredient {
+  name: string;
+  quantity: number;
+  rarity: IngredientRarity;
+  location?: string;
+  icon?: string;
+}
+
+// 2025年食谱详细信息
+export interface DetailedRecipe {
+  name: string;
+  slug: string;
+  icon: string;
+  description: string;
+  difficulty: string;
+  cookingTime: string;
+  ingredients: RecipeIngredient[];
+  steps: {
+    step: number;
+    description: string;
+    timing?: string;
+    tip?: string;
+  }[];
+  rewards: {
+    normal: string;
+    perfect: string;
+    prismatic: string;
+  };
+  tips: string[];
+  variations: {
+    name: string;
+    ingredients: string;
+    effect: string;
+  }[];
+  relatedRecipes: string[];
+  category?: string;
+  lastUpdated?: string;
+}
+
 // Recipe categories
 export const recipeCategories: RecipeCategory[] = [
   {
@@ -169,6 +227,7 @@ export const popularRecipes = [
   },
 ];
 
+// 最新的2025年食谱数据
 export const allRecipes = [
   {
     name: 'Donut Recipe',
@@ -177,6 +236,9 @@ export const allRecipes = [
     description: 'Learn how to make delicious donuts in Grow a Garden',
     difficulty: 'Hard',
     cookingTime: '9 minutes 37 seconds',
+    rarity: 'Mythical',
+    category: 'desserts',
+    lastUpdated: '2025-08-15',
   },
   {
     name: 'Burger Recipe',
@@ -185,6 +247,9 @@ export const allRecipes = [
     description: 'Master the art of making perfect burgers in Grow a Garden',
     difficulty: 'Hard',
     cookingTime: '10 minutes 32 seconds',
+    rarity: 'Divine',
+    category: 'main-dishes',
+    lastUpdated: '2025-08-15',
   },
   {
     name: 'Pizza Recipe',
@@ -193,6 +258,10 @@ export const allRecipes = [
     description: 'Create amazing pizzas with the best ingredients',
     difficulty: 'Medium',
     cookingTime: '7 minutes 36 seconds',
+    rarity: 'Prismatic',
+    category: 'main-dishes',
+    hasDetailedPage: true,
+    lastUpdated: '2025-08-15',
   },
   {
     name: 'Cake Recipe',
@@ -201,6 +270,9 @@ export const allRecipes = [
     description: 'Bake beautiful cakes for Chris P in Grow a Garden',
     difficulty: 'Easy',
     cookingTime: '5 minutes 55 seconds',
+    rarity: 'Prismatic',
+    category: 'desserts',
+    lastUpdated: '2025-08-15',
   },
   {
     name: 'Ice Cream Recipe',
@@ -209,6 +281,9 @@ export const allRecipes = [
     description: 'Make refreshing ice cream treats in Grow a Garden',
     difficulty: 'Easy',
     cookingTime: '5 minutes 48 seconds',
+    rarity: 'Prismatic',
+    category: 'desserts',
+    lastUpdated: '2025-08-15',
   },
   {
     name: 'Sushi Recipe',
@@ -217,6 +292,9 @@ export const allRecipes = [
     description: 'Prepare authentic sushi dishes in Grow a Garden',
     difficulty: 'Medium',
     cookingTime: '7 minutes 21 seconds',
+    rarity: 'Divine',
+    category: 'special',
+    lastUpdated: '2025-08-15',
   },
   {
     name: 'Hot Dog Recipe',
@@ -225,6 +303,9 @@ export const allRecipes = [
     description: 'Create delicious hot dogs in Grow a Garden',
     difficulty: 'Medium',
     cookingTime: '6 minutes 45 seconds',
+    rarity: 'Prismatic',
+    category: 'main-dishes',
+    lastUpdated: '2025-08-15',
   },
   {
     name: 'Waffle Recipe',
@@ -233,6 +314,9 @@ export const allRecipes = [
     description: 'Make perfect waffles in Grow a Garden',
     difficulty: 'Easy',
     cookingTime: '5 minutes 30 seconds',
+    rarity: 'Prismatic',
+    category: 'snacks',
+    lastUpdated: '2025-08-15',
   },
   {
     name: 'Pie Recipe',
@@ -241,6 +325,9 @@ export const allRecipes = [
     description: 'Bake delicious pies in Grow a Garden',
     difficulty: 'Medium',
     cookingTime: '7 minutes 15 seconds',
+    rarity: 'Prismatic',
+    category: 'desserts',
+    lastUpdated: '2025-08-15',
   },
   {
     name: 'Sandwich Recipe',
@@ -249,6 +336,9 @@ export const allRecipes = [
     description: 'Create tasty sandwiches in Grow a Garden',
     difficulty: 'Easy',
     cookingTime: '5 minutes 20 seconds',
+    rarity: 'Divine',
+    category: 'main-dishes',
+    lastUpdated: '2025-08-15',
   },
   {
     name: 'Salad Recipe',
@@ -257,6 +347,9 @@ export const allRecipes = [
     description: 'Prepare healthy salads in Grow a Garden',
     difficulty: 'Easy',
     cookingTime: '4 minutes 50 seconds',
+    rarity: 'Prismatic',
+    category: 'snacks',
+    lastUpdated: '2025-08-15',
   },
   {
     name: 'Soup Recipe',
@@ -265,5 +358,21 @@ export const allRecipes = [
     description: 'Cook warm and comforting soups in Grow a Garden',
     difficulty: 'Medium',
     cookingTime: '6 minutes 30 seconds',
+    rarity: 'Legendary',
+    category: 'snacks',
+    lastUpdated: '2025-08-15',
+  },
+  {
+    name: 'Porridge Recipe',
+    slug: 'porridge',
+    icon: '🥣',
+    description:
+      'A warm and comforting porridge, perfect for breakfast in Grow a Garden',
+    difficulty: 'Easy',
+    cookingTime: '4 minutes 25 seconds',
+    rarity: 'Uncommon',
+    category: 'snacks',
+    hasDetailedPage: true,
+    lastUpdated: '2025-08-15',
   },
 ];
