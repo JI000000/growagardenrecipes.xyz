@@ -2,6 +2,606 @@ import { DetailedRecipe } from './recipes';
 
 // 存储详细食谱数据
 export const detailedRecipes: Record<string, DetailedRecipe> = {
+  // 甜甜圈食谱详细信息
+  donut: {
+    name: 'Donut',
+    slug: 'donut',
+    icon: '🍩',
+    description:
+      'Learn how to make delicious donuts in Grow a Garden with this comprehensive recipe guide',
+    difficulty: 'Hard',
+    cookingTime: '9 minutes 37 seconds',
+    ingredients: [
+      {
+        name: 'Flour',
+        quantity: 3,
+        rarity: 'Common',
+        location: 'Market stall',
+        icon: '🌾',
+      },
+      {
+        name: 'Sugar',
+        quantity: 2,
+        rarity: 'Uncommon',
+        location: 'Market stall',
+        icon: '🧂',
+      },
+      {
+        name: 'Butter',
+        quantity: 1,
+        rarity: 'Uncommon',
+        location: 'Dairy farm',
+        icon: '🧈',
+      },
+      {
+        name: 'Egg',
+        quantity: 2,
+        rarity: 'Common',
+        location: 'Chicken coop',
+        icon: '🥚',
+      },
+      {
+        name: 'Chocolate',
+        quantity: 1,
+        rarity: 'Rare',
+        location: 'Special vendor (weekends only)',
+        icon: '🍫',
+      },
+    ],
+    steps: [
+      {
+        step: 1,
+        description: 'Mix Flour and Sugar in a large bowl',
+        timing: '0:00',
+        tip: 'Ensure ingredients are at room temperature for best results',
+      },
+      {
+        step: 2,
+        description: 'Add melted Butter and mix thoroughly',
+        timing: '1:30',
+        tip: 'The mixture should be smooth with no lumps',
+      },
+      {
+        step: 3,
+        description: 'Add Eggs one at a time, mixing well after each addition',
+        timing: '3:15',
+        tip: 'Beat eggs slightly before adding for easier incorporation',
+      },
+      {
+        step: 4,
+        description: 'Form the dough into a ring shape',
+        timing: '5:00',
+        tip: 'Use the special donut mold for perfect shape',
+      },
+      {
+        step: 5,
+        description: 'Fry until golden brown',
+        timing: '7:30',
+        tip: 'Watch carefully as donuts can burn quickly',
+      },
+      {
+        step: 6,
+        description: 'Add Chocolate glaze and serve',
+        timing: '9:37',
+        tip: 'Drizzle chocolate in a circular motion for professional appearance',
+      },
+    ],
+    rewards: {
+      normal: 'Sheckles (80-120)',
+      perfect: 'Deluxe Sheckles (150-200) + Chance for Uncommon Seed',
+      prismatic: 'Premium Sheckles (350-450) + Guaranteed Rare Item',
+    },
+    tips: [
+      'The perfect preparation time is exactly 9 minutes and 37 seconds',
+      'Using higher rarity ingredients will significantly increase rewards',
+      'Donuts are especially popular during morning hours (6AM-9AM game time)',
+      'The 2025 update added special seasonal glazes that can be unlocked during events',
+      'Donuts make excellent gifts for the Tanuki character, increasing friendship points by 20%',
+    ],
+    variations: [
+      {
+        name: 'Glazed Donut',
+        ingredients: 'Add Honey instead of Chocolate',
+        effect:
+          'Grants "Sweet Tooth" buff for 15 minutes, increasing coin drops by 10%',
+      },
+      {
+        name: 'Sprinkle Donut',
+        ingredients: 'Add Rainbow Sprinkles after Chocolate',
+        effect:
+          'Increases chance of rare seed drops when harvesting for 20 minutes',
+      },
+      {
+        name: 'Prismatic Donut',
+        ingredients: 'Use all Prismatic-tier ingredients',
+        effect:
+          'Highest possible rewards, has a chance to attract the Tanuki spirit',
+      },
+    ],
+    relatedRecipes: ['cake', 'pie', 'ice-cream'],
+    category: 'desserts',
+    lastUpdated: '2025-08-15',
+  },
+
+  // 派食谱详细信息
+  pie: {
+    name: 'Pie',
+    slug: 'pie',
+    icon: '🥧',
+    description:
+      'Bake delicious pies in Grow a Garden with this detailed recipe guide',
+    difficulty: 'Medium',
+    cookingTime: '7 minutes 15 seconds',
+    ingredients: [
+      {
+        name: 'Flour',
+        quantity: 2,
+        rarity: 'Common',
+        location: 'Market stall',
+        icon: '🌾',
+      },
+      {
+        name: 'Butter',
+        quantity: 2,
+        rarity: 'Uncommon',
+        location: 'Dairy farm',
+        icon: '🧈',
+      },
+      {
+        name: 'Sugar',
+        quantity: 1,
+        rarity: 'Uncommon',
+        location: 'Market stall',
+        icon: '🧂',
+      },
+      {
+        name: 'Apple',
+        quantity: 3,
+        rarity: 'Common',
+        location: 'Orchard (Apple trees)',
+        icon: '🍎',
+      },
+      {
+        name: 'Cinnamon',
+        quantity: 1,
+        rarity: 'Rare',
+        location: 'Spice merchant (rotates daily)',
+        icon: '🌰',
+      },
+    ],
+    steps: [
+      {
+        step: 1,
+        description: 'Mix Flour and Butter to create pie dough',
+        timing: '0:00',
+        tip: 'Keep butter cold for a flakier crust',
+      },
+      {
+        step: 2,
+        description: 'Roll out the dough and place in pie dish',
+        timing: '1:15',
+        tip: 'Roll from the center outward for even thickness',
+      },
+      {
+        step: 3,
+        description: 'Mix sliced Apples with Sugar and Cinnamon',
+        timing: '2:45',
+        tip: 'Cut apples into even slices for consistent cooking',
+      },
+      {
+        step: 4,
+        description: 'Add the Apple mixture to the pie crust',
+        timing: '4:00',
+        tip: 'Arrange apples in a circular pattern for even distribution',
+      },
+      {
+        step: 5,
+        description: 'Add the top crust and seal edges',
+        timing: '5:30',
+        tip: 'Cut small vents in the top crust to allow steam to escape',
+      },
+      {
+        step: 6,
+        description: 'Bake until golden brown and serve',
+        timing: '7:15',
+        tip: 'The filling should be bubbling slightly when done',
+      },
+    ],
+    rewards: {
+      normal: 'Sheckles (70-100)',
+      perfect: 'Deluxe Sheckles (130-180) + Chance for Uncommon Seed',
+      prismatic: 'Premium Sheckles (320-420) + Guaranteed Rare Item',
+    },
+    tips: [
+      'The perfect preparation time is exactly 7 minutes and 15 seconds',
+      'Using higher rarity ingredients will significantly increase rewards',
+      'Pies are especially popular during Harvest Festival events',
+      'The 2025 update added seasonal fruit variations that change with in-game seasons',
+      'Pies make excellent gifts for the Kitsune character, increasing friendship points by 15%',
+    ],
+    variations: [
+      {
+        name: 'Berry Pie',
+        ingredients: 'Use Berries instead of Apples',
+        effect:
+          'Grants "Berry Good" buff for 20 minutes, increasing movement speed by 10%',
+      },
+      {
+        name: 'Pumpkin Pie',
+        ingredients: 'Use Pumpkin instead of Apples',
+        effect: 'Increases harvest yield by 15% for 30 minutes',
+      },
+      {
+        name: 'Prismatic Pie',
+        ingredients: 'Use all Prismatic-tier ingredients',
+        effect:
+          'Highest possible rewards, has a chance to attract the Kitsune spirit',
+      },
+    ],
+    relatedRecipes: ['cake', 'donut', 'ice-cream'],
+    category: 'desserts',
+    lastUpdated: '2025-08-15',
+  },
+
+  // 沙拉食谱详细信息
+  salad: {
+    name: 'Salad',
+    slug: 'salad',
+    icon: '🥗',
+    description:
+      'Prepare healthy salads in Grow a Garden with this fresh recipe guide',
+    difficulty: 'Easy',
+    cookingTime: '4 minutes 50 seconds',
+    ingredients: [
+      {
+        name: 'Lettuce',
+        quantity: 2,
+        rarity: 'Common',
+        location: 'Garden plots (Lettuce seeds)',
+        icon: '🥬',
+      },
+      {
+        name: 'Tomato',
+        quantity: 1,
+        rarity: 'Common',
+        location: 'Garden plots (Tomato seeds)',
+        icon: '🍅',
+      },
+      {
+        name: 'Cucumber',
+        quantity: 1,
+        rarity: 'Common',
+        location: 'Garden plots (Cucumber seeds)',
+        icon: '🥒',
+      },
+      {
+        name: 'Olive Oil',
+        quantity: 1,
+        rarity: 'Uncommon',
+        location: 'Market stall (specialty section)',
+        icon: '🫒',
+      },
+      {
+        name: 'Lemon',
+        quantity: 1,
+        rarity: 'Uncommon',
+        location: 'Citrus Grove',
+        icon: '🍋',
+      },
+    ],
+    steps: [
+      {
+        step: 1,
+        description: 'Wash and chop the Lettuce into bite-sized pieces',
+        timing: '0:00',
+        tip: 'Dry lettuce thoroughly to help the dressing adhere better',
+      },
+      {
+        step: 2,
+        description: 'Slice Tomatoes into wedges',
+        timing: '1:00',
+        tip: 'Remove seeds for a less watery salad',
+      },
+      {
+        step: 3,
+        description: 'Slice Cucumber into thin rounds',
+        timing: '2:00',
+        tip: 'For a decorative touch, score the sides with a fork before slicing',
+      },
+      {
+        step: 4,
+        description: 'Combine all vegetables in a large bowl',
+        timing: '3:00',
+        tip: 'Toss gently to avoid bruising the vegetables',
+      },
+      {
+        step: 5,
+        description: 'Mix Olive Oil and Lemon juice for dressing',
+        timing: '4:00',
+        tip: 'Use 3 parts oil to 1 part lemon juice for perfect balance',
+      },
+      {
+        step: 6,
+        description: 'Drizzle dressing over salad and serve',
+        timing: '4:50',
+        tip: 'Add dressing just before serving to keep the salad crisp',
+      },
+    ],
+    rewards: {
+      normal: 'Sheckles (40-60)',
+      perfect: 'Deluxe Sheckles (80-120) + Chance for Common Seed',
+      prismatic: 'Premium Sheckles (250-350) + Guaranteed Uncommon Item',
+    },
+    tips: [
+      'The perfect preparation time is exactly 4 minutes and 50 seconds',
+      'Using higher rarity ingredients will significantly increase rewards',
+      'Salads are especially popular during Summer Festival events',
+      'The 2025 update added special dressings that can be unlocked through quests',
+      'Salads make excellent gifts for the Kodama character, increasing friendship points by 25%',
+    ],
+    variations: [
+      {
+        name: 'Fruit Salad',
+        ingredients: 'Use Apples, Berries, and Bananas instead of vegetables',
+        effect:
+          'Grants "Fruity Energy" buff for 30 minutes, increasing stamina regeneration by 15%',
+      },
+      {
+        name: 'Garden Salad',
+        ingredients: 'Add Bell Peppers and Carrots to the base recipe',
+        effect: 'Increases gardening skill gain by 10% for 20 minutes',
+      },
+      {
+        name: 'Prismatic Salad',
+        ingredients: 'Use all Prismatic-tier ingredients',
+        effect:
+          'Highest possible rewards, has a chance to attract the Kodama spirit',
+      },
+    ],
+    relatedRecipes: ['sandwich', 'soup', 'hot-dog'],
+    category: 'snacks',
+    lastUpdated: '2025-08-15',
+  },
+
+  // 汤食谱详细信息
+  soup: {
+    name: 'Soup',
+    slug: 'soup',
+    icon: '🍲',
+    description:
+      'Cook warm and comforting soups in Grow a Garden with this hearty recipe guide',
+    difficulty: 'Medium',
+    cookingTime: '6 minutes 30 seconds',
+    ingredients: [
+      {
+        name: 'Carrot',
+        quantity: 2,
+        rarity: 'Common',
+        location: 'Garden plots (Carrot seeds)',
+        icon: '🥕',
+      },
+      {
+        name: 'Potato',
+        quantity: 2,
+        rarity: 'Common',
+        location: 'Garden plots (Potato seeds)',
+        icon: '🥔',
+      },
+      {
+        name: 'Onion',
+        quantity: 1,
+        rarity: 'Common',
+        location: 'Garden plots (Onion seeds)',
+        icon: '🧅',
+      },
+      {
+        name: 'Chicken',
+        quantity: 1,
+        rarity: 'Uncommon',
+        location: 'Butcher shop',
+        icon: '🍗',
+      },
+      {
+        name: 'Herbs',
+        quantity: 1,
+        rarity: 'Rare',
+        location: 'Herb garden (special area)',
+        icon: '🌿',
+      },
+    ],
+    steps: [
+      {
+        step: 1,
+        description: 'Dice Onion and sauté until translucent',
+        timing: '0:00',
+        tip: 'Low heat prevents onions from burning and becoming bitter',
+      },
+      {
+        step: 2,
+        description: 'Add diced Chicken and cook until browned',
+        timing: '1:15',
+        tip: 'Make sure chicken is evenly browned for best flavor',
+      },
+      {
+        step: 3,
+        description: 'Add chopped Carrots and Potatoes',
+        timing: '2:30',
+        tip: 'Cut vegetables to similar sizes for even cooking',
+      },
+      {
+        step: 4,
+        description: 'Add water and bring to a simmer',
+        timing: '3:45',
+        tip: "Don't boil too vigorously or vegetables may become mushy",
+      },
+      {
+        step: 5,
+        description: 'Add Herbs and season to taste',
+        timing: '5:00',
+        tip: 'Adding herbs later preserves their flavor',
+      },
+      {
+        step: 6,
+        description: 'Simmer until vegetables are tender and serve',
+        timing: '6:30',
+        tip: 'Soup is ready when potatoes can be easily pierced with a fork',
+      },
+    ],
+    rewards: {
+      normal: 'Sheckles (60-90)',
+      perfect: 'Deluxe Sheckles (120-170) + Chance for Uncommon Seed',
+      prismatic: 'Premium Sheckles (300-400) + Guaranteed Rare Item',
+    },
+    tips: [
+      'The perfect preparation time is exactly 6 minutes and 30 seconds',
+      'Using higher rarity ingredients will significantly increase rewards',
+      'Soups are especially popular during Winter Festival events',
+      'The 2025 update added special seasonal soups with unique effects',
+      'Soups make excellent gifts for the Raiju character, increasing friendship points by 20%',
+    ],
+    variations: [
+      {
+        name: 'Mushroom Soup',
+        ingredients: 'Use Mushrooms instead of Chicken',
+        effect:
+          'Grants "Forest Wisdom" buff for 25 minutes, increasing foraging yield by 20%',
+      },
+      {
+        name: 'Seafood Soup',
+        ingredients: 'Use Fish and Shrimp instead of Chicken',
+        effect: 'Increases fishing skill gain by 15% for 30 minutes',
+      },
+      {
+        name: 'Prismatic Soup',
+        ingredients: 'Use all Prismatic-tier ingredients',
+        effect:
+          'Highest possible rewards, has a chance to attract the Raiju spirit',
+      },
+    ],
+    relatedRecipes: ['porridge', 'salad', 'sandwich'],
+    category: 'snacks',
+    lastUpdated: '2025-08-15',
+  },
+
+  // 华夫饼食谱详细信息
+  waffle: {
+    name: 'Waffle',
+    slug: 'waffle',
+    icon: '🧇',
+    description:
+      'Make perfect waffles in Grow a Garden with this delicious recipe guide',
+    difficulty: 'Easy',
+    cookingTime: '5 minutes 30 seconds',
+    ingredients: [
+      {
+        name: 'Flour',
+        quantity: 2,
+        rarity: 'Common',
+        location: 'Market stall',
+        icon: '🌾',
+      },
+      {
+        name: 'Egg',
+        quantity: 2,
+        rarity: 'Common',
+        location: 'Chicken coop',
+        icon: '🥚',
+      },
+      {
+        name: 'Milk',
+        quantity: 1,
+        rarity: 'Common',
+        location: 'Cow barn',
+        icon: '🥛',
+      },
+      {
+        name: 'Butter',
+        quantity: 1,
+        rarity: 'Uncommon',
+        location: 'Dairy farm',
+        icon: '🧈',
+      },
+      {
+        name: 'Honey',
+        quantity: 1,
+        rarity: 'Rare',
+        location: 'Bee farm (special area)',
+        icon: '🍯',
+      },
+    ],
+    steps: [
+      {
+        step: 1,
+        description: 'Mix Flour, Eggs, and Milk in a large bowl',
+        timing: '0:00',
+        tip: 'Whisk until just combined - overmixing makes tough waffles',
+      },
+      {
+        step: 2,
+        description: 'Melt Butter and add to the batter',
+        timing: '1:15',
+        tip: 'Let melted butter cool slightly before adding to prevent cooking the eggs',
+      },
+      {
+        step: 3,
+        description: 'Preheat the waffle iron',
+        timing: '2:30',
+        tip: 'The iron is ready when water droplets sizzle on the surface',
+      },
+      {
+        step: 4,
+        description: 'Pour batter onto the waffle iron',
+        timing: '3:15',
+        tip: 'Fill to about 2/3 full as batter will expand',
+      },
+      {
+        step: 5,
+        description: 'Cook until golden brown',
+        timing: '4:45',
+        tip: "Don't open the iron too early or waffles may stick",
+      },
+      {
+        step: 6,
+        description: 'Top with Honey and serve',
+        timing: '5:30',
+        tip: 'Warm the honey slightly for easier pouring',
+      },
+    ],
+    rewards: {
+      normal: 'Sheckles (50-70)',
+      perfect: 'Deluxe Sheckles (100-150) + Chance for Common Seed',
+      prismatic: 'Premium Sheckles (280-380) + Guaranteed Uncommon Item',
+    },
+    tips: [
+      'The perfect preparation time is exactly 5 minutes and 30 seconds',
+      'Using higher rarity ingredients will significantly increase rewards',
+      'Waffles are especially popular during Breakfast Festival events',
+      'The 2025 update added special toppings that can be unlocked through quests',
+      'Waffles make excellent gifts for the Kitsune character, increasing friendship points by 15%',
+    ],
+    variations: [
+      {
+        name: 'Berry Waffle',
+        ingredients: 'Add Berries to the batter',
+        effect:
+          'Grants "Morning Energy" buff for 20 minutes, increasing movement speed by 10%',
+      },
+      {
+        name: 'Chocolate Waffle',
+        ingredients: 'Add Chocolate to the batter',
+        effect: 'Increases coin drops by 15% for 30 minutes',
+      },
+      {
+        name: 'Prismatic Waffle',
+        ingredients: 'Use all Prismatic-tier ingredients',
+        effect:
+          'Highest possible rewards, has a chance to attract the Kitsune spirit',
+      },
+    ],
+    relatedRecipes: ['porridge', 'cake', 'donut'],
+    category: 'snacks',
+    lastUpdated: '2025-08-15',
+  },
   // 蛋糕食谱详细信息
   'ice-cream': {
     name: 'Ice Cream',

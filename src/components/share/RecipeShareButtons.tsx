@@ -4,7 +4,7 @@ interface RecipeShareButtonsProps {
   title: string;
   description: string;
   className?: string;
-  colorScheme?: 'red' | 'rose' | 'cyan' | 'purple' | 'blue' | 'green';
+  colorScheme?: 'red' | 'rose' | 'cyan' | 'purple' | 'blue' | 'green' | 'pink' | 'yellow' | 'orange' | 'amber';
 }
 
 export default function RecipeShareButtons({
@@ -47,6 +47,30 @@ export default function RecipeShareButtons({
     },
     green: {
       primaryBtn: 'bg-green-600 hover:bg-green-700',
+      twitterBtn: 'bg-sky-500 hover:bg-sky-600',
+      facebookBtn: 'bg-blue-700 hover:bg-blue-800',
+      copyBtn: 'bg-slate-600 hover:bg-slate-700',
+    },
+    pink: {
+      primaryBtn: 'bg-pink-600 hover:bg-pink-700',
+      twitterBtn: 'bg-sky-500 hover:bg-sky-600',
+      facebookBtn: 'bg-blue-700 hover:bg-blue-800',
+      copyBtn: 'bg-slate-600 hover:bg-slate-700',
+    },
+    yellow: {
+      primaryBtn: 'bg-yellow-600 hover:bg-yellow-700',
+      twitterBtn: 'bg-sky-500 hover:bg-sky-600',
+      facebookBtn: 'bg-blue-700 hover:bg-blue-800',
+      copyBtn: 'bg-slate-600 hover:bg-slate-700',
+    },
+    orange: {
+      primaryBtn: 'bg-orange-600 hover:bg-orange-700',
+      twitterBtn: 'bg-sky-500 hover:bg-sky-600',
+      facebookBtn: 'bg-blue-700 hover:bg-blue-800',
+      copyBtn: 'bg-slate-600 hover:bg-slate-700',
+    },
+    amber: {
+      primaryBtn: 'bg-amber-600 hover:bg-amber-700',
       twitterBtn: 'bg-sky-500 hover:bg-sky-600',
       facebookBtn: 'bg-blue-700 hover:bg-blue-800',
       copyBtn: 'bg-slate-600 hover:bg-slate-700',

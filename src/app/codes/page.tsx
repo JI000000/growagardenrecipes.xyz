@@ -169,8 +169,9 @@ export default function CodesPage() {
                 </h3>
               </div>
               <p className="text-neutral-600">
-                Type or paste the code into the text field and click the "Redeem"
-                button. Your rewards will be added to your inventory immediately.
+                Type or paste the code into the text field and click the
+                "Redeem" button. Your rewards will be added to your inventory
+                immediately.
               </p>
             </div>
           </div>
@@ -306,9 +307,9 @@ export default function CodesPage() {
                 </h3>
               </div>
               <p className="text-neutral-600">
-                New codes are often released on the official Grow a Garden social
-                media accounts. Follow them on Twitter, Instagram, and Discord to
-                be the first to know about new codes.
+                New codes are often released on the official Grow a Garden
+                social media accounts. Follow them on Twitter, Instagram, and
+                Discord to be the first to know about new codes.
               </p>
             </div>
 
