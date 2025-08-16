@@ -1,13 +1,10 @@
 {
-  "/categories/page": "app/categories/page.js",
   "/recipes/page": "app/recipes/page.js",
-  "/categories/[slug]/page": "app/categories/[slug]/page.js",
-  "/recipes/donut/page": "app/recipes/donut/page.js",
-  "/_not-found/page": "app/_not-found/page.js",
-  "/recipes/salad/page": "app/recipes/salad/page.js",
-  "/recipes/soup/page": "app/recipes/soup/page.js",
   "/recipes/pie/page": "app/recipes/pie/page.js",
-  "/recipes/waffle/page": "app/recipes/waffle/page.js",
-  "/recipes/prismatic/page": "app/recipes/prismatic/page.js",
-  "/recipes/ice-cream/page": "app/recipes/ice-cream/page.js"
+  "/recipes/soup/page": "app/recipes/soup/page.js",
+  "/_not-found/page": "app/_not-found/page.js",
+  "/recipes/sushi/page": "app/recipes/sushi/page.js",
+  "/recipes/hot-dog/page": "app/recipes/hot-dog/page.js",
+  "/recipes/sandwich/page": "app/recipes/sandwich/page.js",
+  "/recipes/porridge/page": "app/recipes/porridge/page.js"
 }

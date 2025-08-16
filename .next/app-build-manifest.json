@@ -100,6 +100,11 @@
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/chunks/app/recipes/pie/page.js"
+    ],
+    "/recipes/porridge/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/recipes/porridge/page.js"
     ]
   }
 }
