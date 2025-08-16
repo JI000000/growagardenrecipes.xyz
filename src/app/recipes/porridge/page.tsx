@@ -567,6 +567,79 @@ export default function PorridgeRecipePage() {
               ))}
             </div>
           </div>
+          
+          {/* Prismatic Porridge Section */}
+          <div id="prismatic" className="max-w-4xl mx-auto mt-16 bg-gradient-to-br from-purple-50 to-indigo-50 rounded-xl p-8 border border-purple-200 shadow-lg">
+            <div className="flex items-center justify-between mb-6">
+              <h3 className="text-2xl font-bold text-purple-900 flex items-center">
+                <span className="text-3xl mr-3">🌈</span> Prismatic Porridge
+              </h3>
+              <span className="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-sm font-medium">
+                Legendary Difficulty
+              </span>
+            </div>
+            
+            <p className="text-purple-700 mb-6">
+              The Prismatic version of Porridge is a breakfast delicacy sought after by culinary masters. 
+              This legendary dish requires special ingredients and perfect timing, 
+              offering exceptional rewards and unique game benefits.
+            </p>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+              <div className="bg-white/80 backdrop-blur rounded-lg p-5 border border-purple-100">
+                <h4 className="font-bold text-purple-800 mb-3">Prismatic Requirements</h4>
+                <ul className="space-y-2 text-purple-700">
+                  <li className="flex items-center">
+                    <span className="text-purple-500 mr-2">•</span>
+                    All ingredients must be Prismatic-tier quality
+                  </li>
+                  <li className="flex items-center">
+                    <span className="text-purple-500 mr-2">•</span>
+                    Perfect timing (exactly 4 minutes 25 seconds)
+                  </li>
+                  <li className="flex items-center">
+                    <span className="text-purple-500 mr-2">•</span>
+                    Must be cooked during Dawn hours (5AM-7AM game time)
+                  </li>
+                  <li className="flex items-center">
+                    <span className="text-purple-500 mr-2">•</span>
+                    Requires the "Morning Chef" badge (complete 20 perfect breakfast recipes)
+                  </li>
+                </ul>
+              </div>
+              
+              <div className="bg-white/80 backdrop-blur rounded-lg p-5 border border-purple-100">
+                <h4 className="font-bold text-purple-800 mb-3">Special Rewards</h4>
+                <ul className="space-y-2 text-purple-700">
+                  <li className="flex items-center">
+                    <span className="text-purple-500 mr-2">•</span>
+                    Premium Sheckles (300-400)
+                  </li>
+                  <li className="flex items-center">
+                    <span className="text-purple-500 mr-2">•</span>
+                    Guaranteed Rare Morning Item
+                  </li>
+                  <li className="flex items-center">
+                    <span className="text-purple-500 mr-2">•</span>
+                    45% chance to attract the Kodama spirit
+                  </li>
+                  <li className="flex items-center">
+                    <span className="text-purple-500 mr-2">•</span>
+                    "Breakfast Champion" temporary title (24 hours)
+                  </li>
+                </ul>
+              </div>
+            </div>
+            
+            <div className="text-center">
+              <Link
+                href="/recipes/prismatic"
+                className="inline-block px-6 py-3 bg-gradient-to-r from-purple-600 to-indigo-600 text-white rounded-lg font-medium hover:from-purple-700 hover:to-indigo-700 transition-all shadow-md"
+              >
+                View All Prismatic Recipes
+              </Link>
+            </div>
+          </div>
         </div>
       </section>
 
