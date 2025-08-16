@@ -479,7 +479,7 @@ export default function BurgerRecipePage() {
           </div>
           
           {/* Prismatic Burger Section */}
-          <div className="max-w-4xl mx-auto mt-16 bg-gradient-to-br from-purple-50 to-indigo-50 rounded-xl p-8 border border-purple-200 shadow-lg">
+          <div id="prismatic" className="max-w-4xl mx-auto mt-16 bg-gradient-to-br from-purple-50 to-indigo-50 rounded-xl p-8 border border-purple-200 shadow-lg">
             <div className="flex items-center justify-between mb-6">
               <h3 className="text-2xl font-bold text-purple-900 flex items-center">
                 <span className="text-3xl mr-3">🌈</span> Prismatic Burger

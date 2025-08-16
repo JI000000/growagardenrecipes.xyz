@@ -218,7 +218,7 @@ export default function HomePage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
             {/* Featured Prismatic Recipes */}
             <a
-              href="/recipes/prismatic-pizza"
+              href="/recipes/pizza#prismatic"
               className="card-modern group p-6 text-center transform hover:scale-105 transition-all duration-300 rounded-xl"
               style={{
                 background: 'rgba(255, 255, 255, 0.8)',
@@ -247,7 +247,7 @@ export default function HomePage() {
             </a>
             
             <a
-              href="/recipes/prismatic-burger"
+              href="/recipes/burger#prismatic"
               className="card-modern group p-6 text-center transform hover:scale-105 transition-all duration-300 rounded-xl"
               style={{
                 background: 'rgba(255, 255, 255, 0.8)',
@@ -276,7 +276,7 @@ export default function HomePage() {
             </a>
             
             <a
-              href="/recipes/prismatic-cake"
+              href="/recipes/cake#prismatic"
               className="card-modern group p-6 text-center transform hover:scale-105 transition-all duration-300 rounded-xl"
               style={{
                 background: 'rgba(255, 255, 255, 0.8)',
@@ -305,7 +305,7 @@ export default function HomePage() {
             </a>
             
             <a
-              href="/recipes/prismatic-ice-cream"
+              href="/recipes/ice-cream#prismatic"
               className="card-modern group p-6 text-center transform hover:scale-105 transition-all duration-300 rounded-xl"
               style={{
                 background: 'rgba(255, 255, 255, 0.8)',
